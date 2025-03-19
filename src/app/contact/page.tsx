@@ -12,7 +12,7 @@ export default function ContactPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Get In Touch</h1>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Have a question or want to work together? Fill out the form below and I'll get back to you as soon as possible.
+            Have a question or want to work together? Fill out the form below and I&apos;ll get back to you as soon as possible.
           </p>
         </div>
         

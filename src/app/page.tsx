@@ -10,7 +10,7 @@ export default function Home() {
         <div className="container flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2 space-y-6">
             <h2 style={{ color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.05em', fontSize: '0.875rem', fontWeight: '500' }}>
-              Hello, I'm Pedro Longle
+              Hello, I&apos;m Pedro Longle
             </h2>
             <h1 style={{ fontSize: '3.75rem', fontWeight: '700' }}>Software Engineer</h1>
             <p style={{ color: 'var(--muted-foreground)', maxWidth: '32rem' }}>
@@ -139,7 +139,7 @@ export default function Home() {
       <section className="section">
         <div className="container" style={{ textAlign: 'center' }}>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem', maxWidth: '800px', margin: '0 auto' }}>
-            <h2 style={{ fontSize: '2.25rem', fontWeight: '700' }}>Let's work together on your next project</h2>
+            <h2 style={{ fontSize: '2.25rem', fontWeight: '700' }}>Let&apos;s work together on your next project</h2>
             <Link href="/contact" className="btn btn-primary">
               Contact
             </Link>

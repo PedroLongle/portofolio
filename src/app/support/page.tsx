@@ -75,7 +75,7 @@ export default function SupportPage() {
               </div>
               <h2 className="text-2xl font-semibold mb-3">Other Ways to Support</h2>
               <p className="text-muted-foreground mb-6">
-                Your support doesn't have to be monetary. You can also help by:
+                Your support doesn&apos;t have to be monetary. You can also help by:
               </p>
               <ul className="text-left space-y-2 mb-6">
                 <li className="flex items-start">

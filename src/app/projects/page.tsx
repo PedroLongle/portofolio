@@ -31,7 +31,7 @@ export default function ProjectsPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to start your project?</h2>
           <p className="text-zinc-400 max-w-2xl mx-auto mb-8">
-            Let's collaborate and create something extraordinary together. Our team is ready to transform your vision into reality.
+            Let&apos;s collaborate and create something extraordinary together. Our team is ready to transform your vision into reality.
           </p>
           <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-6 uppercase text-sm tracking-wider font-medium">
             Get in Touch

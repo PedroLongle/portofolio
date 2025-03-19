@@ -34,6 +34,7 @@ export default function ContactForm() {
   
   const onSubmit = async (data: FormValues) => {
     try {
+      console.log("submitted data: ", data);
       // In a real application, you would send the data to your API here
       // For now, we'll simulate a successful submission
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -53,7 +54,7 @@ export default function ContactForm() {
     <div className="w-full max-w-xl mx-auto">
       {isSuccess && (
         <div className="rounded-lg bg-green-100 p-4 mb-6 text-green-700 border border-green-200">
-          Thank you for your message! I'll get back to you soon.
+          Thank you for your message! I&apos;ll get back to you soon.
         </div>
       )}
       
