@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
+import { StatsCounter } from "@/components/ui/stats-counter";
 
 export default function Home() {
   return (
@@ -76,24 +77,7 @@ export default function Home() {
       {/* Stats Section */}
       <section className="section">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '2rem' }}>
-            <div style={{ textAlign: 'center' }}>
-              <h2 style={{ fontSize: '3.75rem', fontWeight: '700', color: 'var(--primary)' }}>12</h2>
-              <p style={{ marginTop: '0.5rem', color: '#d4d4d8' }}>Years Experience</p>
-            </div>
-            <div style={{ textAlign: 'center' }}>
-              <h2 style={{ fontSize: '3.75rem', fontWeight: '700', color: '#27272a' }}>60+</h2>
-              <p style={{ marginTop: '0.5rem', color: '#d4d4d8' }}>Clients</p>
-            </div>
-            <div style={{ textAlign: 'center' }}>
-              <h2 style={{ fontSize: '3.75rem', fontWeight: '700', color: '#27272a' }}>08</h2>
-              <p style={{ marginTop: '0.5rem', color: '#d4d4d8' }}>Years Experience</p>
-            </div>
-            <div style={{ textAlign: 'center' }}>
-              <h2 style={{ fontSize: '3.75rem', fontWeight: '700', color: '#27272a' }}>122+</h2>
-              <p style={{ marginTop: '0.5rem', color: '#d4d4d8' }}>Completed Projects</p>
-            </div>
-          </div>
+          <StatsCounter />
         </div>
       </section>
 

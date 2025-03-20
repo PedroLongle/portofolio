@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header";
+import { CursorTrail } from "@/components/ui/cursor-trail";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
           <main>
             {children}
           </main>
+          <CursorTrail />
         </ThemeProvider>
       </body>
     </html>
