@@ -49,10 +49,9 @@ export function StatsCounter() {
         clearInterval(intervalRef.current);
       }
     };
-  }, []);
+  },);
   
   const startInfiniteLoop = () => {
-    let currentIndex = -1;
     
     // Clear any existing interval
     if (intervalRef.current) {

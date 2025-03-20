@@ -11,22 +11,14 @@ interface Point {
 export function CursorTrail() {
   const [points, setPoints] = useState<Point[]>([]);
   const [isOverDarkBg, setIsOverDarkBg] = useState(false);
-  const [isMouseMoving, setIsMouseMoving] = useState(false);
+  const [, setIsMouseMoving] = useState(false);
 
   useEffect(() => {
     let moveTimeout: NodeJS.Timeout;
-    let lastX = 0;
-    let lastY = 0;
-
+    
     // Create trail points on mouse move
-    const handleMouseMove = (e: MouseEvent) => {
-      // Simple distance calculation
-      const dx = e.clientX - lastX;
-      const dy = e.clientY - lastY;
-      
-      lastX = e.clientX;
-      lastY = e.clientY;
-
+    const handleMouseMove = (e: MouseEvent) => {     
+    
       // Set mouse as moving
       setIsMouseMoving(true);
       clearTimeout(moveTimeout);
