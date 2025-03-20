@@ -11,6 +11,9 @@ interface StatItemProps {
 
 function StatItem({ value, label, index, currentHighlight }: StatItemProps) {
   const isHighlighted = index === currentHighlight;
+  const highlightColor = 'var(--primary)';
+  const normalColor = '#27272a';
+  const labelNormalColor = '#d4d4d8';
   
   return (
     <div style={{ textAlign: 'center' }}>
@@ -18,20 +21,29 @@ function StatItem({ value, label, index, currentHighlight }: StatItemProps) {
         style={{ 
           fontSize: '3.75rem', 
           fontWeight: '700', 
-          color: isHighlighted ? 'var(--primary)' : '#27272a',
+          color: isHighlighted ? highlightColor : normalColor,
           transition: 'color 0.3s ease-in-out'
         }}
       >
         {value}
       </h2>
-      <p style={{ marginTop: '0.5rem', color: '#d4d4d8' }}>{label}</p>
+      <p 
+        style={{ 
+          marginTop: '0.5rem', 
+          color: isHighlighted ? highlightColor : labelNormalColor,
+          fontWeight: isHighlighted ? 600 : 400,
+          transition: 'all 0.3s ease-in-out'
+        }}
+      >
+        {label}
+      </p>
     </div>
   );
 }
 
 export function StatsCounter() {
   const [currentHighlight, setCurrentHighlight] = useState(-1);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const timeoutsRef = useRef<NodeJS.Timeout[]>([]);
   const stats = [
     { value: "12", label: "Years Experience" },
     { value: "60+", label: "Clients" },
@@ -40,49 +52,45 @@ export function StatsCounter() {
   ];
   
   useEffect(() => {
-    // Start the infinite loop
-    startInfiniteLoop();
+    // Start the sequence immediately
+    startSequence();
+    
+    // Set up a repeating timer to restart the sequence
+    const intervalId = setInterval(() => {
+      startSequence();
+    }, stats.length * 1500 + 2000); // Allow enough time for full sequence plus pause
     
     // Cleanup on unmount
     return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
+      clearInterval(intervalId);
+      // Clear any pending timeouts
+      timeoutsRef.current.forEach(clearTimeout);
     };
-  },);
+  }, []);
   
-  const startInfiniteLoop = () => {
+  const startSequence = () => {
+    // Clear any existing timeouts
+    timeoutsRef.current.forEach(clearTimeout);
+    timeoutsRef.current = [];
     
-    // Clear any existing interval
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-    }
+    // Start with no highlight
+    setCurrentHighlight(-1);
     
-    // Initial animation
-    runSequence();
+    // Highlight each stat in sequence
+    stats.forEach((_, index) => {
+      const timeout = setTimeout(() => {
+        setCurrentHighlight(index);
+      }, 1500 * index + 500); // Spacing out enough for visibility
+      
+      timeoutsRef.current.push(timeout);
+    });
     
-    // Set up the interval to repeat the animation
-    intervalRef.current = setInterval(() => {
-      runSequence();
-    }, stats.length * 1000 + 2000); // Wait a bit longer between full cycles
-    
-    // Function to run through the stats once
-    function runSequence() {
-      // Reset to no highlight
+    // Reset at the end of sequence
+    const resetTimeout = setTimeout(() => {
       setCurrentHighlight(-1);
-      
-      // Highlight each stat in sequence
-      stats.forEach((_, index) => {
-        setTimeout(() => {
-          setCurrentHighlight(index);
-        }, index * 1000); // 1 second between highlights
-      });
-      
-      // Reset after the sequence completes
-      setTimeout(() => {
-        setCurrentHighlight(-1);
-      }, stats.length * 1000);
-    }
+    }, stats.length * 1500 + 500);
+    
+    timeoutsRef.current.push(resetTimeout);
   };
   
   return (
