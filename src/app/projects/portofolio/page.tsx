@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations } from "@/i18n/client";
 
 export default function PortfolioProjectPage() {
   const [activeTab, setActiveTab] = useState<"repo" | "tech" | "performance">("repo");

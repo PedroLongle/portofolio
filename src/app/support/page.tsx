@@ -3,7 +3,6 @@
 import { useTranslations } from "@/i18n/client";
 import Link from "next/link";
 import Image from "next/image";
-import { useTheme } from "next-themes";
 
 export default function SupportPage() {
   const t = useTranslations("support");

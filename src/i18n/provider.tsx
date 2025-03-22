@@ -8,7 +8,7 @@ import { defaultLocale, locales, Locale } from './config';
 interface I18nContextType {
   locale: Locale;
   setLocale: (locale: Locale) => void;
-  messages: Record<string, any>;
+  messages: Record<string, string>;
 }
 
 // Create context with default values
@@ -28,7 +28,7 @@ interface I18nProviderProps {
 export function I18nProvider({ children }: I18nProviderProps) {
   // Get saved locale from localStorage or use default
   const [locale, setLocaleState] = useState<Locale>(defaultLocale);
-  const [messages, setMessages] = useState<Record<string, any>>({});
+  const [messages, setMessages] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(true);
 
   // Initialize locale from localStorage if available
