@@ -2,12 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
-
-export default function ProjectCard({ title, image, link }: { 
+import { useRouter } from "next/navigation";
+export default function ProjectCard({ title, description, image, link }: { 
   title: string; 
+  description?: string;
   image: string; 
   link: string;
 }) {
+  const router = useRouter();
   return (
     <div style={{ position: 'relative', overflow: 'hidden' }}>
       <div style={{ position: 'relative', height: '350px', width: '100%', overflow: 'hidden' }}>
@@ -16,12 +18,19 @@ export default function ProjectCard({ title, image, link }: {
           alt={title}
           fill
           style={{ objectFit: 'cover', transition: 'transform 0.5s' }}
+          className="cursor-pointer"
           onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
           onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+          onClick={() => router.push(link)}
         />
       </div>
       <div style={{ marginTop: '1rem' }}>
         <h3 style={{ fontSize: '1.25rem', fontWeight: '700' }}>{title}</h3>
+        {description && (
+          <p style={{ color: 'var(--muted-foreground)', marginTop: '0.5rem', marginBottom: '0.75rem' }}>
+            {description}
+          </p>
+        )}
         <Link href={link} style={{ display: 'flex', alignItems: 'center', color: 'var(--primary)', fontSize: '0.875rem' }}>
           KNOW MORE 
           <svg style={{ width: '1rem', height: '1rem', marginLeft: '0.25rem' }} viewBox="0 0 20 20" fill="currentColor">

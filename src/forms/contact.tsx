@@ -4,35 +4,37 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { ContactoFormValues, schema } from "./schema";
+import { Form } from "@/components/ui/form";
+import FormInput from "@/components/ui/form-input";
+import { Spinner } from "@/components/ui/spinner";
 
 export default function ContactForm() {
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isSuccess, setIsSuccess] = useState<boolean>(false);
   
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors, isSubmitting }
-  } = useForm<ContactoFormValues>({
+  const form = useForm<ContactoFormValues>({
     resolver: yupResolver(schema),
     mode: "onBlur"
   });
   
   const onSubmit = async (data: ContactoFormValues) => {
     try {
+      setIsLoading(true);
       console.log("submitted data: ", data);
       // In a real application, you would send the data to your API here
       // For now, we'll simulate a successful submission
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       // Reset form and show success message
-      reset();
+      form.reset();
       setIsSuccess(true);
       
       // Hide success message after 5 seconds
       setTimeout(() => setIsSuccess(false), 5000);
     } catch (error) {
       console.error("Form submission error:", error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -44,71 +46,43 @@ export default function ContactForm() {
         </div>
       )}
       
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-        <div>
-          <label htmlFor="name" className="block text-sm font-medium mb-2">
-            Name
-          </label>
-          <input
-            id="name"
-            {...register("name")}
-            type="text"
-            className={`w-full px-4 py-3 rounded-lg border ${
-              errors.name ? "border-red-500" : "border-gray-300"
-            } focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition`}
-            placeholder="Your name"
-          />
-          {errors.name && (
-            <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>
-          )}
-        </div>
+      <Form 
+        form={form} 
+        onSubmit={onSubmit} 
+        className="space-y-6"
+      >
+        <FormInput
+          name="name"
+          label="Name"
+          placeholder="Your name"
+        />
         
-        <div>
-          <label htmlFor="email" className="block text-sm font-medium mb-2">
-            Email
-          </label>
-          <input
-            id="email"
-            {...register("email")}
-            type="email"
-            className={`w-full px-4 py-3 rounded-lg border ${
-              errors.email ? "border-red-500" : "border-gray-300"
-            } focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition`}
-            placeholder="your.email@example.com"
-          />
-          {errors.email && (
-            <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
-          )}
-        </div>
+        <FormInput
+          name="email"
+          label="Email"
+          type="email"
+          placeholder="your.email@example.com"
+        />
         
-        <div>
-          <label htmlFor="message" className="block text-sm font-medium mb-2">
-            Message
-          </label>
-          <textarea
-            id="message"
-            {...register("message")}
-            rows={5}
-            className={`w-full px-4 py-3 rounded-lg border ${
-              errors.message ? "border-red-500" : "border-gray-300"
-            } focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition`}
-            placeholder="How can I help you?"
-          />
-          {errors.message && (
-            <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>
-          )}
-        </div>
+        <FormInput
+          name="message"
+          label="Message"
+          multiline
+          rows={5}
+          placeholder="How can I help you?"
+        />
         
         <div>
           <button
-            type="submit"
-            disabled={isSubmitting}
-            className="btn btn-primary w-full py-3"
+              type="submit"
+              disabled={isLoading}
+              className={"btn btn-primary w-full py-3 rounded-lg"}
           >
-            {isSubmitting ? "Sending..." : "Send Message"}
-          </button>
+              Send Message
+              {isLoading && <Spinner />}
+            </button>
         </div>
-      </form>
+      </Form>
     </div>
   );
 } 

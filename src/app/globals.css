@@ -50,6 +50,7 @@ a {
   justify-content: center;
   font-weight: 500;
   transition: all 0.2s ease;
+  border-radius: 0.5rem; /* rounded-lg */
 }
 
 .btn-primary {
@@ -99,6 +100,42 @@ a {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
+/* Form Styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: var(--muted);
+  border: 1px solid var(--border);
+  color: var(--foreground);
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
 /* Animations */
 @keyframes collapse {
   0% {
@@ -124,6 +161,47 @@ a {
     transform: translateY(-10px);
     max-height: 0;
   }
+}
+
+/* Coffee steam animations */
+@keyframes steam1 {
+  0% { opacity: 0; transform: translateY(0) scale(0.5); }
+  15% { opacity: 1; }
+  50% { opacity: 0.7; transform: translateY(-10px) scale(1); }
+  100% { opacity: 0; transform: translateY(-15px) scale(1.5); }
+}
+@keyframes steam2 {
+  0% { opacity: 0; transform: translateY(0) scale(0.5); }
+  20% { opacity: 0; }
+  40% { opacity: 1; }
+  70% { opacity: 0.7; transform: translateY(-15px) scale(1); }
+  100% { opacity: 0; transform: translateY(-20px) scale(1.5); }
+}
+@keyframes steam3 {
+  0% { opacity: 0; transform: translateY(0) scale(0.5); }
+  30% { opacity: 0; }
+  60% { opacity: 1; }
+  80% { opacity: 0.7; transform: translateY(-12px) scale(1); }
+  100% { opacity: 0; transform: translateY(-18px) scale(1.5); }
+}
+
+.group:hover .steam-1 {
+  animation: steam1 3s ease-out infinite;
+  opacity: 1;
+  stroke: #0D0C22;
+  stroke-width: 1.2;
+}
+.group:hover .steam-2 {
+  animation: steam2 3s ease-out 0.3s infinite;
+  opacity: 1;
+  stroke: #0D0C22;
+  stroke-width: 1.2;
+}
+.group:hover .steam-3 {
+  animation: steam3 3s ease-out 0.6s infinite;
+  opacity: 1;
+  stroke: #0D0C22;
+  stroke-width: 1.2;
 }
 
 /* Fix for top padding on pages with headers */

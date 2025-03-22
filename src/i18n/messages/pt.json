@@ -1,0 +1,195 @@
+{
+  "common": {
+    "nav": {
+      "home": "Início",
+      "projects": "Projetos",
+      "about": "Sobre",
+      "contact": "Contacto",
+      "support": "Apoio"
+    },
+    "buttons": {
+      "aboutMe": "Sobre Mim",
+      "viewAll": "Ver Todos",
+      "contact": "Contacto",
+      "getInTouch": "Entre em Contacto"
+    },
+    "language": {
+      "select": "Selecionar idioma",
+      "en": "Inglês",
+      "pt": "Português",
+      "es": "Espanhol"
+    },
+    "footer": {
+      "description": "Ajudo empresas a construir websites e aplicações web modernas e profissionais utilizando as mais recentes tecnologias e melhores práticas.",
+      "quickLinks": "Links Rápidos",
+      "contact": "Informações de Contacto",
+      "rights": "Todos os Direitos Reservados"
+    }
+  },
+  "home": {
+    "greeting": "Olá, sou o Pedro Longle",
+    "title": "Engenheiro de Software",
+    "description": "Apaixonado por criar soluções elegantes para problemas complexos. Com anos de experiência em desenvolvimento full-stack, ajudo empresas a dar vida às suas ideias.",
+    "heroImageAlt": "Engenheiro de Software",
+    "skills": {
+      "title": "Minhas Competências",
+      "backendDevelopment": {
+        "title": "Desenvolvimento Backend",
+        "description": "Projetar e implementar sistemas backend robustos e escaláveis usando tecnologias modernas."
+      },
+      "frontendDevelopment": {
+        "title": "Desenvolvimento Frontend",
+        "description": "Criar interfaces de utilizador bonitas e responsivas com atenção aos detalhes e à experiência do utilizador."
+      },
+      "security": {
+        "title": "Segurança",
+        "description": "Implementar as melhores práticas para proteger aplicações e proteger dados sensíveis."
+      }
+    },
+    "projects": {
+      "title": "Projetos em Destaque"
+    },
+    "stats": {
+      "yearsExperience": "Anos de Experiência",
+      "clients": "Clientes",
+      "hoursCoding": "Horas de Código",
+      "completedProjects": "Projetos Concluídos"
+    }
+  },
+  "contact": {
+    "title": "Entre em Contacto",
+    "description": "Tem uma pergunta ou quer trabalhar em conjunto? Preencha o formulário abaixo e entrarei em contacto o mais rápido possível.",
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "message": "Mensagem",
+      "subject": "Assunto",
+      "send": "Enviar Mensagem",
+      "sending": "A enviar...",
+      "success": "Mensagem enviada com sucesso!",
+      "error": "Ocorreu um erro ao enviar a sua mensagem. Por favor, tente novamente."
+    },
+    "contactInfo": {
+      "title": "Informações de Contacto",
+      "email": {
+        "title": "Email",
+        "value": "pedro.longle.dev@gmail.com"
+      },
+      "location": {
+        "title": "Localização",
+        "value": "Lisboa, Portugal"
+      },
+      "hours": {
+        "title": "Horário de Trabalho",
+        "value": "Horário totalmente flexível"
+      }
+    },
+    "connect": {
+      "title": "Conecte-se"
+    }
+  },
+  "support": {
+    "title": "Apoie o Meu Trabalho",
+    "description": "Se encontra o meu trabalho útil ou valioso, considere apoiar-me para me ajudar a continuar a criar projetos e conteúdos de código aberto.",
+    "buyMeCoffee": {
+      "title": "Compre-me um Café",
+      "description": "Compre-me um Café é uma forma simples e divertida de apoiar o meu trabalho com uma pequena doação, o preço de um café. Cada café ajuda-me a dedicar mais tempo à criação de conteúdos e projetos de qualidade."
+    },
+    "hireMe": {
+      "title": "Contrate-me para Projetos",
+      "description": "Outra ótima maneira de apoiar o meu trabalho é contratar-me para os seus projetos de desenvolvimento web ou consultas. Sou especializado em tecnologias web modernas e posso ajudar a dar vida às suas ideias."
+    },
+    "otherWays": {
+      "title": "Outras Formas de Apoio",
+      "description": "O seu apoio não precisa ser monetário. Também pode ajudar:",
+      "social": "Seguindo-me nas redes sociais e partilhando o meu conteúdo",
+      "github": "Dando estrelas e contribuindo para os meus repositórios GitHub",
+      "feedback": "Fornecendo feedback e sugestões para melhorias",
+      "recommend": "Recomendando-me à sua rede para oportunidades de trabalho freelance"
+    }
+  },
+  "projects": {
+    "title": "Os Meus Projetos",
+    "description": "Explore o meu portfólio de projetos abrangendo várias indústrias e disciplinas de design.",
+    "readyToStart": "Vamos trabalhar juntos no seu próximo projeto",
+    "collaborateDescription": "Vamos colaborar e criar algo extraordinário juntos. Estou pronto para transformar a sua visão em realidade.",
+    "project1": {
+      "title": "The Vintage",
+      "shortDescription": "Uma plataforma de e-commerce inspirada no vintage com funcionalidades modernas."
+    },
+    "project2": {
+      "title": "Foodasa",
+      "shortDescription": "Aplicação móvel para descobrir recomendações de comida local e restaurantes."
+    },
+    "project3": {
+      "title": "Marco Accent",
+      "shortDescription": "Identidade da marca e website para uma etiqueta de moda de luxo."
+    }
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "heroImageAlt": "Pedro Longle - Engenheiro de Software",
+    "introduction": "Sou um engenheiro de software com mais de 10 anos de experiência na construção de aplicações web e soluções de software para clientes em todo o mundo. Com experiência tanto em desenvolvimento frontend como backend, entrego soluções completas que ajudam as empresas a atingir os seus objetivos.",
+    "mission": "A minha missão é criar software intuitivo, eficiente e escalável que tenha um impacto positivo. Acredito em código limpo, design centrado no utilizador e aprendizagem contínua para estar na vanguarda da tecnologia.",
+    "education": {
+      "title": "Educação",
+      "degree1": "Mestrado em Ciência da Computação",
+      "school1": "Universidade de Stanford",
+      "year1": "2012 - 2014",
+      "degree2": "Licenciatura em Engenharia Informática",
+      "school2": "UC Berkeley",
+      "year2": "2008 - 2012"
+    },
+    "languages": {
+      "title": "Idiomas",
+      "english": "Inglês",
+      "portuguese": "Português",
+      "spanish": "Espanhol"
+    },
+    "experience": {
+      "title": "Experiência",
+      "job1": {
+        "title": "Engenheiro de Software Sénior",
+        "company": "Tech Innovations Inc.",
+        "period": "2018 - Presente",
+        "description": "Liderando o desenvolvimento de aplicações e serviços web de alto tráfego, focando na otimização de desempenho e escalabilidade.",
+        "bullet1": "Redesenhei a arquitetura de um serviço crítico, resultando numa melhoria de 70% no tempo de resposta",
+        "bullet2": "Implementei pipelines de CI/CD que reduziram o tempo de implantação em 60%",
+        "bullet3": "Orientei desenvolvedores juniores e estabeleci padrões de codificação entre equipas"
+      },
+      "job2": {
+        "title": "Desenvolvedor Full Stack",
+        "company": "Digital Solutions LLC",
+        "period": "2014 - 2018",
+        "description": "Desenvolvi aplicações web full-stack para clientes nos setores de finanças, saúde e e-commerce.",
+        "bullet1": "Construí aplicações web responsivas usando React, Node.js e MongoDB",
+        "bullet2": "Implementei sistemas de processamento de pagamentos seguros para plataformas de e-commerce",
+        "bullet3": "Colaborei com equipas de design para criar interfaces de utilizador intuitivas"
+      }
+    },
+    "skills": {
+      "title": "Competências",
+      "technical": {
+        "title": "Competências Técnicas"
+      },
+      "soft": {
+        "title": "Competências Interpessoais",
+        "communication": "Comunicação",
+        "teamwork": "Trabalho em Equipa",
+        "problemSolving": "Resolução de Problemas",
+        "creativity": "Criatividade",
+        "leadership": "Liderança"
+      }
+    }
+  },
+  "validation": {
+    "required": "Este campo é obrigatório",
+    "email": "Por favor, introduza um endereço de email válido",
+    "minLength": "Deve ter pelo menos {0} caracteres",
+    "maxLength": "Deve ter no máximo {0} caracteres"
+  },
+  "formSuccess": {
+    "title": "Mensagem Enviada!",
+    "subtitle": "Obrigado pela sua mensagem. Responderei em breve."
+  }
+} 

@@ -1,9 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
 import { StatsCounter } from "@/components/ui/stats-counter";
+import { useTranslations } from "@/i18n/client";
 
 export default function Home() {
+  const homeT = useTranslations('home');
+  const commonT = useTranslations('common');
+  const projectsT = useTranslations('projects');
+
   return (
     <div>
       {/* Hero Section */}
@@ -11,20 +18,20 @@ export default function Home() {
         <div className="container flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2 space-y-6">
             <h2 style={{ color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.05em', fontSize: '0.875rem', fontWeight: '500' }}>
-              Hello, I&apos;m Pedro Longle
+              {homeT('greeting')}
             </h2>
-            <h1 style={{ fontSize: '3.75rem', fontWeight: '700' }}>Software Engineer</h1>
+            <h1 style={{ fontSize: '3.75rem', fontWeight: '700' }}>{homeT('title')}</h1>
             <p style={{ color: 'var(--muted-foreground)', maxWidth: '32rem' }}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, et dolore magna aliqua. Ut enim veniam.
+              {homeT('description')}
             </p>
-            <button className="btn btn-primary">
-              About Me
-            </button>
+            <Link href="/about" className="btn btn-primary rounded-lg">
+              {commonT('buttons.aboutMe')}
+            </Link>
           </div>
           <div className="lg:w-1/2">
             <Image 
               src="/images/home.svg"
-              alt="Software Engineer" 
+              alt={homeT('heroImageAlt')} 
               width={600} 
               height={800}
               style={{ width: '100%', height: 'auto' }}
@@ -39,7 +46,7 @@ export default function Home() {
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
             <ServiceCard 
-              title="UI Design" 
+              title={homeT('skills.frontendDevelopment.title')} 
               icon={
                 <svg style={{ width: '2rem', height: '2rem', color: 'var(--primary)' }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <rect x="2" y="3" width="20" height="14" rx="2" />
@@ -47,27 +54,27 @@ export default function Home() {
                   <line x1="12" y1="17" x2="12" y2="21" />
                 </svg>
               }
-              description="Lorem Ipsum is simply text of the printing type of the printing here."
+              description={homeT('skills.frontendDevelopment.description')}
               isHighlighted={false}
             />
             <ServiceCard 
-              title="Product Design" 
+              title={homeT('skills.backendDevelopment.title')} 
               icon={
                 <svg style={{ width: '2rem', height: '2rem', color: 'white' }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
                 </svg>
               }
-              description="Lorem Ipsum is simply text of the printing type of the printing here."
+              description={homeT('skills.backendDevelopment.description')}
               isHighlighted={true}
             />
             <ServiceCard 
-              title="Branding" 
+              title={homeT('skills.security.title')} 
               icon={
                 <svg style={{ width: '2rem', height: '2rem', color: 'var(--primary)' }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                 </svg>
               }
-              description="Lorem Ipsum is simply text of the printing type of the printing here."
+              description={homeT('skills.security.description')}
               isHighlighted={false}
             />
           </div>
@@ -84,36 +91,28 @@ export default function Home() {
       {/* Featured Projects Section */}
       <section className="section section-dark">
         <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3rem', flexWrap: 'wrap', gap: '1rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '5rem', flexWrap: 'wrap', gap: '1rem' }}>
             <div>
-              <h2 style={{ fontSize: '1.875rem', fontWeight: '700' }}>FEATURED PROJECTS</h2>
-              <p style={{ color: 'var(--muted-foreground)', marginTop: '0.5rem' }}>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+              <h2 style={{ fontSize: '1.875rem', fontWeight: '700' }}>{homeT('projects.title').toUpperCase()}</h2>
+              <p style={{ color: 'var(--muted-foreground)', marginTop: '0.5rem' }}>{projectsT('description')}</p>
             </div>
-            <button className="btn btn-primary">
-              View All
-            </button>
+            <Link href="/projects" className="btn btn-primary items-center rounded-lg pl-6 h-12 mt-6"            >
+              {commonT('buttons.viewAll')}
+            </Link>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
             <ProjectCard 
-              title="The Vintage" 
-              image="https://placehold.co/600x350/333/FFF?text=Vintage" 
-              link="/projects/vintage"
+              title={"Personal Portofolio"} 
+              description={"Personal portofolio website."}
+              image="/projects/portofolio.png" 
+              link="/projects/portofolio"
             />
             <ProjectCard 
-              title="Foodasa" 
-              image="https://placehold.co/600x350/333/FFF?text=Foodasa" 
-              link="/projects/foodasa" 
-            />
-            <ProjectCard 
-              title="Marco Accent" 
-              image="https://placehold.co/600x350/333/FFF?text=Marco+Accent" 
-              link="/projects/marco-accent" 
-            />
-            <ProjectCard 
-              title="Mozaik" 
-              image="https://placehold.co/600x350/333/FFF?text=Mozaik" 
-              link="/projects/mozaik" 
+              title={"to-be-announced"} 
+              description={"to-be-announced"}
+              image="https://placehold.co/100x100/333/FFF?text=tba" 
+              link="/projects/tba"
             />
           </div>
         </div>
@@ -123,9 +122,9 @@ export default function Home() {
       <section className="section">
         <div className="container" style={{ textAlign: 'center' }}>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem', maxWidth: '800px', margin: '0 auto' }}>
-            <h2 style={{ fontSize: '2.25rem', fontWeight: '700' }}>Let&apos;s work together on your next project</h2>
-            <Link href="/contact" className="btn btn-primary">
-              Contact
+            <h2 style={{ fontSize: '2.25rem', fontWeight: '700' }}>{projectsT('readyToStart')}!</h2>
+            <Link href="/contact" className="btn btn-primary rounded-lg">
+              {commonT('buttons.getInTouch')}
             </Link>
           </div>
         </div>

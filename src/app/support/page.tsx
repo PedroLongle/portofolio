@@ -1,108 +1,229 @@
-import BuyMeCoffeeButton from "@/components/BuyMeCoffeeButton";
-import Link from "next/link";
+"use client";
 
-export const metadata = {
-  title: "Support My Work | Pedro Longle",
-  description: "Support my work and help me create more open-source projects and content.",
-};
+import { useTranslations } from "@/i18n/client";
+import Link from "next/link";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 
 export default function SupportPage() {
+  const t = useTranslations("support");
+  const commonT = useTranslations("common.buttons");
+  
   return (
-    <div className="container mx-auto py-20 px-4">
-      <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Support My Work</h1>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            If you find my work helpful or valuable, consider supporting me to help me
-            continue creating open-source projects and content.
+    <div className="section bg-muted pt-6">
+      <div className="container">
+        <div className="mx-auto">
+          <h1 className="text-4xl font-bold mb-6">{t("title")}</h1>
+          <p className="text-muted-foreground mb-16 text-lg">
+            {t("description")}
           </p>
-        </div>
-
-        <div className="bg-card rounded-xl shadow-md overflow-hidden mb-10">
-          <div className="p-8">
-            <div className="flex flex-col items-center text-center">
-              <div className="mb-6">
-                <svg className="w-16 h-16 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h16v12zM6 10h2v2H6v-2zm0 4h8v2H6v-2zm10 0h2v2h-2v-2zm-10-8h12v2H6V6z" />
-                </svg>
-              </div>
-              <h2 className="text-2xl font-semibold mb-3 text-card-foreground">Buy Me a Coffee</h2>
-              <p className="text-muted-foreground mb-6">
-                Buy Me a Coffee is a simple and fun way to support my work with a small donation,
-                the price of a coffee. Every coffee helps me dedicate more time to creating quality content and projects.
-              </p>
-              <div className="mb-6">
-                <BuyMeCoffeeButton 
-                  username="pedrolongle" 
-                  text="Buy me a coffee" 
-                  size="large" 
-                />
+          
+          <div className="flex flex-col space-y-16">
+            {/* Buy Me a Coffee */}
+            <div className="bg-card rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl bg-zinc-900">
+              <div className="flex flex-row">
+                <div className="max-w-5xl p-12 flex flex-col justify-between">
+                  <div>
+                    <h2 className="text-2xl font-bold mb-3">{t("buyMeCoffee.title")}</h2>
+                    <p className="text-muted-foreground mb-4">
+                      {t("buyMeCoffee.description")}
+                      {t("buyMeCoffee.description")}
+                    </p>
+                  </div>
+                  <div>
+                    <a 
+                      href="https://www.buymeacoffee.com/pedrolongle" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="p-2 text-white rounded-2xl text-sm font-medium transition-colors"
+                    >
+                      <Image 
+                        src="/bmc-button.svg"
+                        alt="Hire me" 
+                        width={100} 
+                        height={50}
+                        style={{ width: '22%', height: 'auto' }}
+                        priority
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div className="relative flex items-center justify-center">
+                  <div className="w-30% flex items-center justify-center p-2 mr-10">
+                    <Image 
+                      src={"/bmc_qr.png"}
+                      alt="Buy me a coffee" 
+                      width={800} 
+                      height={800}
+                      style={{ width: '95%', height: 'auto', borderRadius: '10px' }}
+                      priority
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div className="bg-primary rounded-xl shadow-md overflow-hidden mb-10">
-          <div className="p-8">
-            <div className="flex flex-col items-center text-center">
-              <div className="mb-6">
-                <svg className="w-16 h-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
-                </svg>
-              </div>
-              <h2 className="text-2xl font-semibold mb-3 text-white">Hire Me for Projects</h2>
-              <p className="text-white text-opacity-90 mb-6">
-                Another great way to support my work is by hiring me for your web development 
-                projects or consultations. I specialize in modern web technologies and can help 
-                bring your ideas to life.
-              </p>
-              <div>
-                <Link href="/contact" className="btn bg-white text-primary hover:bg-zinc-100 font-medium py-2 px-6 inline-block">
-                  Get in touch
-                </Link>
+            
+            {/* Hire Me */}
+            <div className="bg-card rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl bg-zinc-900">
+              <div className="flex flex-row">
+                <div className="w-1/3 bg-primary/10 relative flex items-center justify-center">
+                  {/* Image placeholder */}
+                  <div className="w-full h-full flex items-center justify-center p-2">
+                    <Image 
+                      src="/images/hire.svg"
+                      alt="Hire me" 
+                      width={400} 
+                      height={600}
+                      style={{ width: '90%', height: 'auto' }}
+                      priority
+                    />
+                  </div>
+                </div>
+                <div className="w-2/3 p-12 flex flex-col justify-between">
+                  <div>
+                    <h2 className="text-2xl font-bold mb-3">{t("hireMe.title")}</h2>
+                    <p className="text-muted-foreground mb-6">
+                      {t("hireMe.description")}
+                      {t("hireMe.description")}
+                      {t("hireMe.description")}
+                    </p>
+                  </div>
+                  <div className="">
+                    <Link 
+                      href="/contact" 
+                      className="btn btn-primary inline-flex items-center rounded-xl w-full pl-6 h-12 mt-6"
+                    >
+                      {commonT("getInTouch")}
+                      <svg 
+                        width="20" 
+                        height="20" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        strokeWidth="2" 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round"
+                        className="ml-2"
+                      >
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                      </svg>
+                    </Link>
+                    
+                    <div className="relative flex items-center mt-10 mb-4">
+                      <div className="flex-grow border-t border-muted"></div>
+                      <span className="flex-shrink mx-3 text-muted-foreground text-sm">OR</span>
+                      <div className="flex-grow border-t border-muted"></div>
+                    </div>
+                    
+                    <p className="text-sm text-muted-foreground mb-3">Check my profile at:</p>
+                    
+                    <div className="flex space-x-3">
+                      <a 
+                        href="https://www.fiverr.com/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 bg-[#1DBF73] text-white rounded-md text-sm font-medium hover:bg-[#19a764] transition-colors w-full flex items-center justify-center"
+                      >
+                        <Image 
+                          src="/images/fiverr.svg"
+                          alt="Hire me" 
+                          width={100} 
+                          height={50}
+                          style={{ width: '16%', height: 'auto' }}
+                          priority
+                        />
+                      </a>
+                      <a 
+                        href="https://www.upwork.com/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 bg-gray-200 text-white rounded-md text-sm font-medium hover:bg-gray-300 transition-colors w-full flex items-center justify-center"
+                      >
+                       <Image 
+                          src="/images/upwork.svg"
+                          alt="Hire me" 
+                          width={100} 
+                          height={50}
+                          style={{ width: '20%', height: 'auto' }}
+                          priority
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div className="bg-card rounded-xl shadow-md overflow-hidden">
-          <div className="p-8">
-            <div className="flex flex-col items-center text-center">
-              <div className="mb-6">
-                <svg className="w-16 h-16 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
+            
+            {/* Other Ways to Support */}
+            <div className="bg-card rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl bg-zinc-900">
+              <div className="flex flex-row">
+                <div className="w-2/3 p-12">
+                  <h2 className="text-2xl font-bold mb-3">{t("otherWays.title")}</h2>
+                  <p className="text-muted-foreground mb-6">
+                    {t("otherWays.description")}
+                  </p>
+                  <ul className="space-y-2">
+                    <li className="flex items-center">
+                      <svg 
+                        className="w-5 h-5 mr-2 text-primary" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-sm">{t("otherWays.social")}</span>
+                    </li>
+                    <li className="flex items-center">
+                      <svg 
+                        className="w-5 h-5 mr-2 text-primary" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-sm">{t("otherWays.github")}</span>
+                    </li>
+                    <li className="flex items-center">
+                      <svg 
+                        className="w-5 h-5 mr-2 text-primary" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-sm">{t("otherWays.feedback")}</span>
+                    </li>
+                    <li className="flex items-center">
+                      <svg 
+                        className="w-5 h-5 mr-2 text-primary" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-sm">{t("otherWays.recommend")}</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="w-1/3 relative flex items-center justify-center">
+                  {/* Image placeholder */}
+                  <div className="w-full h-full flex items-center justify-center p-10">
+                    <Image 
+                      src="/images/support.svg"
+                      alt="Support" 
+                      width={200} 
+                      height={400}
+                      style={{ width: '60%', height: 'auto' }}
+                      priority
+                    />
+                  </div>
+                </div>
               </div>
-              <h2 className="text-2xl font-semibold mb-3 text-card-foreground">Other Ways to Support</h2>
-              <p className="text-muted-foreground mb-6">
-                Your support doesn&apos;t have to be monetary. You can also help by:
-              </p>
-              <ul className="text-left space-y-2 mb-6 text-card-foreground">
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Following me on social media and sharing my content</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Star and contribute to my GitHub repositories</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Providing feedback and suggestions for improvement</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Recommending me to your network for freelance opportunities</span>
-                </li>
-              </ul>
             </div>
           </div>
         </div>

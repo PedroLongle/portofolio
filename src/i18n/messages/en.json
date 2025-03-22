@@ -1,0 +1,195 @@
+{
+  "common": {
+    "nav": {
+      "home": "Home",
+      "projects": "Projects",
+      "about": "About",
+      "contact": "Contact",
+      "support": "Support"
+    },
+    "buttons": {
+      "aboutMe": "About Me",
+      "viewAll": "View All",
+      "contact": "Contact",
+      "getInTouch": "Get in Touch"
+    },
+    "language": {
+      "select": "Select language",
+      "en": "English",
+      "pt": "Portuguese",
+      "es": "Spanish"
+    },
+    "footer": {
+      "description": "I help businesses build modern, professional websites and web applications using the latest technologies and best practices.",
+      "quickLinks": "Quick Links",
+      "contact": "Contact Info",
+      "rights": "All Rights Reserved"
+    }
+  },
+  "home": {
+    "greeting": "Hello, I'm Pedro Longle",
+    "title": "Software Engineer",
+    "description": "Passionate about creating elegant solutions to complex problems. With years of experience in full-stack development, I help businesses bring their ideas to life.",
+    "heroImageAlt": "Software Engineer",
+    "skills": {
+      "title": "My Skills",
+      "backendDevelopment": {
+        "title": "Backend Development",
+        "description": "Designing and implementing robust, scalable backend systems using modern technologies."
+      },
+      "frontendDevelopment": {
+        "title": "Frontend Development",
+        "description": "Creating beautiful, responsive user interfaces with attention to detail and user experience."
+      },
+      "security": {
+        "title": "Security",
+        "description": "Implementing best practices for securing applications and protecting sensitive data."
+      }
+    },
+    "projects": {
+      "title": "Featured Projects"
+    },
+    "stats": {
+      "yearsExperience": "Years Experience",
+      "clients": "Clients",
+      "hoursCoding": "Hours Coding",
+      "completedProjects": "Completed Projects"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "Have a question or want to work together? Fill out the form below and I'll get back to you as soon as possible.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "subject": "Subject",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "There was an error sending your message. Please try again."
+    },
+    "contactInfo": {
+      "title": "Contact Information",
+      "email": {
+        "title": "Email",
+        "value": "pedro.longle.dev@gmail.com"
+      },
+      "location": {
+        "title": "Location",
+        "value": "Lisbon, Portugal"
+      },
+      "hours": {
+        "title": "Working Hours",
+        "value": "Fully flexible schedule"
+      }
+    },
+    "connect": {
+      "title": "Connect"
+    }
+  },
+  "support": {
+    "title": "Support My Work",
+    "description": "If you find my work helpful or valuable, consider supporting me to help me continue creating open-source projects and content.",
+    "buyMeCoffee": {
+      "title": "Buy Me a Coffee",
+      "description": "Buy Me a Coffee is a simple and fun way to support my work with a small donation, the price of a coffee. Every coffee helps me dedicate more time to creating quality content and projects."
+    },
+    "hireMe": {
+      "title": "Hire Me for Projects",
+      "description": "Another great way to support my work is by hiring me for your web development projects or consultations. I specialize in modern web technologies and can help bring your ideas to life."
+    },
+    "otherWays": {
+      "title": "Other Ways to Support",
+      "description": "Your support doesn't have to be monetary. You can also help by:",
+      "social": "Following me on social media and sharing my content",
+      "github": "Star and contribute to my GitHub repositories",
+      "feedback": "Providing feedback and suggestions for improvement",
+      "recommend": "Recommending me to your network for freelance opportunities"
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "Explore my portfolio of projects spanning various industries and design disciplines.",
+    "readyToStart": "Let's work together on your next project",
+    "collaborateDescription": "Let's collaborate and create something extraordinary together. I'm ready to transform your vision into reality.",
+    "project1": {
+      "title": "The Vintage",
+      "shortDescription": "A vintage-inspired e-commerce platform with modern functionality."
+    },
+    "project2": {
+      "title": "Foodasa",
+      "shortDescription": "Mobile app for discovering local food and restaurant recommendations."
+    },
+    "project3": {
+      "title": "Marco Accent",
+      "shortDescription": "Brand identity and website for a luxury fashion label."
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "heroImageAlt": "Pedro Longle - Software Engineer",
+    "introduction": "I'm a software engineer with over 10 years of experience in building web applications and software solutions for clients around the world. With expertise in both frontend and backend development, I deliver end-to-end solutions that help businesses achieve their goals.",
+    "mission": "My mission is to create intuitive, efficient, and scalable software that makes a positive impact. I believe in clean code, user-centered design, and continuous learning to stay at the forefront of technology.",
+    "education": {
+      "title": "Education",
+      "degree1": "M.S. Computer Science",
+      "school1": "Stanford University",
+      "year1": "2012 - 2014",
+      "degree2": "B.S. Computer Engineering",
+      "school2": "UC Berkeley",
+      "year2": "2008 - 2012"
+    },
+    "languages": {
+      "title": "Languages",
+      "english": "English",
+      "portuguese": "Portuguese",
+      "spanish": "Spanish"
+    },
+    "experience": {
+      "title": "Experience",
+      "job1": {
+        "title": "Senior Software Engineer",
+        "company": "Tech Innovations Inc.",
+        "period": "2018 - Present",
+        "description": "Leading development on high-traffic web applications and services, focusing on performance optimization and scalability.",
+        "bullet1": "Redesigned the architecture of a critical service, resulting in 70% improvement in response time",
+        "bullet2": "Implemented CI/CD pipelines that reduced deployment time by 60%",
+        "bullet3": "Mentored junior developers and established coding standards across teams"
+      },
+      "job2": {
+        "title": "Full Stack Developer",
+        "company": "Digital Solutions LLC",
+        "period": "2014 - 2018",
+        "description": "Developed full-stack web applications for clients in finance, healthcare, and e-commerce sectors.",
+        "bullet1": "Built responsive web applications using React, Node.js, and MongoDB",
+        "bullet2": "Implemented secure payment processing systems for e-commerce platforms",
+        "bullet3": "Collaborated with design teams to create intuitive user interfaces"
+      }
+    },
+    "skills": {
+      "title": "Skills",
+      "technical": {
+        "title": "Technical Skills"
+      },
+      "soft": {
+        "title": "Soft Skills",
+        "communication": "Communication",
+        "teamwork": "Teamwork",
+        "problemSolving": "Problem Solving",
+        "creativity": "Creativity",
+        "leadership": "Leadership"
+      }
+    }
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Please enter a valid email address",
+    "minLength": "Must be at least {0} characters",
+    "maxLength": "Must be at most {0} characters"
+  },
+  "formSuccess": {
+    "title": "Message Sent!",
+    "subtitle": "Thank you for your message. I'll get back to you shortly."
+  }
+} 

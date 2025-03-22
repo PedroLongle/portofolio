@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { useTranslations } from "@/i18n/client";
 
 interface StatItemProps {
   value: string;
@@ -44,11 +45,13 @@ function StatItem({ value, label, index, currentHighlight }: StatItemProps) {
 export function StatsCounter() {
   const [currentHighlight, setCurrentHighlight] = useState(-1);
   const timeoutsRef = useRef<NodeJS.Timeout[]>([]);
+  const t = useTranslations('home.stats');
+  
   const stats = [
-    { value: "12", label: "Years Experience" },
-    { value: "60+", label: "Clients" },
-    { value: "08", label: "Team Members" },
-    { value: "122+", label: "Completed Projects" }
+    { value: "2.5", label: t('yearsExperience') },
+    { value: "5+", label: t('clients') },
+    { value: "20k+", label: t('hoursCoding') },
+    { value: "5+", label: t('completedProjects') }
   ];
   
   useEffect(() => {
