@@ -3,8 +3,8 @@
 import React, { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import LanguageSelector from "./language-selector"
 import { useTranslations } from "@/i18n/client"
+import LanguageSelector from "./language-selector"
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)

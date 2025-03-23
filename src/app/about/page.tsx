@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useTranslations } from "@/i18n/client";
 import { Calendar, House } from "lucide-react";
-import Link from "@/components/ui/link";
+import Link from "@/components/link";
 
 
 export default function AboutPage() {

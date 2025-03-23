@@ -3,34 +3,35 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { ContactoFormValues, schema } from "./schema";
-import { Form } from "@/components/ui/form";
-import FormInput from "@/components/ui/form-input";
-import { Spinner } from "@/components/ui/spinner";
+import { ContactFormValues, useValidationSchema } from "./schema";
+import { Form } from "@/components/form";
+import FormInput from "@/components/form-input";
+import { Spinner } from "@/components/spinner";
 import { sendMail } from "@/_email";
 import Image from "next/image";
-import { useTranslations } from "@/i18n/client";
+import { useTranslations  } from "@/i18n/client";
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
-  const t = useTranslations('contact.form');
   const formSuccess = useTranslations('formSuccess');
   
-  const form = useForm<ContactoFormValues>({
+  const t = useTranslations('contact.form');
+  const schema = useValidationSchema();
+
+  const form = useForm<ContactFormValues>({
     resolver: yupResolver(schema),
-    mode: "onBlur"
+    mode: "onSubmit"
   });
   
-  const onSubmit = async (data: ContactoFormValues) => {
+  const onSubmit = async (data: ContactFormValues) => {
     try {
       setIsLoading(true);
 
-      const mailText = `Name: ${data.name}\n  Email: ${data.email}\nMessage: ${data.message}`;
       const response = await sendMail({
         email: data.email,
-        subject: t('subject'),
-        text: mailText,
+        name: data.name,
+        message: data.message,
       });
 
       if (response?.messageId) {

@@ -24,11 +24,22 @@
   --border: #27272a;  /* Zinc-800 */
 }
 
+html {
+  height: 100%;
+  overflow-x: hidden;
+  overscroll-behavior-y: none; /* Prevent bounce/overscroll effect */
+}
+
 body {
   font-family: var(--font-montserrat);
   background-color: var(--background);
   color: var(--foreground);
   line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -76,7 +87,7 @@ a {
 }
 
 .section {
-  padding: 6rem 0;
+  padding: 8rem 0;
 }
 
 .section-dark {
@@ -202,9 +213,4 @@ textarea.form-control {
   opacity: 1;
   stroke: #0D0C22;
   stroke-width: 1.2;
-}
-
-/* Fix for top padding on pages with headers */
-main {
-  padding-top: 80px; /* Adjust for fixed header */
 }

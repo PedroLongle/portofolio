@@ -1,16 +1,27 @@
 import * as yup from "yup";
+import { useTranslations } from "@/i18n/client";
 
-export const schema = yup.object({
-    name: yup.string()
-      .min(2, "Name must be at least 2 characters")
-      .required("Name is required"),
-    email: yup.string()
-      .email("Please enter a valid email address")
-      .required("Email is required"),
-    message: yup.string()
-      .min(10, "Message must be at least 10 characters")
-      .required("Message is required"),
-  });
+// Create a proper custom hook that follows React naming conventions
+export function useValidationSchema() {
+  const t = useTranslations("validation");
   
-export type ContactoFormValues = yup.InferType<typeof schema>;
+  return yup.object({
+    name: yup.string()
+      .min(2, t('minLength', { 0: 2 }))
+      .required(t('required')),
+    email: yup.string()
+      .email(t('email'))
+      .required(t('required')),
+    message: yup.string()
+      .min(10, t('minLength', { 0: 10 }))
+      .required(t('required')),
+  });
+}
+
+// Define the shape of the form values
+export type ContactFormValues = {
+  name: string;
+  email: string;
+  message: string;
+};
   

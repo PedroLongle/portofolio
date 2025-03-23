@@ -2,7 +2,7 @@
 
 import { useTranslations } from "@/i18n/client";
 import Link from "next/link";
-import ProjectCard from "@/components/ProjectCard";
+import ProjectCard from "@/components/project-card";
 
 export default function ProjectsPage() {
   const t = useTranslations("projects");
@@ -22,7 +22,7 @@ export default function ProjectsPage() {
           <ProjectCard 
             title={"Personal Portofolio"} 
             description={"Personal portofolio website."}
-            image="/projects/portofolio.png" 
+            image="/projects/portofolio-thumb.svg" 
             link="/projects/portofolio"
           />
           <ProjectCard 

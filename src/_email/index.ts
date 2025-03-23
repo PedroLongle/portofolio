@@ -1,5 +1,6 @@
 'use server';
 import nodemailer from 'nodemailer';
+import contactRequestEmailTemplate from './template.';
 
 const SMTP_SERVER_HOST = process.env.SMTP_SERVER_HOST;
 const SMTP_SERVER_USERNAME = process.env.SMTP_SERVER_USERNAME;
@@ -20,17 +21,13 @@ const transporter = nodemailer.createTransport({
 
 // export function to send email
 export async function sendMail({
+  name,
   email,
-  sendTo,
-  subject,
-  text,
-  html,
+  message,
 }: {
+  name: string;
   email: string;
-  sendTo?: string;
-  subject: string;
-  text: string;
-  html?: string;
+  message: string;
 }) {
   try {
      await transporter.verify();
@@ -40,10 +37,9 @@ export async function sendMail({
   }
   const info = await transporter.sendMail({
     from: email,
-    to: sendTo || SITE_MAIL_RECIEVER,
-    subject: subject,
-    text: text,
-    html: html ? html : '',
+    to: SITE_MAIL_RECIEVER,
+    subject: "Portofolio | Novo Contacto",
+    html: contactRequestEmailTemplate({ name, email, message })
   });
   console.log('Message Sent', info.messageId);
   console.log('Mail sent to', SITE_MAIL_RECIEVER);

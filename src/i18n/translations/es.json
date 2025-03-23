@@ -229,7 +229,7 @@
       }
     }
   },
-  "validation": {
+  "validations": {
     "required": "Este campo es obligatorio",
     "email": "Por favor, introduce una dirección de email válida",
     "minLength": "Debe tener al menos {0} caracteres",

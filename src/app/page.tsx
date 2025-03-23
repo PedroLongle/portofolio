@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import ProjectCard from "@/components/ProjectCard";
-import { StatsCounter } from "@/components/ui/stats-counter";
+import ProjectCard from "@/components/project-card";
+import { StatsCounter } from "@/components/stats-counter";
 import { useTranslations } from "@/i18n/client";
 
 export default function Home() {
@@ -105,7 +105,7 @@ export default function Home() {
             <ProjectCard 
               title={"Personal Portofolio"} 
               description={"Personal portofolio website."}
-              image="/projects/portofolio.png" 
+              image="/projects/portofolio-thumb.svg" 
               link="/projects/portofolio"
             />
             <ProjectCard 

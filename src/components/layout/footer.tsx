@@ -8,7 +8,7 @@ export default function Footer() {
   const navT = useTranslations("common.nav");
   
   return (
-    <footer className="bg-zinc-900 py-16">
+    <footer className="bg-zinc-900 pt-16 pb-8 mt-auto">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-2">
@@ -53,6 +53,8 @@ export default function Footer() {
               <FooterLink href="/support">{navT('support')}</FooterLink>
             </ul>
           </div>
+
+          
           
           <div>
             <h3 className="text-lg font-semibold mb-4">{t('contact')}</h3>

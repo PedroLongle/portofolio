@@ -28,7 +28,7 @@ interface I18nProviderProps {
 export function I18nProvider({ children }: I18nProviderProps) {
   // Get saved locale from localStorage or use default
   const [locale, setLocaleState] = useState<Locale>(defaultLocale);
-  const [messages, setMessages] = useState<Record<string, string>>({});
+  const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(true);
 
   // Initialize locale from localStorage if available
@@ -46,8 +46,8 @@ export function I18nProvider({ children }: I18nProviderProps) {
       setLoading(true);
       try {
         // Use dynamic import to load the correct message file
-        const localeMessages = (await import(`./messages/${locale}.json`)).default;
-        setMessages(localeMessages);
+        const localeTranslations = (await import(`./translations/${locale}.json`)).default;
+        setTranslations(localeTranslations);
         
         // Update HTML lang attribute
         document.documentElement.lang = locale;
@@ -58,8 +58,8 @@ export function I18nProvider({ children }: I18nProviderProps) {
         console.error(`Failed to load messages for locale ${locale}`, error);
         // Fallback to default locale if loading fails
         if (locale !== defaultLocale) {
-          const defaultMessages = (await import(`./messages/${defaultLocale}.json`)).default;
-          setMessages(defaultMessages);
+          const defaultTranslations = (await import(`./translations/${defaultLocale}.json`)).default;
+          setTranslations(defaultTranslations);
         }
       } finally {
         setLoading(false);
@@ -77,15 +77,15 @@ export function I18nProvider({ children }: I18nProviderProps) {
   };
 
   // Render loading state while messages are being loaded
-  if (loading && Object.keys(messages).length === 0) {
+  if (loading && Object.keys(translations).length === 0) {
     return <div>Loading...</div>;
   }
 
   return (
-    <I18nContext.Provider value={{ locale, setLocale, messages }}>
+    <I18nContext.Provider value={{ locale, setLocale, messages: translations }}>
       <IntlProvider 
         locale={locale} 
-        messages={messages}
+        messages={translations}
       >
         {children}
       </IntlProvider>

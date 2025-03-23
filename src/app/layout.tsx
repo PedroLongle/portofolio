@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import { CursorTrail } from "@/components/ui/cursor-trail";
+import Footer from "@/components/layout/footer";
+import { CursorTrail } from "@/components/layout/cursor-trail";
 import { I18nProvider } from "@/i18n/provider";
 import { defaultLocale } from "@/i18n/config";
+import Header from "@/components/layout/header";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={defaultLocale} suppressHydrationWarning className={montserrat.variable}>
-      <body>
+      <body className="flex flex-col min-h-screen overflow-x-hidden">
         <I18nProvider>
           <ThemeProvider
             attribute="class"
@@ -34,7 +34,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Header />
-            <main>
+            <main className="flex-grow">
               {children}
             </main>
             <Footer />
