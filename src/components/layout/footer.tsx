@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useTranslations } from "@/i18n/client";
+import Image from "next/image";
 
 export default function Footer() {
   const t = useTranslations("common.footer");
@@ -12,18 +13,8 @@ export default function Footer() {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-2">
-            <Link href="/" className="flex items-center mb-6">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                className="h-8 w-8 mr-2 text-primary"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-              </svg>
+            <Link href="/" className="flex items-center mb-6 gap-4">
+              <Image src="/logos/PL-white.svg" alt="logo" width={50} height={50} priority />
               <span className="text-xl font-bold">Pedro Longle</span>
             </Link>
             <p className="text-zinc-400 max-w-md mb-6">

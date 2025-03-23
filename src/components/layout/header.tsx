@@ -5,7 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useTranslations } from "@/i18n/client"
 import LanguageSelector from "./language-selector"
-
+import Image from "next/image"
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
@@ -27,17 +27,7 @@ export default function Header() {
     <header className={`header ${scrolled ? 'header-scrolled' : ''}`}>
       <div className="container flex justify-between items-center">
         <Link href="/" className="font-bold text-xl" style={{ color: 'var(--primary)' }}>
-          <svg 
-            viewBox="0 0 24 24" 
-            fill="none"
-            className="h-8 w-8"
-            stroke="currentColor" 
-            strokeWidth="2" 
-            strokeLinecap="round" 
-            strokeLinejoin="round"
-          >
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-          </svg>
+         <Image src="/logos/PL.svg" alt="logo" width={50} height={50} priority />
         </Link>
         <div className="flex items-center gap-4">
           <nav className="flex items-center gap-6">
