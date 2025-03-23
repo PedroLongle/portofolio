@@ -8,7 +8,7 @@ export default function PortfolioProjectPage() {
   const [activeTab, setActiveTab] = useState<"repo" | "tech" | "performance">("repo");
 
   return (
-    <div className="section" style={{ paddingTop: "8rem" }}>
+    <div className="section">
       <div className="container">
         <div className="mx-auto">
           <Link 
@@ -32,9 +32,27 @@ export default function PortfolioProjectPage() {
             />
           </div>
           
-          <p className="text-lg mb-10">
+          <p className="text-lg mb-8">
             A modern, responsive portfolio website built with Next.js and Tailwind CSS. This project showcases my work, skills, and services while providing multiple ways for potential clients to contact me.
           </p>
+          
+          {/* Tech Tags */}
+          <div className="flex flex-wrap gap-4 mb-10">
+            {[
+              "Next.js", 
+              "React", 
+              "TypeScript", 
+              "Tailwind CSS", 
+              "i18n"
+            ].map((tech, index) => (
+              <span 
+                key={index} 
+                className="inline-flex items-center px-5 py-1.5 bg-card border border-border text-sm font-medium rounded-xl hover:bg-muted transition-colors"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
           
           {/* Tabs */}
           <div className=" dark:border-gray-700 mb-8">
@@ -85,7 +103,7 @@ export default function PortfolioProjectPage() {
                   </div>
                   <p className="mb-4">The complete source code for this portfolio is available on GitHub. Feel free to explore the code structure, components, and implementation details.</p>
                   <a 
-                    href="https://github.com/yourusername/portfolio" 
+                    href="https://github.com/PedroLongle/portofolio" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors"
@@ -115,19 +133,16 @@ export default function PortfolioProjectPage() {
               <div className="space-y-8">
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                   {[
-                    { name: "Next.js", icon: "nextjs.svg", description: "React framework for production" },
-                    { name: "TypeScript", icon: "typescript.svg", description: "Typed JavaScript for better code quality" },
+                    { name: "Next.js", icon: "next.svg", description: "React framework for production" },
+                    { name: "TypeScript", icon: "ts.svg", description: "Typed JavaScript for better code quality" },
                     { name: "Tailwind CSS", icon: "tailwind.svg", description: "Utility-first CSS framework" },
                     { name: "React", icon: "react.svg", description: "UI component library" },
-                    { name: "Framer Motion", icon: "framer.svg", description: "Animation library" },
-                    { name: "Vercel", icon: "vercel.svg", description: "Deployment platform" }
+                    { name: "Firebase [App Hosting]", icon: "firebase.svg", description: "Deployment platform" }
                   ].map((tech, index) => (
                     <div key={index} className="bg-card p-4 rounded-lg shadow-sm">
                       <div className="flex items-center space-x-3 mb-2">
-                        <div className="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full">
-                          <svg className="w-6 h-6 text-primary" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2z" />
-                          </svg>
+                        <div className="w-7 h-7 flex items-center justify-center bg-primary/10 rounded-full">
+                          <Image src={`/logos/${tech.icon}`} alt={tech.name} width={30} height={30} />
                         </div>
                         <h3 className="font-medium">{tech.name}</h3>
                       </div>

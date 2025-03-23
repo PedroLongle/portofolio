@@ -30,7 +30,7 @@ export default function Home() {
           </div>
           <div className="lg:w-1/2">
             <Image 
-              src="/images/home.svg"
+              src="/illustrations/home.svg"
               alt={homeT('heroImageAlt')} 
               width={600} 
               height={800}

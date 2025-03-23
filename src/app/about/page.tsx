@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import { useTranslations } from "@/i18n/client";
+import { Calendar, House } from "lucide-react";
+import Link from "@/components/ui/link";
+
 
 export default function AboutPage() {
   const t = useTranslations('about');
@@ -10,11 +13,11 @@ export default function AboutPage() {
     <div className="section" style={{ paddingTop: '8rem' }}>
       <div className="container">
         {/* Hero Section */}
-        <div className="flex flex-col lg:flex-row items-center gap-32 mb-20">
+        <div className="flex flex-col lg:flex-row items-center gap-32 mb-24">
           <div className="lg:w-2/5">
             <div className="relative w-full h-0" style={{ paddingBottom: '100%' }}>
               <Image 
-                src="/images/coding.svg" 
+                src="/illustrations/coding.svg" 
                 alt={t('heroImageAlt')}
                 fill
                 className="rounded-xl object-cover"
@@ -24,7 +27,7 @@ export default function AboutPage() {
               />
             </div>
           </div>
-          <div className="lg:w-3/5 space-y-6">
+          <div className="w-full space-y-6">
             <h1 className="text-4xl font-bold mb-6">{t('title')}</h1>
             <p className="text-lg text-muted-foreground">
               {t('introduction')}
@@ -32,52 +35,35 @@ export default function AboutPage() {
             <p className="text-lg text-muted-foreground">
               {t('mission')}
             </p>
-            <div className="grid grid-cols-2 gap-8 mt-8">
+            <div className="gap-8 mt-20">
               <div>
                 <h3 className="text-xl font-bold mb-2">{t('education.title')}</h3>
-                <ul className="space-y-3">
+                <ul className="space-y-5">
                   <li>
-                    <div className="text-md font-medium">{t('education.degree1')}</div>
-                    <div className="text-sm text-muted-foreground">{t('education.school1')}</div>
-                    <div className="text-sm text-muted-foreground">{t('education.year1')}</div>
-                  </li>
-                  <li>
-                    <div className="text-md font-medium">{t('education.degree2')}</div>
-                    <div className="text-sm text-muted-foreground">{t('education.school2')}</div>
-                    <div className="text-sm text-muted-foreground">{t('education.year2')}</div>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">{t('languages.title')}</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center justify-between">
-                    <span>{t('languages.english')}</span>
-                    <div className="flex space-x-1">
-                      {[1, 2, 3, 4, 5].map(i => (
-                        <div key={i} className="w-2 h-2 rounded-full bg-primary"></div>
-                      ))}
+                    <Link isExternal href={t('education.degree1Link')} target="_blank" weight="medium">{t('education.degree1')}</Link>
+                    <div className="flex flex-row items-center gap-2 mt-1">
+                      <House className="w-4 h-4" />
+                        <Link isExternal href={t('education.school1Link')} target="_blank" className="text-sm">{t('education.school1')}</Link>
+                      </div>
+                      <div className="flex flex-row items-center gap-2 mt-1">
+                        <Calendar className="w-4 h-4" />
+                        <div className="text-sm text-muted-foreground">{t('education.year1')}</div>
                     </div>
                   </li>
-                  <li className="flex items-center justify-between">
-                    <span>{t('languages.portuguese')}</span>
-                    <div className="flex space-x-1">
-                      {[1, 2, 3, 4, 5].map(i => (
-                        <div key={i} className="w-2 h-2 rounded-full bg-primary"></div>
-                      ))}
+                  <li>
+                    <Link isExternal href={t('education.degree2Link')} target="_blank" weight="medium">{t('education.degree2')}</Link>
+                    <div className="flex flex-row items-center gap-2 mt-1">
+                      <House className="w-4 h-4" />
+                      <Link isExternal href={t('education.school2Link')} target="_blank" className="text-sm">{t('education.school2')}</Link>
                     </div>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <span>{t('languages.spanish')}</span>
-                    <div className="flex space-x-1">
-                      {[1, 2, 3, 4].map(i => (
-                        <div key={i} className="w-2 h-2 rounded-full bg-primary"></div>
-                      ))}
-                      <div className="w-2 h-2 rounded-full bg-zinc-600"></div>
+                    <div className="flex flex-row items-center gap-2 mt-1">
+                      <Calendar className="w-4 h-4" />
+                      <div className="text-sm text-muted-foreground">{t('education.year2')}</div>
                     </div>
                   </li>
                 </ul>
               </div>
+             
             </div>
           </div>
         </div>
@@ -125,107 +111,197 @@ export default function AboutPage() {
         </div>
         
         {/* Skills Section */}
-        <div>
+        <div className="mb-20">
           <h2 className="text-3xl font-bold mb-8">{t('skills.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div>
               <h3 className="text-xl font-bold mb-4">{t('skills.technical.title')}</h3>
               <div className="space-y-4">
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span>JavaScript / TypeScript</span>
-                    <span>95%</span>
-                  </div>
-                  <div className="h-2 bg-zinc-800 rounded-full">
-                    <div className="h-2 bg-primary rounded-full" style={{ width: '95%' }}></div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span>React / Next.js</span>
-                    <span>90%</span>
-                  </div>
-                  <div className="h-2 bg-zinc-800 rounded-full">
-                    <div className="h-2 bg-primary rounded-full" style={{ width: '90%' }}></div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span>Node.js</span>
-                    <span>85%</span>
-                  </div>
-                  <div className="h-2 bg-zinc-800 rounded-full">
-                    <div className="h-2 bg-primary rounded-full" style={{ width: '85%' }}></div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span>Python</span>
-                    <span>80%</span>
-                  </div>
-                  <div className="h-2 bg-zinc-800 rounded-full">
-                    <div className="h-2 bg-primary rounded-full" style={{ width: '80%' }}></div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span>Docker / Kubernetes</span>
-                    <span>75%</span>
-                  </div>
-                  <div className="h-2 bg-zinc-800 rounded-full">
-                    <div className="h-2 bg-primary rounded-full" style={{ width: '75%' }}></div>
-                  </div>
-                </div>
+                {[
+                    { name: "Node.js", score: 85, color: "text-green-500" },
+                    { name: "React", score: 90, color: "text-green-500" },
+                    { name: "Next.js", score: 95, color: "text-green-500" },
+                    { name: "Typescript", score: 100, color: "text-green-500" },
+                    { name: "Flutter", score: 95, color: "text-green-500" },
+                  ].map((metric, index) => (
+                    <div key={index}>
+                      <div className="flex justify-between mb-2">
+                        <span className="text-sm font-medium">{metric.name}</span>
+                        <span className="text-sm text-green-500">{metric.score}%</span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                        <div className="bg-green-500 h-2.5 rounded-full" style={{ width: `${metric.score}%` }}></div>
+                      </div>
+                    </div>
+                  ))}
               </div>
             </div>
             <div>
               <h3 className="text-xl font-bold mb-4">{t('skills.soft.title')}</h3>
               <div className="space-y-4">
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span>{t('skills.soft.communication')}</span>
-                    <span>90%</span>
+              {[
+                    { name: t('skills.soft.communication'), score: 90, color: "text-green-500" },
+                    { name: t('skills.soft.teamwork'), score: 95, color: "text-green-500" },
+                    { name: t('skills.soft.problemSolving'), score: 85, color: "text-green-500" },
+                    { name: t('skills.soft.creativity'), score: 80, color: "text-green-500" },
+                    { name: t('skills.soft.leadership'), score: 85, color: "text-green-500" },
+                  ].map((metric, index) => (
+                    <div key={index}>
+                      <div className="flex justify-between mb-2">
+                        <span className="text-sm font-medium">{metric.name}</span>
+                        <span className="text-sm text-green-700">{metric.score}%</span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                        <div className="bg-green-700 h-2.5 rounded-full" style={{ width: `${metric.score}%` }}></div>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Certifications Section */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold mb-4">{t('certifications.title')}</h2>
+          <div className="flex flex-col justify-center">
+            {/* Certificate */}
+            <div className="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-xs">
+              <div className="relative w-full h-64 bg-muted overflow-hidden group">
+                <Link 
+                  href={t('certifications.cert1.credlyLink')}
+                  target="_blank"
+                  className="block w-full h-full"
+                >
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
+                    <span className="text-white font-medium bg-primary/80 rounded-md">
+                      {t('certifications.cert1.verify')}
+                    </span>
                   </div>
-                  <div className="h-2 bg-zinc-800 rounded-full">
-                    <div className="h-2 bg-primary rounded-full" style={{ width: '90%' }}></div>
-                  </div>
+                  <Image 
+                    src="/certificates/google-ai-essentials.png" 
+                    alt={t('certifications.cert1.imageAlt')}
+                    width={350}
+                    height={150}
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </Link>
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-lg mb-1">{t('certifications.cert1.title')}</h3>
+                <div className="flex items-center mb-2">
+                  <span className="text-sm text-muted-foreground mr-1">{t('certifications.issuedBy')}:</span>
+                  <Link 
+                    href={t('certifications.cert1.issuerLink')} 
+                    className="text-sm text-muted-foreground hover:text-primary"
+                    isExternal
+                  >
+                    {t('certifications.cert1.issuer')}
+                  </Link>
                 </div>
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span>{t('skills.soft.teamwork')}</span>
-                    <span>95%</span>
-                  </div>
-                  <div className="h-2 bg-zinc-800 rounded-full">
-                    <div className="h-2 bg-primary rounded-full" style={{ width: '95%' }}></div>
-                  </div>
+                <div className="flex flex-row jus items-center mb-4 gap-1">
+                  <Calendar className="w-4 h-4 mr-1" />
+                  <p className="text-sm text-muted-foreground">{t('certifications.cert1.date')}</p>
                 </div>
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span>{t('skills.soft.problemSolving')}</span>
-                    <span>85%</span>
-                  </div>
-                  <div className="h-2 bg-zinc-800 rounded-full">
-                    <div className="h-2 bg-primary rounded-full" style={{ width: '85%' }}></div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span>{t('skills.soft.creativity')}</span>
-                    <span>80%</span>
-                  </div>
-                  <div className="h-2 bg-zinc-800 rounded-full">
-                    <div className="h-2 bg-primary rounded-full" style={{ width: '80%' }}></div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span>{t('skills.soft.leadership')}</span>
-                    <span>85%</span>
-                  </div>
-                  <div className="h-2 bg-zinc-800 rounded-full">
-                    <div className="h-2 bg-primary rounded-full" style={{ width: '85%' }}></div>
-                  </div>
-                </div>
+                <Link 
+                  href={t('certifications.cert1.credlyLink')}
+                  isExternal
+                  className="inline-flex items-center text-sm font-medium text-primary hover:underline"
+                >
+                  {t('certifications.cert1.verify')}
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Languages Section */}
+        <div>
+          <h2 className="text-3xl font-bold">{t('languages.title')}</h2>
+          <p className="text-sm text-muted-foreground mt-2 mb-12 italic">
+            {t('languages.proficiency.levels.a')}{' '}•{' '}
+            {t('languages.proficiency.levels.b')}{' '}•{' '}
+            {t('languages.proficiency.levels.c')}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div>
+              <h3 className="text-xl font-bold mb-4">{t('languages.portuguese')} (🇵🇹)</h3>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-border rounded-lg overflow-hidden">
+                  <thead>
+                    <tr className="bg-muted">
+                      <th colSpan={2} className="px-4 py-3 text-center font-semibold border-b border-border">{t('languages.proficiency.comprehension')}</th>
+                      <th colSpan={2} className="px-4 py-3 text-center font-semibold border-b border-border">{t('languages.proficiency.communicate')}</th>
+                      <th className="px-4 py-3 text-center font-semibold border-b border-border">{t('languages.proficiency.writing')}</th>
+                    </tr>
+                    <tr className="bg-muted/50">
+                      <th className="px-4 py-2 text-sm font-medium border-b border-border">{t('languages.proficiency.oral')}</th>
+                      <th className="px-4 py-2 text-sm font-medium border-b border-border">{t('languages.proficiency.reading')}</th>
+                      <th className="px-4 py-2 text-sm font-medium border-b border-border">{t('languages.proficiency.oralProduction')}</th>
+                      <th className="px-4 py-2 text-sm font-medium border-b border-border">{t('languages.proficiency.oralInteraction')}</th>
+                      <th className="px-4 py-2 text-sm font-medium border-b border-border">{t('languages.proficiency.writing')}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-card">
+                      <td className="px-4 py-3 text-center font-bold border-b border-border">
+                        {t('languages.proficiency.portuguese.oralComprehensionLevel')}
+                      </td>
+                      <td className="px-4 py-3 text-center font-bold border-b border-border">
+                        {t('languages.proficiency.portuguese.readingLevel')}
+                      </td>
+                      <td className="px-4 py-3 text-center font-bold border-b border-border">
+                        {t('languages.proficiency.portuguese.oralProductionLevel')}
+                      </td>
+                      <td className="px-4 py-3 text-center font-bold border-b border-border">
+                        {t('languages.proficiency.portuguese.oralInteractionLevel')}
+                      </td>
+                      <td className="px-4 py-3 text-center font-bold border-b border-border">
+                        {t('languages.proficiency.portuguese.writingLevel')}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-4">{t('languages.english')} (🇬🇧)</h3>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-border rounded-lg overflow-hidden">
+                  <thead>
+                    <tr className="bg-muted">
+                      <th colSpan={2} className="px-4 py-3 text-center font-semibold border-b border-border">{t('languages.proficiency.comprehension')}</th>
+                      <th colSpan={2} className="px-4 py-3 text-center font-semibold border-b border-border">{t('languages.proficiency.communicate')}</th>
+                      <th className="px-4 py-3 text-center font-semibold border-b border-border">{t('languages.proficiency.writing')}</th>
+                    </tr>
+                    <tr className="bg-muted/50">
+                      <th className="px-4 py-2 text-sm font-medium border-b border-border">{t('languages.proficiency.oral')}</th>
+                      <th className="px-4 py-2 text-sm font-medium border-b border-border">{t('languages.proficiency.reading')}</th>
+                      <th className="px-4 py-2 text-sm font-medium border-b border-border">{t('languages.proficiency.oralProduction')}</th>
+                      <th className="px-4 py-2 text-sm font-medium border-b border-border">{t('languages.proficiency.oralInteraction')}</th>
+                      <th className="px-4 py-2 text-sm font-medium border-b border-border">{t('languages.proficiency.writing')}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-card">
+                      <td className="px-4 py-3 text-center font-bold border-b border-border">
+                        {t('languages.proficiency.english.oralComprehensionLevel')}
+                      </td>
+                      <td className="px-4 py-3 text-center font-bold border-b border-border">
+                        {t('languages.proficiency.english.readingLevel')}
+                      </td>
+                      <td className="px-4 py-3 text-center font-bold border-b border-border">
+                        {t('languages.proficiency.english.oralProductionLevel')}
+                      </td>
+                      <td className="px-4 py-3 text-center font-bold border-b border-border">
+                        {t('languages.proficiency.english.oralInteractionLevel')}
+                      </td>
+                      <td className="px-4 py-3 text-center font-bold border-b border-border">
+                        {t('languages.proficiency.english.writingLevel')}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>

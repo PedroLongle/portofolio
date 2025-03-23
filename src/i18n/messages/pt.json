@@ -67,7 +67,8 @@
       "send": "Enviar Mensagem",
       "sending": "A enviar...",
       "success": "Mensagem enviada com sucesso!",
-      "error": "Ocorreu um erro ao enviar a sua mensagem. Por favor, tente novamente."
+      "error": "Ocorreu um erro ao enviar a sua mensagem. Por favor, tente novamente.",
+      "close": "Fechar mensagem"
     },
     "contactInfo": {
       "title": "Informações de Contacto",
@@ -133,34 +134,67 @@
     "mission": "A minha missão é criar software intuitivo, eficiente e escalável que tenha um impacto positivo. Acredito em código limpo, design centrado no utilizador e aprendizagem contínua para estar na vanguarda da tecnologia.",
     "education": {
       "title": "Educação",
-      "degree1": "Mestrado em Ciência da Computação",
-      "school1": "Universidade de Stanford",
-      "year1": "2012 - 2014",
-      "degree2": "Licenciatura em Engenharia Informática",
-      "school2": "UC Berkeley",
-      "year2": "2008 - 2012"
+      "degree1": "Curso Técnico Superior Profissional (CTeSP) - Desenvolvimento de Software",
+      "degree1Link": "https://www.istec.pt/index.php/ctesp-desenvolvimento-de-software/",
+      "school1": "Instituto Superior de Tecnologias Avançadas (ISTEC), Lisboa",
+      "school1Link": "https://www.istec.pt/",
+      "year1": "2023 - 2025",
+      "degree2": "Curso Secundário Profissional - Gestão e Programação de Sistemas Informáticos",
+      "degree2Link": "https://escoladigital.com/cursos-profissionais/gestao-programacao/",
+      "school2": "Escola Profissional de Tecnologia Digital, Lisboa",
+      "school2Link": "https://escoladigital.com/",
+      "year2": "2020-2023"
     },
     "languages": {
       "title": "Idiomas",
       "english": "Inglês",
       "portuguese": "Português",
-      "spanish": "Espanhol"
+      "spanish": "Espanhol",
+      "proficiency": {
+        "title": "Language Proficiency",
+        "comprehension": "Compreensão",
+        "oral": "Compreensão Oral",
+        "reading": "Leitura",
+        "communicate": "Comunicação",
+        "oralProduction": "Produção Oral",
+        "oralInteraction": "Interação Oral",
+        "writing": "Escrita",
+        "levels": {
+          "a": "A - Utilizador Básico (A1 e A2)",
+          "b": "B - Utilizador Independente (B1 e B2)",
+          "c": "C - Utilizador Proficiente (C1 e C2)"
+        },
+        "english": {
+          "oralComprehensionLevel": "B2",
+          "readingLevel": "B2",
+          "oralProductionLevel": "B1",
+          "oralInteractionLevel": "B1",
+          "writingLevel": "B1"
+        },
+        "portuguese": {
+          "oralComprehensionLevel": "C2",
+          "readingLevel": "C2",
+          "oralProductionLevel": "C2",
+          "oralInteractionLevel": "C2",
+          "writingLevel": "C2"
+        }
+      }
     },
     "experience": {
       "title": "Experiência",
       "job1": {
-        "title": "Engenheiro de Software Sénior",
-        "company": "Tech Innovations Inc.",
-        "period": "2018 - Presente",
+        "title": "Engenheiro de Software Mid",
+        "company": "Procimo Tech, Lda",
+        "period": "2024 - Presente",
         "description": "Liderando o desenvolvimento de aplicações e serviços web de alto tráfego, focando na otimização de desempenho e escalabilidade.",
         "bullet1": "Redesenhei a arquitetura de um serviço crítico, resultando numa melhoria de 70% no tempo de resposta",
         "bullet2": "Implementei pipelines de CI/CD que reduziram o tempo de implantação em 60%",
         "bullet3": "Orientei desenvolvedores juniores e estabeleci padrões de codificação entre equipas"
       },
       "job2": {
-        "title": "Desenvolvedor Full Stack",
-        "company": "Digital Solutions LLC",
-        "period": "2014 - 2018",
+        "title": "Desenvolvedor Frontend Junior",
+        "company": "Procimo Tech, Lda",
+        "period": "2023 - 2024",
         "description": "Desenvolvi aplicações web full-stack para clientes nos setores de finanças, saúde e e-commerce.",
         "bullet1": "Construí aplicações web responsivas usando React, Node.js e MongoDB",
         "bullet2": "Implementei sistemas de processamento de pagamentos seguros para plataformas de e-commerce",
@@ -179,6 +213,19 @@
         "problemSolving": "Resolução de Problemas",
         "creativity": "Criatividade",
         "leadership": "Liderança"
+      }
+    },
+    "certifications": {
+      "title": "Certificações",
+      "issuedBy": "Emitido por",
+      "cert1": {
+        "title": "Google AI Essentials",
+        "issuer": "Coursera",
+        "issuerLink": "https://www.coursera.org/",
+        "date": "Janeiro 2024",
+        "imageAlt": "Certificado Google AI Essentials",
+        "credlyLink": "https://www.credly.com/badges/621d4879-98ef-4470-86d5-e93767d2836c/",
+        "verify": "Verificar no Credly"
       }
     }
   },

@@ -67,7 +67,8 @@
       "send": "Send Message",
       "sending": "Sending...",
       "success": "Message sent successfully!",
-      "error": "There was an error sending your message. Please try again."
+      "error": "There was an error sending your message. Please try again.",
+      "close": "Close message"
     },
     "contactInfo": {
       "title": "Contact Information",
@@ -133,34 +134,67 @@
     "mission": "My mission is to create intuitive, efficient, and scalable software that makes a positive impact. I believe in clean code, user-centered design, and continuous learning to stay at the forefront of technology.",
     "education": {
       "title": "Education",
-      "degree1": "M.S. Computer Science",
-      "school1": "Stanford University",
-      "year1": "2012 - 2014",
-      "degree2": "B.S. Computer Engineering",
-      "school2": "UC Berkeley",
-      "year2": "2008 - 2012"
+      "degree1": "Higher Professional Technical Course - Software Development",
+      "degree1Link": "https://www.istec.pt/index.php/ctesp-desenvolvimento-de-software/",
+      "school1": "Instituto Superior de Tecnologias Avançadas (ISTEC), Lisbon",
+      "school1Link": "https://www.istec.pt/",
+      "year1": "2023 - 2025",
+      "degree2": "High School - Computer Systems Management and Programming Technician Course",
+      "degree2Link": "https://escoladigital.com/cursos-profissionais/gestao-programacao/",
+      "school2": "Escola Profissional de Tecnologia Digital, Lisbon",
+      "school2Link": "https://escoladigital.com/",
+      "year2": "2020-2023"
     },
     "languages": {
       "title": "Languages",
       "english": "English",
       "portuguese": "Portuguese",
-      "spanish": "Spanish"
+      "spanish": "Spanish",
+      "proficiency": {
+        "title": "Language Proficiency",
+        "comprehension": "Comprehension",
+        "oral": "Oral Comprehension",
+        "reading": "Reading",
+        "communicate": "Communicate",
+        "oralProduction": "Oral Production",
+        "oralInteraction": "Oral Interaction",
+        "writing": "Writing",
+        "levels": {
+          "a": "A - Basic User (A1 and A2)",
+          "b": "B - Independent User (B1 and B2)",
+          "c": "C - Proficient User (C1 and C2)"
+        },
+        "english": {
+          "oralComprehensionLevel": "B2",
+          "readingLevel": "B2",
+          "oralProductionLevel": "B1",
+          "oralInteractionLevel": "B1",
+          "writingLevel": "B1"
+        },
+        "portuguese": {
+          "oralComprehensionLevel": "C2",
+          "readingLevel": "C2",
+          "oralProductionLevel": "C2",
+          "oralInteractionLevel": "C2",
+          "writingLevel": "C2"
+        }
+      }
     },
     "experience": {
       "title": "Experience",
       "job1": {
-        "title": "Senior Software Engineer",
-        "company": "Tech Innovations Inc.",
-        "period": "2018 - Present",
+        "title": "Junior/Mid Software Engineer",
+        "company": "Procimo Tech, Lda",
+        "period": "2024 - Present",
         "description": "Leading development on high-traffic web applications and services, focusing on performance optimization and scalability.",
         "bullet1": "Redesigned the architecture of a critical service, resulting in 70% improvement in response time",
         "bullet2": "Implemented CI/CD pipelines that reduced deployment time by 60%",
         "bullet3": "Mentored junior developers and established coding standards across teams"
       },
       "job2": {
-        "title": "Full Stack Developer",
-        "company": "Digital Solutions LLC",
-        "period": "2014 - 2018",
+        "title": "Junior Frontend Developer",
+        "company": "Procimo Tech, Lda",
+        "period": "2023 - 2024",
         "description": "Developed full-stack web applications for clients in finance, healthcare, and e-commerce sectors.",
         "bullet1": "Built responsive web applications using React, Node.js, and MongoDB",
         "bullet2": "Implemented secure payment processing systems for e-commerce platforms",
@@ -179,6 +213,19 @@
         "problemSolving": "Problem Solving",
         "creativity": "Creativity",
         "leadership": "Leadership"
+      }
+    },
+    "certifications": {
+      "title": "Certifications",
+      "issuedBy": "Issued by",
+      "cert1": {
+        "title": "Google AI Essentials",
+        "issuer": "Coursera",
+        "issuerLink": "https://www.coursera.org/",
+        "date": "January 2024",
+        "imageAlt": "Google AI Essentials Certificate",
+        "credlyLink": "https://www.credly.com/badges/621d4879-98ef-4470-86d5-e93767d2836c/",
+        "verify": "Verify on Credly"
       }
     }
   },

@@ -37,7 +37,7 @@ export default function SupportPage() {
                       className="p-2 text-white rounded-2xl text-sm font-medium transition-colors"
                     >
                       <Image 
-                        src="/bmc-button.svg"
+                        src="/bmc/button.svg"
                         alt="Hire me" 
                         width={100} 
                         height={50}
@@ -50,7 +50,7 @@ export default function SupportPage() {
                 <div className="relative flex items-center justify-center">
                   <div className="w-30% flex items-center justify-center p-2 mr-10">
                     <Image 
-                      src={"/bmc_qr.png"}
+                      src={"/bmc/qr.png"}
                       alt="Buy me a coffee" 
                       width={800} 
                       height={800}
@@ -69,7 +69,7 @@ export default function SupportPage() {
                   {/* Image placeholder */}
                   <div className="w-full h-full flex items-center justify-center p-2">
                     <Image 
-                      src="/images/hire.svg"
+                      src="/illustrations/hire.svg"
                       alt="Hire me" 
                       width={400} 
                       height={600}
@@ -125,7 +125,7 @@ export default function SupportPage() {
                         className="px-4 py-2 bg-[#1DBF73] text-white rounded-md text-sm font-medium hover:bg-[#19a764] transition-colors w-full flex items-center justify-center"
                       >
                         <Image 
-                          src="/images/fiverr.svg"
+                          src="/logos/fiverr.svg"
                           alt="Hire me" 
                           width={100} 
                           height={50}
@@ -140,7 +140,7 @@ export default function SupportPage() {
                         className="px-4 py-2 bg-gray-200 text-white rounded-md text-sm font-medium hover:bg-gray-300 transition-colors w-full flex items-center justify-center"
                       >
                        <Image 
-                          src="/images/upwork.svg"
+                          src="/logos/upwork.svg"
                           alt="Hire me" 
                           width={100} 
                           height={50}
@@ -213,7 +213,7 @@ export default function SupportPage() {
                   {/* Image placeholder */}
                   <div className="w-full h-full flex items-center justify-center p-10">
                     <Image 
-                      src="/images/support.svg"
+                      src="/illustrations/support.svg"
                       alt="Support" 
                       width={200} 
                       height={400}

@@ -7,10 +7,15 @@ import { ContactoFormValues, schema } from "./schema";
 import { Form } from "@/components/ui/form";
 import FormInput from "@/components/ui/form-input";
 import { Spinner } from "@/components/ui/spinner";
+import { sendMail } from "@/_email";
+import Image from "next/image";
+import { useTranslations } from "@/i18n/client";
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
+  const t = useTranslations('contact.form');
+  const formSuccess = useTranslations('formSuccess');
   
   const form = useForm<ContactoFormValues>({
     resolver: yupResolver(schema),
@@ -20,17 +25,21 @@ export default function ContactForm() {
   const onSubmit = async (data: ContactoFormValues) => {
     try {
       setIsLoading(true);
-      console.log("submitted data: ", data);
-      // In a real application, you would send the data to your API here
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Reset form and show success message
-      form.reset();
-      setIsSuccess(true);
-      
-      // Hide success message after 5 seconds
-      setTimeout(() => setIsSuccess(false), 5000);
+
+      const mailText = `Name: ${data.name}\n  Email: ${data.email}\nMessage: ${data.message}`;
+      const response = await sendMail({
+        email: data.email,
+        subject: t('subject'),
+        text: mailText,
+      });
+
+      if (response?.messageId) {
+        console.log("Contact Form Submitted Successfully.");
+        form.reset();
+        setIsSuccess(true);
+      } else {
+        setIsSuccess(false);
+      }
     } catch (error) {
       console.error("Form submission error:", error);
     } finally {
@@ -38,14 +47,37 @@ export default function ContactForm() {
     }
   };
 
+  if(isSuccess) {
+    return (
+      <div className="flex flex-col items-center justify-center w-full max-w-xl mx-auto relative">
+        <button 
+          onClick={() => setIsSuccess(false)} 
+          className="absolute top-0 right-0 p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+          aria-label={t('close')}
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        
+        <Image 
+            src="/illustrations/mail-sent.svg"
+            alt={formSuccess('title')} 
+            width={200} 
+            height={400}
+            style={{ width: '40%', height: 'auto', marginTop: '3.5rem' }}
+            priority
+          />
+        <div className="flex flex-col items-center justify-center gap-2 mt-12 w-full">
+          <h1 className="text-2xl font-bold">{formSuccess('title')}</h1>
+          <p className="text-sm text-muted-foreground">{formSuccess('subtitle')}</p>
+        </div>
+      </div>
+    );
+  }
+  
   return (
     <div className="w-full max-w-xl mx-auto">
-      {isSuccess && (
-        <div className="rounded-lg bg-green-100 p-4 mb-6 text-green-700 border border-green-200">
-          Thank you for your message! I&apos;ll get back to you soon.
-        </div>
-      )}
-      
       <Form 
         form={form} 
         onSubmit={onSubmit} 
@@ -53,23 +85,23 @@ export default function ContactForm() {
       >
         <FormInput
           name="name"
-          label="Name"
-          placeholder="Your name"
+          label={t('name')}
+          placeholder={t('name')}
         />
         
         <FormInput
           name="email"
-          label="Email"
+          label={t('email')}
           type="email"
-          placeholder="your.email@example.com"
+          placeholder={t('email')}
         />
         
         <FormInput
           name="message"
-          label="Message"
+          label={t('message')}
           multiline
           rows={5}
-          placeholder="How can I help you?"
+          placeholder={t('message')}
         />
         
         <div>
@@ -78,7 +110,7 @@ export default function ContactForm() {
               disabled={isLoading}
               className={"btn btn-primary w-full py-3 rounded-lg"}
           >
-              Send Message
+              {isLoading ? t('sending') : t('send')}
               {isLoading && <Spinner />}
             </button>
         </div>
