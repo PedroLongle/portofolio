@@ -1,0 +1,36 @@
+# Settings for Backend (on Cloud Run).
+# See https://firebase.google.com/docs/app-hosting/configure#cloud-run
+runConfig:
+  minInstances: 0
+  # maxInstances: 100
+  # concurrency: 80
+  # cpu: 1
+  # memoryMiB: 512
+
+# Environment variables and secrets.
+# env:
+  # Configure environment variables.
+  # See https://firebase.google.com/docs/app-hosting/configure#user-defined-environment
+  # - variable: MESSAGE
+  #   value: Hello world!
+  #   availability:
+  #     - BUILD
+  #     - RUNTIME
+
+  # Grant access to secrets in Cloud Secret Manager.
+  # See https://firebase.google.com/docs/app-hosting/configure#secret-parameters
+  # - variable: MY_SECRET
+  #   secret: mySecretRef
+
+env:
+  - variable: SMTP_SERVER_USERNAME
+    secret: projects/1019253267812/secrets/SMTP_SERVER_USERNAME
+
+  - variable: SMTP_SERVER_PASSWORD
+    secret: projects/1019253267812/secrets/SMTP_SERVER_PASSWORD
+
+  - variable: SMTP_SERVER_HOST
+    secret: projects/1019253267812/secrets/SMTP_SERVER_HOST
+
+  - variable: SITE_MAIL_RECIEVER
+    secret: projects/1019253267812/secrets/SITE_MAIL_RECIEVER

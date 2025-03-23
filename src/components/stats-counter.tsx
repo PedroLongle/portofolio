@@ -49,9 +49,9 @@ export function StatsCounter() {
   
   const stats = [
     { value: "2.5", label: t('yearsExperience') },
-    { value: "5+", label: t('clients') },
+    { value: "5", label: t('clients') },
     { value: "5k+", label: t('hoursCoding') },
-    { value: "5+", label: t('completedProjects') }
+    { value: "8", label: t('completedProjects') }
   ];
   
   useEffect(() => {
