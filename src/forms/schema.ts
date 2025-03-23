@@ -3,7 +3,7 @@ import { useTranslations } from "@/i18n/client";
 
 // Create a proper custom hook that follows React naming conventions
 export function useValidationSchema() {
-  const t = useTranslations("validation");
+  const t = useTranslations("validations");
   
   return yup.object({
     name: yup.string()
