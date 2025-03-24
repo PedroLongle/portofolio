@@ -7,6 +7,7 @@ import { CursorTrail } from "@/components/layout/cursor-trail";
 import { I18nProvider } from "@/i18n/provider";
 import { defaultLocale } from "@/i18n/config";
 import Header from "@/components/layout/header";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang={defaultLocale} suppressHydrationWarning className={montserrat.variable}>
       <body className="flex flex-col min-h-screen overflow-x-hidden">
+        <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_TAG || ''} /> 
         <I18nProvider>
           <ThemeProvider
             attribute="class"

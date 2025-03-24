@@ -19,3 +19,6 @@ env:
 
   - variable: SITE_MAIL_RECIEVER 
     secret: projects/1019253267812/secrets/SITE_MAIL_RECIEVER
+
+  - variable: GOOGLE_ANALYTICS_TAG
+    secret: projects/1019253267812/secrets/GOOGLE_ANALYTICS_TAG
