@@ -11,7 +11,7 @@ const useTabWithParams = (defaultTab: string) => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState<"repo" | "tech" | "performance">(
-    (searchParams.get("tab") as "repo" | "tech" | "performance") || defaultTab as any
+    (searchParams.get("tab") as "repo" | "tech" | "performance") || defaultTab
   );
 
   // Update URL when tab changes
