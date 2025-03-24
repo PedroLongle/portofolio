@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useTranslations } from "@/i18n/client";
-import { Calendar, House } from "lucide-react";
+import { Building, Calendar, House } from "lucide-react";
 import Link from "@/components/link";
 
 
@@ -10,11 +10,11 @@ export default function AboutPage() {
   const t = useTranslations('about');
   
   return (
-    <div className="section" style={{ paddingTop: '8rem' }}>
+    <div className="section">
       <div className="container">
         {/* Hero Section */}
-        <div className="flex flex-col lg:flex-row items-center gap-32 mb-24">
-          <div className="lg:w-2/5">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-32 mb-12 lg:mb-20 mt-6 lg:mt-12">
+          <div className="w-full lg:w-2/5 max-w-sm mx-auto lg:mx-0">
             <div className="relative w-full h-0" style={{ paddingBottom: '100%' }}>
               <Image 
                 src="/illustrations/coding.svg" 
@@ -27,17 +27,17 @@ export default function AboutPage() {
               />
             </div>
           </div>
-          <div className="w-full space-y-6">
-            <h1 className="text-4xl font-bold mb-6">{t('title')}</h1>
-            <p className="text-lg text-muted-foreground">
+          <div className="w-full space-y-4 lg:space-y-6 mt-8 lg:mt-0">
+            <h1 className="text-3xl lg:text-4xl font-bold mb-4 lg:mb-6">{t('title')}</h1>
+            <p className="text-base lg:text-lg text-muted-foreground">
               {t('introduction')}
             </p>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base lg:text-lg text-muted-foreground">
               {t('mission')}
             </p>
-            <div className="gap-8 mt-20">
+            <div className="gap-8">
               <div>
-                <h3 className="text-xl font-bold mb-2">{t('education.title')}</h3>
+                <h3 className="text-xl font-bold mb-2 mt-8 lg:mt-12">{t('education.title')}</h3>
                 <ul className="space-y-5">
                   <li>
                     <Link isExternal href={t('education.degree1Link')} target="_blank" weight="medium">{t('education.degree1')}</Link>
@@ -69,35 +69,54 @@ export default function AboutPage() {
         </div>
         
         {/* Experience Section */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold mb-8">{t('experience.title')}</h2>
-          <div className="space-y-14">
+        <div className="mb-12 lg:mb-20">
+          <h2 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-8">{t('experience.title')}</h2>
+          <div className="space-y-10 lg:space-y-14">
             <div className="flex flex-col md:flex-row gap-6">
               <div className="md:w-1/3">
-                <h3 className="text-xl font-bold">{t('experience.job1.title')}</h3>
-                <div className="text-muted-foreground">{t('experience.job1.company')}</div>
-                <div className="text-sm text-muted-foreground">{t('experience.job1.period')}</div>
+                <h3 className="text-xl font-bold mb-2">{t('experience.job1.title')}</h3>
+                <div className="flex flex-row items-center gap-2 mt-2">
+                  <Building className="w-4 h-4" />
+                  <Link isExternal href={t('experience.job1.link')} target="_blank" className="text-sm">{t('experience.job1.company')}</Link>
+                </div>
+                <div className="flex flex-row items-center gap-2 mt-2">
+                  <Calendar className="w-4 h-4" />
+                  <div className="text-sm text-muted-foreground">{t('experience.job1.period')}</div>
+                </div>
               </div>
               <div className="md:w-2/3">
-                <p className="text-lg text-muted-foreground mb-4">
-                  {t('experience.job1.description')}
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                <div className="text-base lg:text-lg text-muted-foreground mb-4">
+                  <p>{t('experience.job1.description')}</p>
+                  <ul className="list-disc list-inside space-y-2 text-sm lg:text-md text-muted-foreground ml-4 lg:ml-10 mt-2">
+                    <li>{t('experience.job1.descriptionBullet1')}</li>
+                    <li>{t('experience.job1.descriptionBullet2')}</li>
+                </ul>
+                </div>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground mt-2">
                   <li>{t('experience.job1.bullet1')}</li>
                   <li>{t('experience.job1.bullet2')}</li>
                   <li>{t('experience.job1.bullet3')}</li>
+                  <li>{t('experience.job1.bullet4')}</li>
                 </ul>
               </div>
             </div>
             
             <div className="flex flex-col md:flex-row gap-6">
               <div className="md:w-1/3">
-                <h3 className="text-xl font-bold">{t('experience.job2.title')}</h3>
-                <div className="text-muted-foreground">{t('experience.job2.company')}</div>
-                <div className="text-sm text-muted-foreground">{t('experience.job2.period')}</div>
+                <h3 className="text-xl font-bold mb-2">{t('experience.job2.title')}</h3>
+                <div className="text-muted-foreground mt-2">
+                  <div className="flex flex-row items-center gap-2">
+                    <Building className="w-4 h-4" />
+                    <Link isExternal href={t('experience.job2.link')} target="_blank" className="text-sm">{t('experience.job2.company')}</Link>
+                  </div>
+                </div>
+                <div className="flex flex-row items-center gap-2 mt-2">
+                    <Calendar className="w-4 h-4" />
+                    <div className="text-sm text-muted-foreground">{t('experience.job2.period')}</div>
+                </div>
               </div>
               <div className="md:w-2/3">
-                <p className="text-lg text-muted-foreground mb-4">
+                <p className="text-base lg:text-lg text-muted-foreground mb-4">
                   {t('experience.job2.description')}
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-muted-foreground">
@@ -107,13 +126,36 @@ export default function AboutPage() {
                 </ul>
               </div>
             </div>
+
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="md:w-1/3">
+                <h3 className="text-xl font-bold mb-2">{t('experience.job3.title')}</h3>
+                <div className="text-muted-foreground mt-2">
+                  <div className="flex flex-row items-center gap-2">
+                    <Building className="w-4 h-4" />
+                    <div className="text-sm">{t('experience.job3.company')}</div>
+                  </div>
+                </div>
+                <div className="flex flex-row items-center gap-2 mt-2">
+                    <Calendar className="w-4 h-4" />
+                    <div className="text-sm text-muted-foreground">{t('experience.job3.period')}</div>
+                </div>
+              </div>
+              <div className="md:w-2/3">
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                  <li>{t('experience.job3.bullet1')}</li>
+                  <li>{t('experience.job3.bullet2')}</li>
+                </ul>
+              </div>
+            </div>
+
           </div>
         </div>
         
         {/* Skills Section */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold mb-8">{t('skills.title')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div className="mb-12 lg:mb-20">
+          <h2 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-8">{t('skills.title')}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
             <div>
               <h3 className="text-xl font-bold mb-4">{t('skills.technical.title')}</h3>
               <div className="space-y-4">
@@ -162,9 +204,9 @@ export default function AboutPage() {
         </div>
         
         {/* Certifications Section */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold mb-4">{t('certifications.title')}</h2>
-          <div className="flex flex-col justify-center">
+        <div className="mb-12 lg:mb-20">
+          <h2 className="text-2xl lg:text-3xl font-bold mb-4">{t('certifications.title')}</h2>
+          <div className="flex flex-col items-center sm:items-start justify-center">
             {/* Certificate */}
             <div className="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-xs">
               <div className="relative w-full h-64 bg-muted overflow-hidden group">
@@ -217,46 +259,46 @@ export default function AboutPage() {
 
         {/* Languages Section */}
         <div>
-          <h2 className="text-3xl font-bold">{t('languages.title')}</h2>
-          <p className="text-sm text-muted-foreground mt-2 mb-12 italic">
+          <h2 className="text-2xl lg:text-3xl font-bold">{t('languages.title')}</h2>
+          <p className="text-sm text-muted-foreground mt-2 mb-8 lg:mb-12 italic">
             {t('languages.proficiency.levels.a')}{' '}•{' '}
             {t('languages.proficiency.levels.b')}{' '}•{' '}
             {t('languages.proficiency.levels.c')}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
             <div>
               <h3 className="text-xl font-bold mb-4">{t('languages.portuguese')} (🇵🇹)</h3>
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse border border-border rounded-lg overflow-hidden">
+              <div className="overflow-x-auto -mx-4 px-4">
+                <table className="w-full border-collapse border border-border rounded-lg overflow-hidden min-w-[320px]">
                   <thead>
                     <tr className="bg-muted">
-                      <th colSpan={2} className="px-4 py-3 text-center font-semibold border-b border-border">{t('languages.proficiency.comprehension')}</th>
-                      <th colSpan={2} className="px-4 py-3 text-center font-semibold border-b border-border">{t('languages.proficiency.communicate')}</th>
-                      <th className="px-4 py-3 text-center font-semibold border-b border-border">{t('languages.proficiency.writing')}</th>
+                      <th colSpan={2} className="px-2 md:px-4 py-2 md:py-3 text-center font-semibold border-b border-border text-xs md:text-sm">{t('languages.proficiency.comprehension')}</th>
+                      <th colSpan={2} className="px-2 md:px-4 py-2 md:py-3 text-center font-semibold border-b border-border text-xs md:text-sm">{t('languages.proficiency.communicate')}</th>
+                      <th className="px-2 md:px-4 py-2 md:py-3 text-center font-semibold border-b border-border text-xs md:text-sm">{t('languages.proficiency.writing')}</th>
                     </tr>
                     <tr className="bg-muted/50">
-                      <th className="px-4 py-2 text-sm font-medium border-b border-border">{t('languages.proficiency.oral')}</th>
-                      <th className="px-4 py-2 text-sm font-medium border-b border-border">{t('languages.proficiency.reading')}</th>
-                      <th className="px-4 py-2 text-sm font-medium border-b border-border">{t('languages.proficiency.oralProduction')}</th>
-                      <th className="px-4 py-2 text-sm font-medium border-b border-border">{t('languages.proficiency.oralInteraction')}</th>
-                      <th className="px-4 py-2 text-sm font-medium border-b border-border">{t('languages.proficiency.writing')}</th>
+                      <th className="px-2 md:px-4 py-1 md:py-2 text-xs font-medium border-b border-border">{t('languages.proficiency.oral')}</th>
+                      <th className="px-2 md:px-4 py-1 md:py-2 text-xs font-medium border-b border-border">{t('languages.proficiency.reading')}</th>
+                      <th className="px-2 md:px-4 py-1 md:py-2 text-xs font-medium border-b border-border">{t('languages.proficiency.oralProduction')}</th>
+                      <th className="px-2 md:px-4 py-1 md:py-2 text-xs font-medium border-b border-border">{t('languages.proficiency.oralInteraction')}</th>
+                      <th className="px-2 md:px-4 py-1 md:py-2 text-xs font-medium border-b border-border">{t('languages.proficiency.writing')}</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="bg-card">
-                      <td className="px-4 py-3 text-center font-bold border-b border-border">
+                      <td className="px-2 md:px-4 py-2 md:py-3 text-center font-bold border-b border-border text-xs md:text-sm">
                         {t('languages.proficiency.portuguese.oralComprehensionLevel')}
                       </td>
-                      <td className="px-4 py-3 text-center font-bold border-b border-border">
+                      <td className="px-2 md:px-4 py-2 md:py-3 text-center font-bold border-b border-border text-xs md:text-sm">
                         {t('languages.proficiency.portuguese.readingLevel')}
                       </td>
-                      <td className="px-4 py-3 text-center font-bold border-b border-border">
+                      <td className="px-2 md:px-4 py-2 md:py-3 text-center font-bold border-b border-border text-xs md:text-sm">
                         {t('languages.proficiency.portuguese.oralProductionLevel')}
                       </td>
-                      <td className="px-4 py-3 text-center font-bold border-b border-border">
+                      <td className="px-2 md:px-4 py-2 md:py-3 text-center font-bold border-b border-border text-xs md:text-sm">
                         {t('languages.proficiency.portuguese.oralInteractionLevel')}
                       </td>
-                      <td className="px-4 py-3 text-center font-bold border-b border-border">
+                      <td className="px-2 md:px-4 py-2 md:py-3 text-center font-bold border-b border-border text-xs md:text-sm">
                         {t('languages.proficiency.portuguese.writingLevel')}
                       </td>
                     </tr>
@@ -266,37 +308,37 @@ export default function AboutPage() {
             </div>
             <div>
               <h3 className="text-xl font-bold mb-4">{t('languages.english')} (🇬🇧)</h3>
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse border border-border rounded-lg overflow-hidden">
+              <div className="overflow-x-auto -mx-4 px-4">
+                <table className="w-full border-collapse border border-border rounded-lg overflow-hidden min-w-[320px]">
                   <thead>
                     <tr className="bg-muted">
-                      <th colSpan={2} className="px-4 py-3 text-center font-semibold border-b border-border">{t('languages.proficiency.comprehension')}</th>
-                      <th colSpan={2} className="px-4 py-3 text-center font-semibold border-b border-border">{t('languages.proficiency.communicate')}</th>
-                      <th className="px-4 py-3 text-center font-semibold border-b border-border">{t('languages.proficiency.writing')}</th>
+                      <th colSpan={2} className="px-2 md:px-4 py-2 md:py-3 text-center font-semibold border-b border-border text-xs md:text-sm">{t('languages.proficiency.comprehension')}</th>
+                      <th colSpan={2} className="px-2 md:px-4 py-2 md:py-3 text-center font-semibold border-b border-border text-xs md:text-sm">{t('languages.proficiency.communicate')}</th>
+                      <th className="px-2 md:px-4 py-2 md:py-3 text-center font-semibold border-b border-border text-xs md:text-sm">{t('languages.proficiency.writing')}</th>
                     </tr>
                     <tr className="bg-muted/50">
-                      <th className="px-4 py-2 text-sm font-medium border-b border-border">{t('languages.proficiency.oral')}</th>
-                      <th className="px-4 py-2 text-sm font-medium border-b border-border">{t('languages.proficiency.reading')}</th>
-                      <th className="px-4 py-2 text-sm font-medium border-b border-border">{t('languages.proficiency.oralProduction')}</th>
-                      <th className="px-4 py-2 text-sm font-medium border-b border-border">{t('languages.proficiency.oralInteraction')}</th>
-                      <th className="px-4 py-2 text-sm font-medium border-b border-border">{t('languages.proficiency.writing')}</th>
+                      <th className="px-2 md:px-4 py-1 md:py-2 text-xs font-medium border-b border-border">{t('languages.proficiency.oral')}</th>
+                      <th className="px-2 md:px-4 py-1 md:py-2 text-xs font-medium border-b border-border">{t('languages.proficiency.reading')}</th>
+                      <th className="px-2 md:px-4 py-1 md:py-2 text-xs font-medium border-b border-border">{t('languages.proficiency.oralProduction')}</th>
+                      <th className="px-2 md:px-4 py-1 md:py-2 text-xs font-medium border-b border-border">{t('languages.proficiency.oralInteraction')}</th>
+                      <th className="px-2 md:px-4 py-1 md:py-2 text-xs font-medium border-b border-border">{t('languages.proficiency.writing')}</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="bg-card">
-                      <td className="px-4 py-3 text-center font-bold border-b border-border">
+                      <td className="px-2 md:px-4 py-2 md:py-3 text-center font-bold border-b border-border text-xs md:text-sm">
                         {t('languages.proficiency.english.oralComprehensionLevel')}
                       </td>
-                      <td className="px-4 py-3 text-center font-bold border-b border-border">
+                      <td className="px-2 md:px-4 py-2 md:py-3 text-center font-bold border-b border-border text-xs md:text-sm">
                         {t('languages.proficiency.english.readingLevel')}
                       </td>
-                      <td className="px-4 py-3 text-center font-bold border-b border-border">
+                      <td className="px-2 md:px-4 py-2 md:py-3 text-center font-bold border-b border-border text-xs md:text-sm">
                         {t('languages.proficiency.english.oralProductionLevel')}
                       </td>
-                      <td className="px-4 py-3 text-center font-bold border-b border-border">
+                      <td className="px-2 md:px-4 py-2 md:py-3 text-center font-bold border-b border-border text-xs md:text-sm">
                         {t('languages.proficiency.english.oralInteractionLevel')}
                       </td>
-                      <td className="px-4 py-3 text-center font-bold border-b border-border">
+                      <td className="px-2 md:px-4 py-2 md:py-3 text-center font-bold border-b border-border text-xs md:text-sm">
                         {t('languages.proficiency.english.writingLevel')}
                       </td>
                     </tr>

@@ -11,7 +11,8 @@
       "aboutMe": "About Me",
       "viewAll": "View All",
       "contact": "Contact",
-      "getInTouch": "Get in Touch"
+      "getInTouch": "Get in Touch",
+      "backToProjects": "Back to Projects"
     },
     "language": {
       "select": "Select language",
@@ -114,6 +115,127 @@
     "description": "Explore my portfolio of projects spanning various industries and design disciplines.",
     "readyToStart": "Let's work together on your next project",
     "collaborateDescription": "Let's collaborate and create something extraordinary together. I'm ready to transform your vision into reality.",
+    "portofolio": {
+      "title": "Personal Portfolio",
+      "imageAlt": "Portfolio Project",
+      "description": {
+        "part1": "A modern, responsive portfolio website showcasing my work, skills, and services. Built with Next.js, TypeScript, and Tailwind CSS, this portfolio offers a seamless user experience across devices with internationalization supporting three languages and a contact form with validation.",
+        "part2": "The project is deployed using Firebase App Hosting with environment variable management through Google Cloud Secret Manager. The architecture leverages React Server Components for improved performance and follows best practices for accessibility and SEO optimization."
+      },
+      "tabs": {
+        "repo": "Repository",
+        "tech": "Tech Stack",
+        "performance": "Performance Analysis"
+      },
+      "repo": {
+        "title": "GitHub Repository",
+        "description": "The complete source code for this portfolio is available on GitHub. Feel free to explore the code structure, components, and implementation details.",
+        "viewButton": "View Code on GitHub"
+      },
+      "keyFeatures": {
+        "title": "Key Features",
+        "features": {
+          "responsive": "Responsive design that works on all devices",
+          "i18n": "Internationalization supporting multiple languages",
+          "darkMode": "Dark/light mode implementation",
+          "contactForm": "Contact form with validation and email delivery",
+          "portfolio": "Project portfolio with detailed case studies",
+          "performance": "Optimized performance and accessibility",
+          "seo": "SEO optimization with metadata and structured data",
+          "analytics": "Google Analytics integration",
+          "cicd": "CI/CD pipeline for automated deployments"
+        }
+      },
+      "tech": {
+        "frameworks": {
+          "next": "React framework for production",
+          "typescript": "Typed JavaScript for better code quality",
+          "tailwind": "Utility-first CSS framework",
+          "shadcn": "UI component library",
+          "rhf": "Form state + validations handling",
+          "nodemailer": "Email sending with Gmail transporter",
+          "firebase": "Deployment + Hosting platform",
+          "secretManager": "Environment variables management",
+          "nextIntl": "Internationalization library"
+        }
+      },
+      "architecture": {
+        "title": "Architecture Highlights",
+        "features": {
+          "component": {
+            "title": "Component-Based Structure",
+            "description": "Modular components designed for reusability and maintainability"
+          },
+          "serverComponents": {
+            "title": "Server Components + Client Components",
+            "description": "Strategic use of React Server Components for improved performance"
+          },
+          "ssg": {
+            "title": "Static Site Generation",
+            "description": "Pre-rendered pages for optimal loading speed and SEO benefits"
+          },
+          "i18n": {
+            "title": "Internationalization",
+            "description": "Custom i18n implementation for multi-language support with next-intl"
+          },
+          "cicd": {
+            "title": "CI/CD Pipeline",
+            "description": "Automated testing and deployment with GitHub Actions"
+          },
+          "analytics": {
+            "title": "Analytics Integration",
+            "description": "User behavior tracking with Google Analytics 4"
+          }
+        }
+      },
+      "performance": {
+        "lighthouse": {
+          "title": "Lighthouse Analysis",
+          "metrics": {
+            "performance": "Performance",
+            "accessibility": "Accessibility",
+            "bestPractices": "Best Practices",
+            "seo": "SEO"
+          }
+        },
+        "metrics": {
+          "title": "Key Performance Metrics",
+          "fcp": {
+            "title": "First Contentful Paint"
+          },
+          "lcp": {
+            "title": "Largest Contentful Paint"
+          },
+          "cls": {
+            "title": "Cumulative Layout Shift"
+          },
+          "tbt": {
+            "title": "Total Blocking Time"
+          }
+        },
+        "optimization": {
+          "title": "Optimization Techniques",
+          "techniques": {
+            "images": {
+              "title": "Image Optimization",
+              "description": "Using Next.js Image component for optimal loading and formats"
+            },
+            "codeSplitting": {
+              "title": "Code Splitting",
+              "description": "Automatic code splitting for optimal bundle sizes"
+            },
+            "fonts": {
+              "title": "Font Optimization",
+              "description": "Using next/font with subsets and display swap"
+            },
+            "responsive": {
+              "title": "Responsive Design",
+              "description": "Mobile-first approach with tailwind breakpoints"
+            }
+          }
+        }
+      }
+    },
     "project1": {
       "title": "The Vintage",
       "shortDescription": "A vintage-inspired e-commerce platform with modern functionality."
@@ -130,7 +252,7 @@
   "about": {
     "title": "About Me",
     "heroImageAlt": "Pedro Longle - Software Engineer",
-    "introduction": "I'm a software engineer with over 10 years of experience in building web applications and software solutions for clients around the world. With expertise in both frontend and backend development, I deliver end-to-end solutions that help businesses achieve their goals.",
+    "introduction": "I'm a software engineer with over 3 years of experience in building web applications and software solutions. With expertise in both frontend and backend development, I deliver end-to-end solutions that help businesses achieve their goals.",
     "mission": "My mission is to create intuitive, efficient, and scalable software that makes a positive impact. I believe in clean code, user-centered design, and continuous learning to stay at the forefront of technology.",
     "education": {
       "title": "Education",
@@ -185,20 +307,33 @@
       "job1": {
         "title": "Junior/Mid Software Engineer",
         "company": "Procimo Tech, Lda",
-        "period": "2024 - Present",
-        "description": "Leading development on high-traffic web applications and services, focusing on performance optimization and scalability.",
-        "bullet1": "Redesigned the architecture of a critical service, resulting in 70% improvement in response time",
-        "bullet2": "Implemented CI/CD pipelines that reduced deployment time by 60%",
-        "bullet3": "Mentored junior developers and established coding standards across teams"
+        "link": "https://www.linkedin.com/company/procimo",
+        "period": "August 2023 - Present",
+        "description": "Leading two projects:",
+        "descriptionBullet1": "An Intranet platform project that encompasses web application solutions (front-office & back-office) and backend. The project was successfully completed, achieving the proposed objectives.",
+        "descriptionBullet2": "A climate emissions management project that encompasses solutions for a web application (back-office) and backend. The project is currently ongoing, with ambitious goals to reduce environmental impact.",
+        "bullet1": "Managed multiple tickets on the Jira platform using Agile methodologies, prioritizing and resolving issues effectively to ensure smooth project execution and deadline compliance",
+        "bullet2": "Resolved critical issues in production by applying analytical skills to identify root causes and implementing effective solutions, minimizing downtime and ensuring business continuity",
+        "bullet3": "Successfully planned and executed projects, facilitating stakeholder meetings, creating action plans, and defining architectures and solutions, meeting stakeholder expectations and minimizing risks",
+        "bullet4": "Created comprehensive process and product documentation, enabling team members to easily understand and follow processes, improving overall efficiency and productivity"
       },
       "job2": {
-        "title": "Junior Frontend Developer",
+        "title": "Junior Software Developer (Internship)",
         "company": "Procimo Tech, Lda",
-        "period": "2023 - 2024",
-        "description": "Developed full-stack web applications for clients in finance, healthcare, and e-commerce sectors.",
-        "bullet1": "Built responsive web applications using React, Node.js, and MongoDB",
-        "bullet2": "Implemented secure payment processing systems for e-commerce platforms",
-        "bullet3": "Collaborated with design teams to create intuitive user interfaces"
+        "link": "https://www.linkedin.com/company/procimo",
+        "period": "April 2023 - July 2023",
+        "description": "As a member of the development team, I integrated socially and professionally:",
+        "bullet1": "Developed projects with frontend and backend architectures",
+        "bullet2": "Fixed bugs in ongoing projects",
+        "bullet3": "Helped establish improvements in project quality and stability"
+      },
+      "job3": {
+        "title": "Junior Software Developer (Internship)",
+        "company": "Nonlocality, Lda",
+        "period": "January 2022 - February 2022",
+        "description": "As a member of the development team, I integrated socially and professionally:",
+        "bullet1": "Participated in the development of a Rest API in Angular to make Company management more effective",
+        "bullet2": "Created and implemented Swagger documentation for the API, which resulted in improved API understanding and usage"
       }
     },
     "skills": {
@@ -222,7 +357,7 @@
         "title": "Google AI Essentials",
         "issuer": "Coursera",
         "issuerLink": "https://www.coursera.org/",
-        "date": "January 2024",
+        "date": "October 2023",
         "imageAlt": "Google AI Essentials Certificate",
         "credlyLink": "https://www.credly.com/badges/621d4879-98ef-4470-86d5-e93767d2836c/",
         "verify": "Verify on Credly"
@@ -239,4 +374,4 @@
     "title": "Message Sent!",
     "subtitle": "Thank you for your message. I'll get back to you shortly."
   }
-} 
+}

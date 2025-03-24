@@ -9,9 +9,9 @@ export default function ProjectsPage() {
   const commonT = useTranslations("common.buttons");
   
   return (
-    <div className="section pt-6">
+    <div className="section">
       <div className="container">
-        <div className="max-w-4xl mx-auto mb-12 text-center">
+        <div className="max-w-4xl mx-auto mb-12 mt-12 text-center">
           <h1 className="text-4xl font-bold mb-6">{t("title")}</h1>
           <p className="text-muted-foreground text-lg">
             {t("description")}
@@ -22,7 +22,7 @@ export default function ProjectsPage() {
           <ProjectCard 
             title={"Personal Portofolio"} 
             description={"Personal portofolio website."}
-            image="/projects/portofolio-thumb.svg" 
+            image="/projects/portofolio/thumb.svg" 
             link="/projects/portofolio"
           />
           <ProjectCard 

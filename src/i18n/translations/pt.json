@@ -11,7 +11,8 @@
       "aboutMe": "Sobre Mim",
       "viewAll": "Ver Todos",
       "contact": "Contacto",
-      "getInTouch": "Entre em Contacto"
+      "getInTouch": "Entre em Contacto",
+      "backToProjects": "Voltar a Projetos"
     },
     "language": {
       "select": "Selecionar idioma",
@@ -114,6 +115,127 @@
     "description": "Explore o meu portfólio de projetos abrangendo várias indústrias e disciplinas de design.",
     "readyToStart": "Vamos trabalhar juntos no seu próximo projeto",
     "collaborateDescription": "Vamos colaborar e criar algo extraordinário juntos. Estou pronto para transformar a sua visão em realidade.",
+    "portofolio": {
+      "title": "Portfólio Pessoal",
+      "imageAlt": "Projeto Portfólio",
+      "description": {
+        "part1": "Um website de portfólio moderno e responsivo que mostra o meu trabalho, competências e serviços. Construído com Next.js, TypeScript e Tailwind CSS, este portfólio oferece uma experiência de utilização fluida em todos os dispositivos, com internacionalização suportando três idiomas e um formulário de contacto com validação.",
+        "part2": "O projeto está implementado usando Firebase App Hosting com gestão de variáveis de ambiente através do Google Cloud Secret Manager. A arquitetura utiliza React Server Components para melhor desempenho e segue as melhores práticas para acessibilidade e otimização SEO."
+      },
+      "tabs": {
+        "repo": "Repositório",
+        "tech": "Stack Tecnológica",
+        "performance": "Análise de Desempenho"
+      },
+      "repo": {
+        "title": "Repositório GitHub",
+        "description": "O código fonte completo deste portfólio está disponível no GitHub. Fique à vontade para explorar a estrutura do código, componentes e detalhes de implementação.",
+        "viewButton": "Ver Código no GitHub"
+      },
+      "keyFeatures": {
+        "title": "Funcionalidades Principais",
+        "features": {
+          "responsive": "Design responsivo que funciona em todos os dispositivos",
+          "i18n": "Internacionalização com suporte para múltiplos idiomas",
+          "darkMode": "Implementação de modo claro/escuro",
+          "contactForm": "Formulário de contacto com validação e envio de email",
+          "portfolio": "Portfólio de projetos com estudos de caso detalhados",
+          "performance": "Desempenho e acessibilidade otimizados",
+          "seo": "Otimização SEO com metadados e dados estruturados",
+          "analytics": "Integração com Google Analytics",
+          "cicd": "Pipeline CI/CD para implementações automatizadas"
+        }
+      },
+      "tech": {
+        "frameworks": {
+          "next": "Framework React para produção",
+          "typescript": "JavaScript tipado para melhor qualidade de código",
+          "tailwind": "Framework CSS utilitário",
+          "shadcn": "Biblioteca de componentes UI",
+          "rhf": "Gestão de estado de formulários + validações",
+          "nodemailer": "Envio de emails com transportador Gmail",
+          "firebase": "Plataforma de implementação + hospedagem",
+          "secretManager": "Gestão de variáveis de ambiente",
+          "nextIntl": "Biblioteca de internacionalização"
+        }
+      },
+      "architecture": {
+        "title": "Destaques da Arquitetura",
+        "features": {
+          "component": {
+            "title": "Estrutura Baseada em Componentes",
+            "description": "Componentes modulares projetados para reutilização e manutenção"
+          },
+          "serverComponents": {
+            "title": "Server Components + Client Components",
+            "description": "Uso estratégico de React Server Components para melhor desempenho"
+          },
+          "ssg": {
+            "title": "Geração de Site Estático",
+            "description": "Páginas pré-renderizadas para velocidade de carregamento ideal e benefícios SEO"
+          },
+          "i18n": {
+            "title": "Internacionalização",
+            "description": "Implementação i18n personalizada para suporte multilíngue com next-intl"
+          },
+          "cicd": {
+            "title": "Pipeline CI/CD",
+            "description": "Testes e implementação automatizados com GitHub Actions"
+          },
+          "analytics": {
+            "title": "Integração de Analytics",
+            "description": "Rastreamento de comportamento do utilizador com Google Analytics 4"
+          }
+        }
+      },
+      "performance": {
+        "lighthouse": {
+          "title": "Análise Lighthouse",
+          "metrics": {
+            "performance": "Desempenho",
+            "accessibility": "Acessibilidade",
+            "bestPractices": "Melhores Práticas",
+            "seo": "SEO"
+          }
+        },
+        "metrics": {
+          "title": "Métricas de Desempenho Principais",
+          "fcp": {
+            "title": "First Contentful Paint"
+          },
+          "lcp": {
+            "title": "Largest Contentful Paint"
+          },
+          "cls": {
+            "title": "Cumulative Layout Shift"
+          },
+          "tbt": {
+            "title": "Total Blocking Time"
+          }
+        },
+        "optimization": {
+          "title": "Técnicas de Otimização",
+          "techniques": {
+            "images": {
+              "title": "Otimização de Imagens",
+              "description": "Utilização do componente Image do Next.js para carregamento e formatos ótimos"
+            },
+            "codeSplitting": {
+              "title": "Divisão de Código",
+              "description": "Divisão automática de código para tamanhos de pacote ótimos"
+            },
+            "fonts": {
+              "title": "Otimização de Fontes",
+              "description": "Utilização de next/font com subconjuntos e display swap"
+            },
+            "responsive": {
+              "title": "Design Responsivo",
+              "description": "Abordagem mobile-first com breakpoints do Tailwind"
+            }
+          }
+        }
+      }
+    },
     "project1": {
       "title": "The Vintage",
       "shortDescription": "Uma plataforma de e-commerce inspirada no vintage com funcionalidades modernas."
@@ -130,7 +252,7 @@
   "about": {
     "title": "Sobre Mim",
     "heroImageAlt": "Pedro Longle - Engenheiro de Software",
-    "introduction": "Sou um engenheiro de software com mais de 10 anos de experiência na construção de aplicações web e soluções de software para clientes em todo o mundo. Com experiência tanto em desenvolvimento frontend como backend, entrego soluções completas que ajudam as empresas a atingir os seus objetivos.",
+    "introduction": "Sou um engenheiro de software com mais de 3 anos de experiência na construção de aplicações web e soluções de software. Com experiência tanto em desenvolvimento frontend como backend, entrego soluções completas que ajudam as empresas a atingir os seus objetivos.",
     "mission": "A minha missão é criar software intuitivo, eficiente e escalável que tenha um impacto positivo. Acredito em código limpo, design centrado no utilizador e aprendizagem contínua para estar na vanguarda da tecnologia.",
     "education": {
       "title": "Educação",
@@ -138,12 +260,12 @@
       "degree1Link": "https://www.istec.pt/index.php/ctesp-desenvolvimento-de-software/",
       "school1": "Instituto Superior de Tecnologias Avançadas (ISTEC), Lisboa",
       "school1Link": "https://www.istec.pt/",
-      "year1": "2023 - 2025",
+      "year1": "Setembro 2023 - Presente",
       "degree2": "Curso Secundário Profissional - Gestão e Programação de Sistemas Informáticos",
       "degree2Link": "https://escoladigital.com/cursos-profissionais/gestao-programacao/",
       "school2": "Escola Profissional de Tecnologia Digital, Lisboa",
       "school2Link": "https://escoladigital.com/",
-      "year2": "2020-2023"
+      "year2": "Setembro 2020 - Julho 2023"
     },
     "languages": {
       "title": "Idiomas",
@@ -183,22 +305,35 @@
     "experience": {
       "title": "Experiência",
       "job1": {
-        "title": "Engenheiro de Software Mid",
+        "title": "Engenheiro de Software Junior / Mid",
         "company": "Procimo Tech, Lda",
-        "period": "2024 - Presente",
-        "description": "Liderando o desenvolvimento de aplicações e serviços web de alto tráfego, focando na otimização de desempenho e escalabilidade.",
-        "bullet1": "Redesenhei a arquitetura de um serviço crítico, resultando numa melhoria de 70% no tempo de resposta",
-        "bullet2": "Implementei pipelines de CI/CD que reduziram o tempo de implantação em 60%",
-        "bullet3": "Orientei desenvolvedores juniores e estabeleci padrões de codificação entre equipas"
+        "link": "https://www.linkedin.com/company/procimo",
+        "period": "Agosto 2023 - Presente",
+        "description": "Liderança de dois projetos:",
+        "descriptionBullet1": "Um projeto de plataforma de Intranet que engloba soluções de aplicações-web (front-office & back-office) e backend. O projeto foi concluído com sucesso, alcançando os objetivos propostos.",
+        "descriptionBullet2": "Um projeto de gestão de emissões climáticas que engloba soluções de uma aplicação-web (back-office) e backend. O projeto está atualmente em curso, com objetivos ambiciosos para reduzir o impacto ambiental.",
+        "bullet1": "Gestão de múltiplos tickets na plataforma Jira utilizando metodologias Agile, priorizando e resolvendo problemas de forma eficaz para garantir a execução sem problemas do projeto e o cumprimento de prazos",
+        "bullet2": "Resolvi problemas críticos em produção aplicando habilidades analíticas para identificar as causas raiz e implementando soluções eficazes, minimizando o tempo de inatividade e garantindo a continuidade dos negócios",
+        "bullet3": "Planeiei e executei projetos com êxito, facilitando reuniões com partes interessadas, criando planos de ação e definindo arquitecturas e soluções, satisfazendo as expectativas das partes interessadas e minimizando riscos",
+        "bullet4": "Criei documentação abrangente de processos e produtos, permitindo que os membros da equipa entendessem e seguissem facilmente os processos, melhorando a eficiência e produtividade globais."
       },
       "job2": {
-        "title": "Desenvolvedor Frontend Junior",
+        "title": "Desenvolvedor de Software Junior (Estágio)",
         "company": "Procimo Tech, Lda",
-        "period": "2023 - 2024",
-        "description": "Desenvolvi aplicações web full-stack para clientes nos setores de finanças, saúde e e-commerce.",
-        "bullet1": "Construí aplicações web responsivas usando React, Node.js e MongoDB",
-        "bullet2": "Implementei sistemas de processamento de pagamentos seguros para plataformas de e-commerce",
-        "bullet3": "Colaborei com equipas de design para criar interfaces de utilizador intuitivas"
+        "link": "https://www.linkedin.com/company/procimo",
+        "period": "Abril 2023 - Julho 2023",
+        "description": "Como membro da equipa de desenvolvimento, integrei-me social e profissionalmente:",
+        "bullet1": "Desenvolvi projetos com arquiteturas de frontend e backend",
+        "bullet2": "Corrigi bugs em projetos em curso",
+        "bullet3": "Ajudei a estabelecer melhorias na qualidade e estabilidade dos projetos"
+      },
+      "job3": {
+        "title": "Desenvolvedor de Software Junior (Estágio)",
+        "company": "Nonlocality, Lda",
+        "period": "Janeiro 2022 - Fevereiro 2022",
+        "description": "Como membro da equipa de desenvolvimento, integrei-me social e profissionalmente:",
+        "bullet1": "Participei no desenvolvimento de uma Rest API em Angular para tornar o gerenciamento de Empresas mais eficaz",
+        "bullet2": "Criei e implementei documentação Swagger para a API, o que resultou na melhoria da compreensão e utilização da API."
       }
     },
     "skills": {
@@ -222,7 +357,7 @@
         "title": "Google AI Essentials",
         "issuer": "Coursera",
         "issuerLink": "https://www.coursera.org/",
-        "date": "Janeiro 2024",
+        "date": "Outubro 2023",
         "imageAlt": "Certificado Google AI Essentials",
         "credlyLink": "https://www.credly.com/badges/621d4879-98ef-4470-86d5-e93767d2836c/",
         "verify": "Verificar no Credly"

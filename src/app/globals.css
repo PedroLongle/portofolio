@@ -87,7 +87,7 @@ a {
 }
 
 .section {
-  padding: 8rem 0;
+  padding: 5rem 0;
 }
 
 .section-dark {
@@ -172,45 +172,4 @@ textarea.form-control {
     transform: translateY(-10px);
     max-height: 0;
   }
-}
-
-/* Coffee steam animations */
-@keyframes steam1 {
-  0% { opacity: 0; transform: translateY(0) scale(0.5); }
-  15% { opacity: 1; }
-  50% { opacity: 0.7; transform: translateY(-10px) scale(1); }
-  100% { opacity: 0; transform: translateY(-15px) scale(1.5); }
-}
-@keyframes steam2 {
-  0% { opacity: 0; transform: translateY(0) scale(0.5); }
-  20% { opacity: 0; }
-  40% { opacity: 1; }
-  70% { opacity: 0.7; transform: translateY(-15px) scale(1); }
-  100% { opacity: 0; transform: translateY(-20px) scale(1.5); }
-}
-@keyframes steam3 {
-  0% { opacity: 0; transform: translateY(0) scale(0.5); }
-  30% { opacity: 0; }
-  60% { opacity: 1; }
-  80% { opacity: 0.7; transform: translateY(-12px) scale(1); }
-  100% { opacity: 0; transform: translateY(-18px) scale(1.5); }
-}
-
-.group:hover .steam-1 {
-  animation: steam1 3s ease-out infinite;
-  opacity: 1;
-  stroke: #0D0C22;
-  stroke-width: 1.2;
-}
-.group:hover .steam-2 {
-  animation: steam2 3s ease-out 0.3s infinite;
-  opacity: 1;
-  stroke: #0D0C22;
-  stroke-width: 1.2;
-}
-.group:hover .steam-3 {
-  animation: steam3 3s ease-out 0.6s infinite;
-  opacity: 1;
-  stroke: #0D0C22;
-  stroke-width: 1.2;
 }

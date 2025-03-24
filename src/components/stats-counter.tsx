@@ -13,8 +13,8 @@ interface StatItemProps {
 function StatItem({ value, label, index, currentHighlight }: StatItemProps) {
   const isHighlighted = index === currentHighlight;
   const highlightColor = 'var(--primary)';
-  const normalColor = '#27272a';
-  const labelNormalColor = '#d4d4d8';
+  const normalColor = '#808080';
+  const labelNormalColor = '#808080';
   
   return (
     <div style={{ textAlign: 'center' }}>
@@ -51,7 +51,7 @@ export function StatsCounter() {
     { value: "2.5", label: t('yearsExperience') },
     { value: "5", label: t('clients') },
     { value: "5k+", label: t('hoursCoding') },
-    { value: "8", label: t('completedProjects') }
+    { value: "6", label: t('completedProjects') }
   ];
   
   useEffect(() => {
