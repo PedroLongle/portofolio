@@ -40,10 +40,10 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold mb-2 mt-8 lg:mt-12">{t('education.title')}</h3>
                 <ul className="space-y-5">
                   <li>
-                    <Link isExternal href={t('education.degree1Link')} target="_blank" weight="medium">{t('education.degree1')}</Link>
+                    <Link isExternal href={t('education.degree1Link')} weight="medium">{t('education.degree1')}</Link>
                     <div className="flex flex-row items-center gap-2 mt-1">
                       <House className="w-4 h-4" />
-                        <Link isExternal href={t('education.school1Link')} target="_blank" className="text-sm">{t('education.school1')}</Link>
+                        <Link isExternal href={t('education.school1Link')} className="text-sm">{t('education.school1')}</Link>
                       </div>
                       <div className="flex flex-row items-center gap-2 mt-1">
                         <Calendar className="w-4 h-4" />
@@ -51,10 +51,10 @@ export default function AboutPage() {
                     </div>
                   </li>
                   <li>
-                    <Link isExternal href={t('education.degree2Link')} target="_blank" weight="medium">{t('education.degree2')}</Link>
+                    <Link isExternal href={t('education.degree2Link')} weight="medium">{t('education.degree2')}</Link>
                     <div className="flex flex-row items-center gap-2 mt-1">
                       <House className="w-4 h-4" />
-                      <Link isExternal href={t('education.school2Link')} target="_blank" className="text-sm">{t('education.school2')}</Link>
+                      <Link isExternal href={t('education.school2Link')} className="text-sm">{t('education.school2')}</Link>
                     </div>
                     <div className="flex flex-row items-center gap-2 mt-1">
                       <Calendar className="w-4 h-4" />
@@ -77,7 +77,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold mb-2">{t('experience.job1.title')}</h3>
                 <div className="flex flex-row items-center gap-2 mt-2">
                   <Building className="w-4 h-4" />
-                  <Link isExternal href={t('experience.job1.link')} target="_blank" className="text-sm">{t('experience.job1.company')}</Link>
+                  <Link isExternal href={t('experience.job1.link')} className="text-sm">{t('experience.job1.company')}</Link>
                 </div>
                 <div className="flex flex-row items-center gap-2 mt-2">
                   <Calendar className="w-4 h-4" />
@@ -107,7 +107,7 @@ export default function AboutPage() {
                 <div className="text-muted-foreground mt-2">
                   <div className="flex flex-row items-center gap-2">
                     <Building className="w-4 h-4" />
-                    <Link isExternal href={t('experience.job2.link')} target="_blank" className="text-sm">{t('experience.job2.company')}</Link>
+                    <Link isExternal href={t('experience.job2.link')} className="text-sm">{t('experience.job2.company')}</Link>
                   </div>
                 </div>
                 <div className="flex flex-row items-center gap-2 mt-2">

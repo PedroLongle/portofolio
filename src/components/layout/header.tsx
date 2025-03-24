@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useTranslations } from "@/i18n/client"
@@ -13,6 +13,8 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
   const t = useTranslations('common.nav')
+  const menuRef = useRef<HTMLDivElement>(null)
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +32,26 @@ export default function Header() {
   useEffect(() => {
     setMobileMenuOpen(false)
   }, [pathname])
+  
+  // Handle clicks outside the mobile menu
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        mobileMenuOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        menuButtonRef.current &&
+        !menuButtonRef.current.contains(event.target as Node)
+      ) {
+        setMobileMenuOpen(false)
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [mobileMenuOpen])
 
   return (
     <header className={`header ${scrolled ? 'header-scrolled' : ''}`}>
@@ -40,6 +62,7 @@ export default function Header() {
         
         {/* Mobile menu button */}
         <button 
+          ref={menuButtonRef}
           className="md:hidden z-20"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
@@ -56,6 +79,7 @@ export default function Header() {
           className={`fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm z-10 transition-opacity duration-300 md:hidden ${
             mobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
+          onClick={() => setMobileMenuOpen(false)}
         />
         
         {/* Desktop navigation */}
@@ -72,9 +96,12 @@ export default function Header() {
         </div>
         
         {/* Mobile menu */}
-        <div className={`fixed top-0 right-0 bottom-0 w-64 bg-card shadow-xl z-20 transform transition-transform duration-300 ease-in-out ${
-          mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        } md:hidden pt-20 px-6`}>
+        <div 
+          ref={menuRef}
+          className={`fixed top-0 right-0 bottom-0 w-64 bg-card shadow-xl z-20 transform transition-transform duration-300 ease-in-out ${
+            mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          } md:hidden pt-20 px-6`}
+        >
           <nav className="flex flex-col gap-6">
             <NavLink href="/" active={pathname === "/"}>{t('home').toUpperCase()}</NavLink>
             <NavLink href="/projects" active={pathname.startsWith("/projects")}>{t('projects').toUpperCase()}</NavLink>

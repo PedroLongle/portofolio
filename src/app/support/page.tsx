@@ -41,20 +41,20 @@ export default function SupportPage() {
                         alt="Hire me" 
                         width={100} 
                         height={50}
-                        style={{ width: '40%', maxWidth: '180px', height: 'auto' }}
+                        style={{ width: '50%', maxWidth: '180px', height: 'auto' }}
                         priority
                       />
                     </a>
                   </div>
                 </div>
-                <div className="relative flex items-center justify-center p-4 md:p-0">
+                <div className="hidden md:flex relative items-center justify-center p-4 md:p-0">
                   <div className="flex items-center justify-center p-2 md:mr-10">
                     <Image 
                       src={"/bmc/qr.png"}
                       alt="Buy me a coffee" 
                       width={200} 
                       height={200}
-                      style={{ width: '120px', height: 'auto', borderRadius: '10px' }}
+                      style={{ width: '90%', height: 'auto', borderRadius: '10px' }}
                       priority
                     />
                   </div>
@@ -67,13 +67,13 @@ export default function SupportPage() {
               <div className="flex flex-col-reverse md:flex-row">
                 <div className="w-full md:w-1/3 bg-primary/10 relative flex items-center justify-center py-6 md:py-0">
                   {/* Image placeholder */}
-                  <div className="w-full h-full flex items-center justify-center p-2">
+                  <div className="hidden md:flex w-full h-full  items-center justify-center p-2">
                     <Image 
                       src="/illustrations/hire.svg"
                       alt="Hire me" 
                       width={250} 
                       height={250}
-                      style={{ width: '75%', maxWidth: '300px', height: 'auto' }}
+                      style={{ width: '75%', height: 'auto' }}
                       priority
                     />
                   </div>

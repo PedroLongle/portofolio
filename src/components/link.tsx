@@ -6,7 +6,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 // Define link variants using class-variance-authority
 const linkVariants = cva(
-  "transition-all duration-200 inline-flex items-center gap-1",
+  "transition-all duration-200 inline-flex items-center gap-0.5 md:gap-1",
   {
     variants: {
       variant: {
@@ -47,7 +47,10 @@ export default function Link({
   rel,
   ...props
 }: LinkProps) {
-  // Determine target and rel based on isExternal
+  // Set appropriate target and rel attributes based on:
+  // 1. If explicitly provided via props, use those values
+  // 2. If isExternal=true and attributes aren't provided, set defaults for external links
+  // 3. Otherwise, leave as undefined for internal links
   const targetAttr = target || (isExternal ? "_blank" : undefined);
   const relAttr = rel || (isExternal ? "noopener noreferrer" : undefined);
 
@@ -62,7 +65,7 @@ export default function Link({
       {children}
       {isExternal && (
         <svg
-          className="w-3.5 h-3.5 ml-0.5"
+          className="w-3 h-3 md:w-3.5 md:h-3.5 ml-0.5"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
