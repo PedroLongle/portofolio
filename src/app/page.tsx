@@ -6,7 +6,6 @@ import ProjectCard from "@/components/project-card";
 import { StatsCounter } from "@/components/stats-counter";
 import { useTranslations } from "@/i18n/client";
 import { useLocale } from "next-intl";
-import { cn } from "@/utils";
 
 export default function Home() {
   const homeT = useTranslations('home');

@@ -3,7 +3,7 @@
 import { useTranslations } from "@/i18n/client";
 import Link from "next/link";
 import Image from "next/image";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/shadcn/tooltip";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/shadcn/tooltip";
 
 export default function SupportPage() {
   const t = useTranslations("common");
