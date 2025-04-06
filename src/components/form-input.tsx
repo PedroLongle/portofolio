@@ -30,7 +30,7 @@ export default function FormInput({
 
   return (
     <div className="w-full">
-      <label htmlFor={name} className="block text-sm font-medium mb-2">
+      <label htmlFor={name} className="block text-xs md:text-sm font-medium mb-2">
         {label}
       </label>
       <InputComponent
@@ -38,7 +38,7 @@ export default function FormInput({
         {...register(name)}
         {...props}
         rows={multiline ? rows : undefined}
-        className={`w-full px-4 py-3 rounded-lg border bg-zinc-800  ${
+        className={`w-full px-4 py-3 rounded-lg border bg-zinc-800 text-xs md:text-sm lg:text-md  ${
           error ? "border-red-500" : "border-none"
         } focus:outline-0  transition`}
       />

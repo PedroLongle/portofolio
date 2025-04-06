@@ -38,27 +38,39 @@ export default function AboutPage() {
             <div className="gap-8">
               <div>
                 <h3 className="text-xl font-bold mb-2 mt-8 lg:mt-12">{t('education.title')}</h3>
-                <ul className="space-y-5">
+                <ul className="space-y-8 md:space-y-5">
                   <li>
-                    <Link isExternal href={t('education.degree1Link')} weight="medium">{t('education.degree1')}</Link>
-                    <div className="flex flex-row items-center gap-2 mt-1">
-                      <House className="w-4 h-4" />
-                        <Link isExternal href={t('education.school1Link')} className="text-sm">{t('education.school1')}</Link>
+                    <div className="inline-flex flex-col gap-2 md:gap-1">
+                      <Link isExternal href={t('education.degree1Link')} weight="medium" className="text-sm md:text-base">
+                        {t('education.degree1')}
+                      </Link>
+                      <div className="flex flex-row items-center gap-2 mt-1">
+                        <House className="w-4 h-4 hidden md:flex" />
+                        <Link isExternal href={t('education.school1Link')} className="text-xs md:text-sm">
+                          {t('education.school1')}
+                        </Link>
                       </div>
                       <div className="flex flex-row items-center gap-2 mt-1">
                         <Calendar className="w-4 h-4" />
-                        <div className="text-sm text-muted-foreground">{t('education.year1')}</div>
+                        <div className="text-xs md:text-sm text-muted-foreground">{t('education.year1')}</div>
+                      </div>
                     </div>
                   </li>
                   <li>
-                    <Link isExternal href={t('education.degree2Link')} weight="medium">{t('education.degree2')}</Link>
-                    <div className="flex flex-row items-center gap-2 mt-1">
-                      <House className="w-4 h-4" />
-                      <Link isExternal href={t('education.school2Link')} className="text-sm">{t('education.school2')}</Link>
-                    </div>
-                    <div className="flex flex-row items-center gap-2 mt-1">
-                      <Calendar className="w-4 h-4" />
-                      <div className="text-sm text-muted-foreground">{t('education.year2')}</div>
+                    <div className="inline-flex flex-col gap-2 md:gap-1">
+                      <Link isExternal href={t('education.degree2Link')} weight="medium" className="text-sm md:text-base">
+                        {t('education.degree2')}
+                      </Link>
+                      <div className="flex flex-row items-center gap-2 mt-1">
+                        <House className="w-4 h-4 hidden md:flex" />
+                        <Link isExternal href={t('education.school2Link')} className="text-xs md:text-sm">
+                          {t('education.school2')}
+                        </Link>
+                      </div>
+                      <div className="flex flex-row items-center gap-2 mt-1">
+                        <Calendar className="w-4 h-4" />
+                        <div className="text-xs md:text-sm text-muted-foreground">{t('education.year2')}</div>
+                      </div>
                     </div>
                   </li>
                 </ul>
@@ -74,36 +86,36 @@ export default function AboutPage() {
           <div className="space-y-10 lg:space-y-14">
             <div className="flex flex-col md:flex-row gap-6">
               <div className="md:w-1/3">
-                <h3 className="text-xl font-bold mb-2">{t('experience.job1.title')}</h3>
+                <h3 className="text-md lg:text-lg font-bold mb-2">{t('experience.job1.title')}</h3>
                 <div className="flex flex-row items-center gap-2 mt-2">
-                  <Building className="w-4 h-4" />
-                  <Link isExternal href={t('experience.job1.link')} className="text-sm">{t('experience.job1.company')}</Link>
+                  <Building className="w-4 h-4 hidden md:flex" />
+                  <Link isExternal href={t('experience.job1.link')} className="text-xs md:text-sm text-muted-foreground">{t('experience.job1.company')}</Link>
                 </div>
                 <div className="flex flex-row items-center gap-2 mt-2">
-                  <Calendar className="w-4 h-4" />
-                  <div className="text-sm text-muted-foreground">{t('experience.job1.period')}</div>
+                  <Calendar className="w-4 h-4 " />
+                  <div className="text-xs md:text-sm text-muted-foreground">{t('experience.job1.period')}</div>
                 </div>
               </div>
-              <div className="md:w-2/3">
-                <div className="text-base lg:text-lg text-muted-foreground mb-4">
+              <div className="md:w-2/3 text-sm md:text-md text-muted-foreground">
+                <div className="mb-4">
                   <p>{t('experience.job1.description')}</p>
-                  <ul className="list-disc list-inside space-y-2 text-sm lg:text-md text-muted-foreground ml-4 lg:ml-10 mt-2">
-                    <li>{t('experience.job1.descriptionBullet1')}</li>
-                    <li>{t('experience.job1.descriptionBullet2')}</li>
+                  <ul className="list-disc list-inside space-y-2 ml-4 lg:ml-10 mt-2">
+                    <li>{t('experience.job1.descriptionBullet1')}.</li>
+                    <li>{t('experience.job1.descriptionBullet2')}.</li>
                 </ul>
                 </div>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground mt-2">
-                  <li>{t('experience.job1.bullet1')}</li>
-                  <li>{t('experience.job1.bullet2')}</li>
-                  <li>{t('experience.job1.bullet3')}</li>
-                  <li>{t('experience.job1.bullet4')}</li>
+                <ul className="list-disc list-inside space-y-2 mt-2">
+                  <li>{t('experience.job1.bullet1')}.</li>
+                  <li>{t('experience.job1.bullet2')}.</li>
+                  <li>{t('experience.job1.bullet3')}.</li>
+                  <li>{t('experience.job1.bullet4')}.</li>
                 </ul>
               </div>
             </div>
             
             <div className="flex flex-col md:flex-row gap-6">
               <div className="md:w-1/3">
-                <h3 className="text-xl font-bold mb-2">{t('experience.job2.title')}</h3>
+                <h3 className="text-md lg:text-lg font-bold mb-2">{t('experience.job2.title')}</h3>
                 <div className="text-muted-foreground mt-2">
                   <div className="flex flex-row items-center gap-2">
                     <Building className="w-4 h-4" />
@@ -115,21 +127,21 @@ export default function AboutPage() {
                     <div className="text-sm text-muted-foreground">{t('experience.job2.period')}</div>
                 </div>
               </div>
-              <div className="md:w-2/3">
-                <p className="text-base lg:text-lg text-muted-foreground mb-4">
+              <div className="md:w-2/3 text-sm md:text-md text-muted-foreground">
+                <p className="mb-4">
                   {t('experience.job2.description')}
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                  <li>{t('experience.job2.bullet1')}</li>
-                  <li>{t('experience.job2.bullet2')}</li>
-                  <li>{t('experience.job2.bullet3')}</li>
+                <ul className="list-disc list-inside space-y-2">
+                  <li>{t('experience.job2.bullet1')}.</li>
+                  <li>{t('experience.job2.bullet2')}.</li>
+                  <li>{t('experience.job2.bullet3')}.</li>
                 </ul>
               </div>
             </div>
 
             <div className="flex flex-col md:flex-row gap-6">
               <div className="md:w-1/3">
-                <h3 className="text-xl font-bold mb-2">{t('experience.job3.title')}</h3>
+                <h3 className="text-md lg:text-lg font-bold mb-2">{t('experience.job3.title')}</h3>
                 <div className="text-muted-foreground mt-2">
                   <div className="flex flex-row items-center gap-2">
                     <Building className="w-4 h-4" />
@@ -141,10 +153,10 @@ export default function AboutPage() {
                     <div className="text-sm text-muted-foreground">{t('experience.job3.period')}</div>
                 </div>
               </div>
-              <div className="md:w-2/3">
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                  <li>{t('experience.job3.bullet1')}</li>
-                  <li>{t('experience.job3.bullet2')}</li>
+              <div className="md:w-2/3 text-sm md:text-md text-muted-foreground">
+                <ul className="list-disc list-inside space-y-2">
+                  <li>{t('experience.job3.bullet1')}.</li>
+                  <li>{t('experience.job3.bullet2')}.</li>
                 </ul>
               </div>
             </div>
@@ -184,9 +196,9 @@ export default function AboutPage() {
               {[
                     { name: t('skills.soft.communication'), score: 90, color: "text-green-500" },
                     { name: t('skills.soft.teamwork'), score: 95, color: "text-green-500" },
-                    { name: t('skills.soft.problemSolving'), score: 85, color: "text-green-500" },
-                    { name: t('skills.soft.creativity'), score: 80, color: "text-green-500" },
-                    { name: t('skills.soft.leadership'), score: 85, color: "text-green-500" },
+                    { name: t('skills.soft.problemSolving'), score: 90, color: "text-green-500" },
+                    { name: t('skills.soft.creativity'), score: 95, color: "text-green-500" },
+                    { name: t('skills.soft.organization'), score: 95, color: "text-green-500" },
                   ].map((metric, index) => (
                     <div key={index}>
                       <div className="flex justify-between mb-2">
@@ -265,7 +277,7 @@ export default function AboutPage() {
             {t('languages.proficiency.levels.b')}{' '}•{' '}
             {t('languages.proficiency.levels.c')}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-16">
             <div>
               <h3 className="text-xl font-bold mb-4">{t('languages.portuguese')} (🇵🇹)</h3>
               <div className="overflow-x-auto -mx-4 px-4">

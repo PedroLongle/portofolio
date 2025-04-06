@@ -1,37 +1,22 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
 import { useTranslations } from "@/i18n/client";
+import { useTabWithParams } from "@/hooks/use-tabs";
 
-// Custom hook to handle tab state with URL params
-const useTabWithParams = (defaultTab: string) => {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const [activeTab, setActiveTab] = useState<"repo" | "tech" | "performance">(
-    (searchParams.get("tab") as "repo" | "tech" | "performance") || defaultTab
-  );
 
-  // Update URL when tab changes
-  useEffect(() => {
-    const params = new URLSearchParams(searchParams.toString());
-    params.set("tab", activeTab);
-    router.push(`?${params.toString()}`, { scroll: false });
-  }, [activeTab, router, searchParams]);
+enum Tabs {
+  REPO = "repo",
+  TECH = "tech",
+  PERFORMANCE = "performance"
+}
 
-  const handleTabChange = useCallback((tab: "repo" | "tech" | "performance") => {
-    setActiveTab(tab);
-  }, []);
-
-  return { activeTab, handleTabChange };
-};
 
 export default function PortfolioProjectPage() {
-  const { activeTab, handleTabChange } = useTabWithParams("repo");
+  const { activeTab, handleTabChange } = useTabWithParams(Object.values(Tabs));
   const t = useTranslations('projects.portofolio');
-  const commonT = useTranslations('common');
+  const commonT = useTranslations('common'); 
 
   return (
     <div className="section">
@@ -51,7 +36,7 @@ export default function PortfolioProjectPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-28 mb-2">
             <div className="flex flex-col">
               <h1 className="text-3xl md:text-4xl font-bold">{t('title')}</h1>
-              <p className="text-base md:text-lg mb-8 md:mb-12 mt-6 md:mt-8">
+              <p className="text-sm md:text-lg mb-8 md:mb-12 mt-6 md:mt-8">
                 {t('description.part1')}              
                 <br></br>
                 <br></br>
@@ -85,7 +70,7 @@ export default function PortfolioProjectPage() {
                 ].map((tech, index) => (
                   <button 
                     key={index}
-                    onClick={() => handleTabChange("tech")}
+                    onClick={() => handleTabChange(Tabs.TECH)}
                     className="inline-flex items-center px-3 md:px-5 py-1 md:py-1.5 bg-card border border-border text-xs md:text-sm font-medium rounded-xl hover:bg-muted transition-colors cursor-pointer"
                   >
                     {tech}
@@ -99,7 +84,7 @@ export default function PortfolioProjectPage() {
           <div className="overflow-x-auto -mx-4 px-4 mb-8">
             <nav className="flex min-w-[350px]">
               <button
-                onClick={() => handleTabChange("repo")}
+                onClick={() => handleTabChange(Tabs.REPO)}
                 className={`py-3 md:py-4 px-1 border-b-2 font-medium text-sm ${
                   activeTab === "repo"
                     ? "border-primary text-primary"
@@ -109,7 +94,7 @@ export default function PortfolioProjectPage() {
                 <span className="mx-2 md:mx-4 block">{t('tabs.repo')}</span>
               </button>
               <button
-                onClick={() => handleTabChange("tech")}
+                onClick={() => handleTabChange(Tabs.TECH)}
                 className={`py-3 md:py-4 px-1 border-b-2 font-medium text-sm ${
                   activeTab === "tech"
                     ? "border-primary text-primary"
@@ -119,7 +104,7 @@ export default function PortfolioProjectPage() {
                 <span className="mx-2 md:mx-4 block">{t('tabs.tech')}</span>
               </button>
               <button
-                onClick={() => handleTabChange("performance")}
+                onClick={() => handleTabChange(Tabs.PERFORMANCE)}
                 className={`py-3 md:py-4 px-1 border-b-2 font-medium text-sm ${
                   activeTab === "performance"
                     ? "border-primary text-primary"

@@ -1,6 +1,6 @@
 'use server';
 import nodemailer from 'nodemailer';
-import contactRequestEmailTemplate from './template.';
+import contactRequestEmailTemplate from './template';
 
 const SMTP_SERVER_HOST = process.env.SMTP_SERVER_HOST;
 const SMTP_SERVER_USERNAME = process.env.SMTP_SERVER_USERNAME;

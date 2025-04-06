@@ -109,7 +109,7 @@ export default function ContactForm() {
           <button
               type="submit"
               disabled={isLoading}
-              className={"btn btn-primary w-full py-3 rounded-lg"}
+              className="btn btn-primary rounded-lg text-xs md:text-base w-full"
           >
               {isLoading ? t('sending') : t('send')}
               {isLoading && <Spinner />}

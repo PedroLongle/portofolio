@@ -14,6 +14,10 @@ export default function ContactPage() {
           <p className="text-sm md:text-base text-muted-foreground mb-10 md:mb-20">
             {t("description")}
           </p>
+
+          <div className="flex md:hidden mb-8">
+              <ContactForm />
+          </div>
           
           <div className="grid md:grid-cols-2 gap-8 md:gap-10">
             <div>
@@ -79,7 +83,9 @@ export default function ContactPage() {
               </div>
             </div>
             
-            <ContactForm />
+            <div className="hidden md:flex">
+              <ContactForm />
+            </div>
           </div>
         </div>
       </div>

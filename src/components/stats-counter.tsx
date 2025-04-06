@@ -19,21 +19,18 @@ function StatItem({ value, label, index, currentHighlight }: StatItemProps) {
   return (
     <div style={{ textAlign: 'center' }}>
       <h2 
+        className={`text-[2.5rem] md:text-[3.75rem] font-bold transition-colors duration-300`}
         style={{ 
-          fontSize: '3.75rem', 
-          fontWeight: '700', 
           color: isHighlighted ? highlightColor : normalColor,
-          transition: 'color 0.3s ease-in-out'
         }}
       >
         {value}
       </h2>
       <p 
+        className={`mt-2 text-sm md:text-base transition-all duration-300`}
         style={{ 
-          marginTop: '0.5rem', 
           color: isHighlighted ? highlightColor : labelNormalColor,
           fontWeight: isHighlighted ? 600 : 400,
-          transition: 'all 0.3s ease-in-out'
         }}
       >
         {label}

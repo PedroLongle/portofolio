@@ -1,5 +1,6 @@
 {
   "common": {
+    "or": "Or",
     "nav": {
       "home": "Home",
       "projects": "Projects",
@@ -95,11 +96,13 @@
     "description": "If you find my work helpful or valuable, consider supporting me to help me continue creating open-source projects and content.",
     "buyMeCoffee": {
       "title": "Buy Me a Coffee",
-      "description": "Buy Me a Coffee is a simple and fun way to support my work with a small donation, the price of a coffee. Every coffee helps me dedicate more time to creating quality content and projects."
+      "description": "Buy Me a Coffee is a simple and meaningful way to support my work through a small donation, equivalent to the price of a coffee. Each contribution enables me to dedicate more time to creating high-quality content and open-source projects, while helping me maintain and improve my existing work. Your support directly contributes to the growth and sustainability of my development journey."
     },
     "hireMe": {
       "title": "Hire Me for Projects",
-      "description": "Another great way to support my work is by hiring me for your web development projects or consultations. I specialize in modern web technologies and can help bring your ideas to life."
+      "description": "Another excellent way to support my work is by engaging me for your web development projects or technical consultations. With expertise in modern web technologies and a proven track record of delivering successful solutions, I can help transform your ideas into reality. Whether you need a complete web application, technical guidance, or specific development tasks, I'm committed to providing professional and reliable services that meet your business objectives.",
+      "checkMyProfile": "Check my profile at:",
+      "underConstruction": "Profile under construction. News soon."
     },
     "otherWays": {
       "title": "Other Ways to Support",
@@ -115,10 +118,15 @@
     "description": "Explore my portfolio of projects spanning various industries and design disciplines.",
     "readyToStart": "Let's work together on your next project",
     "collaborateDescription": "Let's collaborate and create something extraordinary together. I'm ready to transform your vision into reality.",
+    "tba": {
+      "title": "To-be-Announced",
+      "description": "Great things under construction."
+    },
     "portofolio": {
       "title": "Personal Portfolio",
       "imageAlt": "Portfolio Project",
       "description": {
+        "short": "Personal portofolio website.",
         "part1": "A modern, responsive portfolio website showcasing my work, skills, and services. Built with Next.js, TypeScript, and Tailwind CSS, this portfolio offers a seamless user experience across devices with internationalization supporting three languages and a contact form with validation.",
         "part2": "The project is deployed using Firebase App Hosting with environment variable management through Google Cloud Secret Manager. The architecture leverages React Server Components for improved performance and follows best practices for accessibility and SEO optimization."
       },
@@ -347,7 +355,7 @@
         "teamwork": "Teamwork",
         "problemSolving": "Problem Solving",
         "creativity": "Creativity",
-        "leadership": "Leadership"
+        "organization": "Organization"
       }
     },
     "certifications": {

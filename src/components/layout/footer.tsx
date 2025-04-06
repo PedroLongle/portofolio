@@ -44,20 +44,18 @@ export default function Footer() {
               <FooterLink href="/support">{navT('support')}</FooterLink>
             </ul>
           </div>
-
-          
           
           <div>
             <h3 className="text-lg font-semibold mb-4">{t('contact')}</h3>
             <ul className="space-y-4 text-zinc-400">
-              <li className="flex items-start">
-                <svg className="w-5 h-5 text-primary mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <li className="flex text-sm md:text-lg items-center">
+                <svg className="w-5 h-5 text-primary mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 <span>pedro.longle.dev@gmail.com</span>
               </li>
-              <li className="flex items-start">
-                <svg className="w-5 h-5 text-primary mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <li className="flex items-start text-sm md:text-lg">
+                <svg className="w-5 h-5 text-primary mr-3 md:mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
@@ -110,7 +108,7 @@ function FooterLink({
     <li>
       <Link 
         href={href}
-        className="text-zinc-400 hover:text-primary transition-colors"
+        className="text-zinc-400 hover:text-primary transition-colors text-sm md:text-lg" 
       >
         {children}
       </Link>

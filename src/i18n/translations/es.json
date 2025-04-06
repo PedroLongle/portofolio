@@ -1,5 +1,6 @@
 {
   "common": {
+    "or": "O",
     "nav": {
       "home": "Inicio",
       "projects": "Proyectos",
@@ -95,11 +96,13 @@
     "description": "Si encuentras mi trabajo útil o valioso, considera apoyarme para ayudarme a seguir creando proyectos de código abierto y contenido.",
     "buyMeCoffee": {
       "title": "Invítame a un Café",
-      "description": "Invítame a un Café es una forma simple y divertida de apoyar mi trabajo con una pequeña donación, el precio de un café. Cada café me ayuda a dedicar más tiempo a crear contenido y proyectos de calidad."
+      "description": "Invítame a un Café es una forma sencilla y significativa de apoyar mi trabajo a través de una pequeña donación, equivalente al precio de un café. Cada contribución me permite dedicar más tiempo a crear contenido de alta calidad y proyectos de código abierto, mientras me ayuda a mantener y mejorar mi trabajo existente. Tu apoyo contribuye directamente al crecimiento y sostenibilidad de mi trayectoria de desarrollo."
     },
     "hireMe": {
       "title": "Contrátame para Proyectos",
-      "description": "Otra excelente manera de apoyar mi trabajo es contratándome para tus proyectos de desarrollo web o consultas. Me especializo en tecnologías web modernas y puedo ayudar a dar vida a tus ideas."
+      "description": "Otra excelente manera de apoyar mi trabajo es contratándome para tus proyectos de desarrollo web o consultas técnicas. Con experiencia en tecnologías web modernas y un historial comprobado de entrega de soluciones exitosas, puedo ayudar a transformar tus ideas en realidad. Ya sea que necesites una aplicación web completa, orientación técnica o tareas de desarrollo específicas, estoy comprometido a proporcionar servicios profesionales y confiables que cumplan con tus objetivos empresariales.",
+      "checkMyProfile": "Consulte mi perfil en:",
+      "underConstruction": "Perfil en construcción. Próximamente noticias."
     },
     "otherWays": {
       "title": "Otras Formas de Apoyo",
@@ -115,10 +118,15 @@
     "description": "Explora mi portafolio de proyectos que abarcan diversas industrias y disciplinas de diseño.",
     "readyToStart": "Trabajemos juntos en tu próximo proyecto",
     "collaborateDescription": "Colaboremos y creemos algo extraordinario juntos. Estoy listo para transformar tu visión en realidad.",
+    "tba": {
+      "title": "Por Anunciar",
+      "description": "Grandes cosas en construcción."
+    },
     "portofolio": {
       "title": "Portafolio Personal",
       "imageAlt": "Proyecto Portafolio",
       "description": {
+        "short": "Sitio web de la cartera personal.",
         "part1": "Un sitio web de portafolio moderno y responsivo que muestra mi trabajo, habilidades y servicios. Construido con Next.js, TypeScript y Tailwind CSS, este portafolio ofrece una experiencia de usuario fluida en todos los dispositivos, con internacionalización que admite tres idiomas y un formulario de contacto con validación.",
         "part2": "El proyecto está implementado utilizando Firebase App Hosting con gestión de variables de entorno a través de Google Cloud Secret Manager. La arquitectura utiliza React Server Components para un mejor rendimiento y sigue las mejores prácticas para accesibilidad y optimización SEO."
       },
@@ -347,7 +355,7 @@
         "teamwork": "Trabajo en Equipo",
         "problemSolving": "Resolución de Problemas",
         "creativity": "Creatividad",
-        "leadership": "Liderazgo"
+        "organization": "Organización"
       }
     },
     "certifications": {
