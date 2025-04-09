@@ -46,6 +46,10 @@
       "security": {
         "title": "Security",
         "description": "Implementing best practices for securing applications and protecting sensitive data."
+      },
+      "scalability": {
+        "title": "Scalability",
+        "description": "Building applications that can handle growth and increased demand while maintaining performance."
       }
     },
     "projects": {

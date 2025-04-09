@@ -61,7 +61,7 @@ export default function ProjectsPage() {
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
             {t("collaborateDescription")}
           </p>
-          <Link href="/contact" className="btn btn-primary rounded-lg text-xs md:text-base">
+          <Link href="/contact" className="btn btn-primary rounded-lg text-xs md:text-sm lg:text-md">
             {commonT("getInTouch")}
           </Link>
         </div>

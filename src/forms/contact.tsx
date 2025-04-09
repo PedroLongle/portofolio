@@ -109,7 +109,7 @@ export default function ContactForm() {
           <button
               type="submit"
               disabled={isLoading}
-              className="btn btn-primary rounded-lg text-xs md:text-base w-full"
+              className="btn btn-primary rounded-lg text-xs md:text-sm lg:text-md w-full"
           >
               {isLoading ? t('sending') : t('send')}
               {isLoading && <Spinner />}

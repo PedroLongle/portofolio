@@ -11,8 +11,10 @@ export default function Footer() {
   return (
     <footer className="bg-zinc-900 pt-16 pb-8 mt-auto">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div className="md:col-span-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-22">
+
+
+          <div className="md:col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center mb-6 gap-4">
               <Image src="/logos/PL-white.svg" alt="logo" width={50} height={50} priority />
               <span className="text-xl font-bold">Pedro Longle</span>
@@ -33,6 +35,25 @@ export default function Footer() {
               </SocialLink>
             </div>
           </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">{t('contact')}</h3>
+            <ul className="space-y-4 text-zinc-400">
+              <li className="flex text-sm md:text-md lg:text-base items-center">
+                <svg className="w-5 h-5 text-primary mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span>pedro.longle.dev@gmail.com</span>
+              </li>
+              <li className="flex items-start text-sm md:text-md lg:text-base">
+                <svg className="w-5 h-5 text-primary mr-3 md:mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>Lisbon, Portugal</span>
+              </li>
+            </ul>
+          </div>
           
           <div>
             <h3 className="text-lg font-semibold mb-4">{t('quickLinks')}</h3>
@@ -45,24 +66,7 @@ export default function Footer() {
             </ul>
           </div>
           
-          <div>
-            <h3 className="text-lg font-semibold mb-4">{t('contact')}</h3>
-            <ul className="space-y-4 text-zinc-400">
-              <li className="flex text-sm md:text-lg items-center">
-                <svg className="w-5 h-5 text-primary mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                <span>pedro.longle.dev@gmail.com</span>
-              </li>
-              <li className="flex items-start text-sm md:text-lg">
-                <svg className="w-5 h-5 text-primary mr-3 md:mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <span>Lisbon, Portugal</span>
-              </li>
-            </ul>
-          </div>
+          
         </div>
         
         <div className="border-t border-zinc-800 mt-12 pt-8 text-center text-zinc-500">
@@ -108,7 +112,7 @@ function FooterLink({
     <li>
       <Link 
         href={href}
-        className="text-zinc-400 hover:text-primary transition-colors text-sm md:text-lg" 
+        className="text-zinc-400 hover:text-primary transition-colors text-sm md:text-md lg:text-base" 
       >
         {children}
       </Link>

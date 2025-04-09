@@ -45,7 +45,11 @@
       },
       "security": {
         "title": "Segurança",
-        "description": "Implementar as melhores práticas para proteger aplicações e proteger dados sensíveis."
+        "description": "Implementação de melhores práticas para proteger aplicações e dados sensíveis."
+      },
+      "scalability": {
+        "title": "Escalabilidade",
+        "description": "Construção de aplicações que podem lidar com crescimento e aumento de demanda mantendo o desempenho."
       }
     },
     "projects": {

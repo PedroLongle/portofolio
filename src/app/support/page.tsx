@@ -88,7 +88,7 @@ export default function SupportPage() {
                   <div className="">
                     <Link 
                       href="/contact" 
-                      className="btn btn-primary rounded-lg text-xs md:text-base w-full"
+                      className="btn btn-primary rounded-lg text-xs md:text-sm lg:text-md w-full"
                       >
                       {commonT("getInTouch")}
                     </Link>
