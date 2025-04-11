@@ -115,13 +115,13 @@ export default function Home() {
             <ProjectCard 
               title={projectsT("portofolio.title")}
               description={projectsT("portofolio.description.short")}
-              image={`/projects/portofolio/${locale}/thumb.svg`}
+              image={`/projects/portofolio/thumb.svg`}
               link="/projects/portofolio"
             />
             <ProjectCard 
               title={projectsT("tba.title")}
               description={projectsT("tba.description")}
-              image={`/projects/tba/${locale}/macbook.svg`}
+              image={`/projects/tba/macbook.svg`}
             />
           </div>
         </div>

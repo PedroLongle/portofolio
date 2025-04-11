@@ -25,33 +25,33 @@ export default function ProjectsPage() {
           <ProjectCard 
            title={t("portofolio.title")}
            description={t("portofolio.description.short")}
-            image={`/projects/portofolio/${locale}/thumb.svg`}
+            image={`/projects/portofolio/thumb.svg`}
             link="/projects/portofolio"
           />
           <ProjectCard 
             title={t("tba.title")}
             description={t("tba.description")}
-            image={`/projects/tba/${locale}/macbook.svg`}
+            image={`/projects/tba/macbook.svg`}
           />
           <ProjectCard 
             title={t("tba.title")}
             description={t("tba.description")}
-            image={`/projects/tba/${locale}/mobile-2.svg`}
+            image={`/projects/tba/mobile-2.svg`}
           />
           <ProjectCard 
             title={t("tba.title")}
             description={t("tba.description")}
-            image={`/projects/tba/${locale}/tablet.svg`}
+            image={`/projects/tba/tablet.svg`}
           />
           <ProjectCard 
             title={t("tba.title")}
             description={t("tba.description")}
-            image={`/projects/tba/${locale}/mobile.svg`}
+            image={`/projects/tba/mobile.svg`}
           />
           <ProjectCard 
             title={t("tba.title")}
             description={t("tba.description")}
-            image={`/projects/tba/${locale}/macbook-2.svg`}
+            image={`/projects/tba/macbook-2.svg`}
           />
           
         </div>
