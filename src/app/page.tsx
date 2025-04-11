@@ -12,8 +12,6 @@ export default function Home() {
   const commonT = useTranslations('common');
   const projectsT = useTranslations('projects');
 
-  const locale = useLocale();
-
   return (
     <div className="mt-12">
       {/* Hero Section */}

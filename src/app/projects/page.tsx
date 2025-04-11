@@ -8,8 +8,6 @@ import { useLocale } from "next-intl";
 export default function ProjectsPage() {
   const t = useTranslations("projects");
   const commonT = useTranslations("common.buttons");
-
-  const locale = useLocale();
   
   return (
     <div className="section">
