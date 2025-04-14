@@ -1,3 +1,5 @@
+"use client"
+
 import { useTranslations } from "@/i18n/client";
 import Link from "next/link";
 import ProjectCard from "@/components/project-card";
