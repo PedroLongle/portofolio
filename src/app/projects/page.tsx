@@ -1,9 +1,6 @@
-"use client";
-
 import { useTranslations } from "@/i18n/client";
 import Link from "next/link";
 import ProjectCard from "@/components/project-card";
-import { useLocale } from "next-intl";
 
 export default function ProjectsPage() {
   const t = useTranslations("projects");

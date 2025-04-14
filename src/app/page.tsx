@@ -5,7 +5,6 @@ import Link from "next/link";
 import ProjectCard from "@/components/project-card";
 import { StatsCounter } from "@/components/stats-counter";
 import { useTranslations } from "@/i18n/client";
-import { useLocale } from "next-intl";
 
 export default function Home() {
   const homeT = useTranslations('home');
