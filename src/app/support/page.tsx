@@ -23,7 +23,7 @@ export default function SupportPage() {
             {/* Buy Me a Coffee */}
             <div className="bg-card rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl bg-zinc-900">
               <div className="flex flex-col lg:flex-row">
-                <div className="w-full md:max-w-5xl p-6 md:p-12 flex flex-col justify-between">
+                <div className="w-full md:max-w-5xl p-6 md:p-10 flex flex-col justify-between">
                   <div>
                     <h2 className="text-xl md:text-2xl font-bold mb-3">{supportT("buyMeCoffee.title")}</h2>
                     <p className="text-xs md:text-base text-muted-foreground mb-4">
@@ -35,7 +35,7 @@ export default function SupportPage() {
                       href="https://www.buymeacoffee.com/pedrolongle" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="p-2 text-white rounded-2xl text-sm font-medium transition-colors w-full"
+                      className="p-2 text-white rounded-2xl text-sm font-medium transition-colors w-full mt-2"
                     >
                       <Image 
                         src="/bmc/button.svg"
@@ -49,14 +49,15 @@ export default function SupportPage() {
                   </div>
                 </div>
                 <div className="hidden lg:flex relative items-center justify-center p-4 md:p-0">
-                  <div className="flex items-center justify-center p-2 md:mr-10">
+                  <div className="flex items-center justify-center p-2 md:-mr-16">
                     <Image 
-                      src={"/bmc/qr.png"}
+                      src="/bmc/qr.png"
                       alt="Buy me a coffee" 
-                      width={200} 
-                      height={200}
-                      style={{ width: '90%', height: 'auto', borderRadius: '10px' }}
+                      width={100} 
+                      height={100}
+                      style={{ width: '50%', height: 'auto', borderRadius: '10px' }}
                       priority
+                      unoptimized
                     />
                   </div>
                 </div>
@@ -67,7 +68,7 @@ export default function SupportPage() {
             <div className="bg-card rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl bg-zinc-900">
               <div className="flex flex-col-reverse md:flex-row">
                 <div className="w-full xl:w-1/3 relative hidden xl:flex items-center justify-center py-6 md:py-0">
-                  <div className="w-full h-full items-center justify-center p-6 md:p-10">
+                  <div className="flex items-center justify-center w-full h-full p-6 md:p-10">
                     <Image 
                       src="/illustrations/hire.svg"
                       alt="Hire me" 
