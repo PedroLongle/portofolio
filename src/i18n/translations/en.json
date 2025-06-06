@@ -122,10 +122,6 @@
     "description": "Explore my portfolio of projects spanning various industries and design disciplines.",
     "readyToStart": "Let's work together on your next project",
     "collaborateDescription": "Let's collaborate and create something extraordinary together. I'm ready to transform your vision into reality.",
-    "tba": {
-      "title": "To-be-Announced",
-      "description": "Great things under construction."
-    },
     "portofolio": {
       "title": "Personal Portfolio",
       "imageAlt": "Portfolio Project",
@@ -245,6 +241,38 @@
               "description": "Mobile-first approach with tailwind breakpoints"
             }
           }
+        }
+      }
+    },
+    "zenRazor": {
+      "website": {
+        "title": "Zen Razor - Public Website",
+        "description": "Modern, responsive public website for Zen Razor brand.",
+        "imageAlt": "Zen Razor Public Website",
+        "fullDescription": {
+          "short": "Public-facing website for Zen Razor brand",
+          "part1": "A modern, responsive public website for the Zen Razor brand, built with cutting-edge web technologies. The website features a clean, minimalist design that reflects the brand's aesthetic while providing an intuitive user experience across all devices.",
+          "part2": "The site includes product showcases, brand storytelling, contact information, and seamless integration with the back-office system for content management. Built with performance and SEO optimization in mind to maximize online presence and user engagement."
+        }
+      },
+      "backoffice": {
+        "title": "Zen Razor - Back Office",
+        "description": "Administrative dashboard for managing Zen Razor operations.",
+        "imageAlt": "Zen Razor Back Office Dashboard",
+        "fullDescription": {
+          "short": "Administrative management system for Zen Razor",
+          "part1": "A comprehensive back-office solution designed to streamline Zen Razor's administrative operations. The dashboard provides intuitive tools for content management, user administration, analytics tracking, and system monitoring.",
+          "part2": "Features include real-time data visualization, automated reporting, user role management, and seamless integration with the backend API. Built with a focus on usability and efficiency to empower administrators with powerful yet easy-to-use tools."
+        }
+      },
+      "backend": {
+        "title": "Zen Razor - Backend API",
+        "description": "Robust backend infrastructure powering Zen Razor solutions.",
+        "imageAlt": "Zen Razor Backend Infrastructure",
+        "fullDescription": {
+          "short": "Scalable backend infrastructure for Zen Razor ecosystem",
+          "part1": "A robust, scalable backend infrastructure that powers the entire Zen Razor ecosystem. Built with modern architectural patterns including microservices, RESTful APIs, and comprehensive security measures to ensure reliable and secure operations.",
+          "part2": "The backend handles user authentication, data management, business logic processing, and third-party integrations. Designed with performance, scalability, and maintainability in mind, featuring automated testing, monitoring, and deployment pipelines."
         }
       }
     },

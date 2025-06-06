@@ -122,10 +122,6 @@
     "description": "Explore o meu portfólio de projetos abrangendo várias indústrias e disciplinas de design.",
     "readyToStart": "Vamos trabalhar juntos no seu próximo projeto",
     "collaborateDescription": "Vamos colaborar e criar algo extraordinário juntos. Estou pronto para transformar a sua visão em realidade.",
-    "tba": {
-      "title": "Por Anunciar",
-      "description": "Grandes coisas em construção."
-    },
     "portofolio": {
       "title": "Portfólio Pessoal",
       "imageAlt": "Projeto Portfólio",
@@ -245,6 +241,38 @@
               "description": "Abordagem mobile-first com breakpoints do Tailwind"
             }
           }
+        }
+      }
+    },
+    "zenRazor": {
+      "website": {
+        "title": "Zen Razor - Website Público",
+        "description": "Website público moderno e responsivo para a marca Zen Razor.",
+        "imageAlt": "Website Público Zen Razor",
+        "fullDescription": {
+          "short": "Website público para a marca Zen Razor",
+          "part1": "Um website público moderno e responsivo para a marca Zen Razor, construído com tecnologias web de ponta. O website apresenta um design limpo e minimalista que reflete a estética da marca, proporcionando uma experiência de utilizador intuitiva em todos os dispositivos.",
+          "part2": "O site inclui vitrines de produtos, narrativa da marca, informações de contacto e integração perfeita com o sistema back-office para gestão de conteúdo. Construído com otimização de desempenho e SEO em mente para maximizar a presença online e o envolvimento do utilizador."
+        }
+      },
+      "backoffice": {
+        "title": "Zen Razor - Back Office",
+        "description": "Painel administrativo para gerir as operações do Zen Razor.",
+        "imageAlt": "Painel Back Office Zen Razor",
+        "fullDescription": {
+          "short": "Sistema de gestão administrativa para Zen Razor",
+          "part1": "Uma solução back-office abrangente projetada para otimizar as operações administrativas do Zen Razor. O painel fornece ferramentas intuitivas para gestão de conteúdo, administração de utilizadores, rastreamento de análises e monitoramento do sistema.",
+          "part2": "As funcionalidades incluem visualização de dados em tempo real, relatórios automatizados, gestão de funções de utilizadores e integração perfeita com a API backend. Construído com foco na usabilidade e eficiência para capacitar administradores com ferramentas poderosas, mas fáceis de usar."
+        }
+      },
+      "backend": {
+        "title": "Zen Razor - API Backend",
+        "description": "Infraestrutura backend robusta que alimenta as soluções Zen Razor.",
+        "imageAlt": "Infraestrutura Backend Zen Razor",
+        "fullDescription": {
+          "short": "Infraestrutura backend escalável para o ecossistema Zen Razor",
+          "part1": "Uma infraestrutura backend robusta e escalável que alimenta todo o ecossistema Zen Razor. Construída com padrões arquiteturais modernos, incluindo microserviços, APIs RESTful e medidas de segurança abrangentes para garantir operações confiáveis e seguras.",
+          "part2": "O backend lida com autenticação de utilizadores, gestão de dados, processamento de lógica de negócios e integrações de terceiros. Projetado com desempenho, escalabilidade e manutenibilidade em mente, apresentando testes automatizados, monitoramento e pipelines de implementação."
         }
       }
     },

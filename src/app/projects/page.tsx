@@ -18,6 +18,47 @@ export default function ProjectsPage() {
           </p>
         </div>
         
+        {/* Zen Razor Project - Consolidated Grouped Section */}
+        <div className="mb-16">
+          <div className="bg-card border border-border rounded-xl p-6 md:p-8 shadow-sm">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">Zen Razor</h2>
+              <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto">
+                Comprehensive digital ecosystem featuring a public website, administrative back-office, and robust backend infrastructure
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="relative">
+                <ProjectCard 
+                  title={t("zenRazor.website.title")}
+                  description={t("zenRazor.website.description")}
+                  image={`/projects/zen-razor/website/thumb.svg`}
+                  link="/projects/zen-razor-website"
+                />
+              </div>
+              
+              <div className="relative">
+                <ProjectCard 
+                  title={t("zenRazor.backoffice.title")}
+                  description={t("zenRazor.backoffice.description")}
+                  image={`/projects/portofolio/thumb.svg`}
+                  link="/projects/zen-razor-backoffice"
+                />
+              </div>
+              
+              <div className="relative">
+                <ProjectCard 
+                  title={t("zenRazor.backend.title")}
+                  description={t("zenRazor.backend.description")}
+                  image={`/projects/portofolio/thumb.svg`}
+                  link="/projects/zen-razor-backend"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <ProjectCard 
            title={t("portofolio.title")}
@@ -25,32 +66,6 @@ export default function ProjectsPage() {
             image={`/projects/portofolio/thumb.svg`}
             link="/projects/portofolio"
           />
-          <ProjectCard 
-            title={t("tba.title")}
-            description={t("tba.description")}
-            image={`/projects/tba/macbook.svg`}
-          />
-          <ProjectCard 
-            title={t("tba.title")}
-            description={t("tba.description")}
-            image={`/projects/tba/mobile-2.svg`}
-          />
-          <ProjectCard 
-            title={t("tba.title")}
-            description={t("tba.description")}
-            image={`/projects/tba/tablet.svg`}
-          />
-          <ProjectCard 
-            title={t("tba.title")}
-            description={t("tba.description")}
-            image={`/projects/tba/mobile.svg`}
-          />
-          <ProjectCard 
-            title={t("tba.title")}
-            description={t("tba.description")}
-            image={`/projects/tba/macbook-2.svg`}
-          />
-          
         </div>
         
         <div className="bg-card p-4 md:p-12 rounded-xl text-center">
