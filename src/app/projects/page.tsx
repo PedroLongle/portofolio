@@ -42,7 +42,7 @@ export default function ProjectsPage() {
                 <ProjectCard 
                   title={t("zenRazor.backoffice.title")}
                   description={t("zenRazor.backoffice.description")}
-                  image={`/projects/portofolio/thumb.svg`}
+                  image={`/projects/zen-razor/back-office/thumb.svg`}
                   link="/projects/zen-razor-backoffice"
                 />
               </div>
@@ -51,7 +51,7 @@ export default function ProjectsPage() {
                 <ProjectCard 
                   title={t("zenRazor.backend.title")}
                   description={t("zenRazor.backend.description")}
-                  image={`/projects/portofolio/thumb.svg`}
+                  image={`/projects/zen-razor/backend/thumb.png`}
                   link="/projects/zen-razor-backend"
                 />
               </div>
