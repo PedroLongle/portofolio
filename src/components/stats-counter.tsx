@@ -66,7 +66,7 @@ export function StatsCounter() {
       // Clear any pending timeouts
       timeoutsRef.current.forEach(clearTimeout);
     };
-  }, []);
+  });
   
   const startSequence = () => {
     // Clear any existing timeouts

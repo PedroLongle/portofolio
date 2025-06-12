@@ -15,20 +15,7 @@ export default function GitHubRepo({
   description 
 }: GitHubRepoProps) {
   const t = useTranslations(translationKey);
-  
-  // Extract repo name from URL for display
-  const getRepoName = (url: string) => {
-    try {
-      const parts = url.split('/');
-      return parts[parts.length - 1] || 'Repository';
-    } catch {
-      return 'Repository';
-    }
-  };
-
-  const repoName = getRepoName(repoUrl);
-
-  return (
+    return (
     <div className="bg-card rounded-lg shadow-sm mb-8 p-4 md:p-6">
       <div className="flex items-center mb-4">
         <svg className="w-5 md:w-6 h-5 md:h-6 text-primary mr-2" fill="currentColor" viewBox="0 0 24 24">
