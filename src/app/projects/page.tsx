@@ -14,56 +14,62 @@ export default function ProjectsPage() {
     <div className="section">
       <div className="container">
         <div className="max-w-4xl mx-auto my-6 md:my-12 text-center">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 lg:mb-4">{t("title")}</h1>
-          <p className="text-muted-foreground text-sm md:text-md lg:text-lg">
+          <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-2 lg:mb-4">{t("title")}</h1>
+          <p className="text-muted-foreground text-lg md:text-base text-muted-foreground">
             {t("description")}
           </p>
         </div>
         
         {/* Zen Razor Project - Consolidated Grouped Section */}
-        <div className="mb-16">
-          <div className="relative bg-gradient-to-br from-card via-card to-muted/20 shadow-lg hover:shadow-xl transition-all duration-300">
+        <div className="mb-10 md:mb-16">
+          <div className="relative bg-gradient-to-br from-card via-card to-muted/20 shadow-lg hover:shadow-xl transition-all duration-300 p-5 md:p-7 lg:p-10 rounded-xl md:rounded-2xl">
             {/* Background Pattern */}
-            <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] rounded-2xl"></div>
+            <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] rounded-xl md:rounded-2xl"></div>
             
             {/* Header Section */}
-            <div className="relative z-10 mb-12">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="relative">
-                    <Image src="/projects/zen-razor/logo/logo.svg" alt="Zen Razor" width={40} height={40} />
+            <div className="relative z-10 mb-10 md:mb-14">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5 mb-6 md:mb-8">
+                <div className="relative flex-shrink-0">
+                    <Image 
+                      src="/projects/zen-razor/logo/logo.svg" 
+                      alt="Zen Razor" 
+                      width={36} 
+                      height={36}
+                      className="sm:w-12 sm:h-12"
+                    />
                 </div>
                 <div>
-                  <h2 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text zen-razor">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text zen-razor">
                     {homeT("zenRazor.title")}
                   </h2>
                 </div>
               </div>
               
               <div className="max-w-3xl">
-                <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                <p className="text-muted-foreground text-base sm:text-md md:text-xl leading-relaxed">
                   {homeT("zenRazor.description")}
                 </p>
               </div>
             </div>
             
             {/* Divider */}
-            <div className="relative mb-12">
+            <div className="relative mb-8 md:mb-14">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gradient-to-r from-transparent via-border to-transparent"></div>
               </div>
               <div className="relative flex justify-center">
-                <div className="bg-card px-4">
-                  <div className="flex gap-1">
-                    <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                    <div className="w-2 h-2 bg-primary/60 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                    <div className="w-2 h-2 bg-primary/30 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+                <div className="bg-card px-4 md:px-5">
+                  <div className="flex gap-1.5">
+                    <div className="w-2 h-2 md:w-2.5 md:h-2.5 bg-primary rounded-full animate-pulse"></div>
+                    <div className="w-2 h-2 md:w-2.5 md:h-2.5 bg-primary/60 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                    <div className="w-2 h-2 md:w-2.5 md:h-2.5 bg-primary/30 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
                   </div>
                 </div>
               </div>
             </div>
             
             {/* Project Cards Grid */}
-            <div className="relative z-10 grid md:grid-cols-3 gap-8">
+            <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-primary/10 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative">
@@ -87,7 +93,7 @@ export default function ProjectsPage() {
                 </div>
               </div>
               
-              <div className="relative group">
+              <div className="relative group sm:col-span-2 md:col-span-1">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-primary/10 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative">
                   <ProjectCard 
@@ -100,16 +106,16 @@ export default function ProjectsPage() {
             </div>
 
             {/* Divider */}
-             <div className="relative py-12">
+             <div className="relative py-8 md:py-14">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gradient-to-r from-transparent via-border to-transparent"></div>
               </div>
               <div className="relative flex justify-center">
-                <div className="bg-card px-4">
-                  <div className="flex gap-1">
-                    <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                    <div className="w-2 h-2 bg-primary/60 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                    <div className="w-2 h-2 bg-primary/30 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+                <div className="bg-card px-4 md:px-5">
+                  <div className="flex gap-1.5">
+                    <div className="w-2 h-2 md:w-2.5 md:h-2.5 bg-primary rounded-full animate-pulse"></div>
+                    <div className="w-2 h-2 md:w-2.5 md:h-2.5 bg-primary/60 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                    <div className="w-2 h-2 md:w-2.5 md:h-2.5 bg-primary/30 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
                   </div>
                 </div>
               </div>
