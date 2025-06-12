@@ -13,7 +13,7 @@ export default function ProjectsPage() {
   return (
     <div className="section">
       <div className="container">
-        <div className="max-w-4xl mx-auto my-6 md:my-12 text-center">
+        <div className="max-w-4xl mx-auto my-6 md:my-8 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-2 lg:mb-4">{t("title")}</h1>
           <p className="text-muted-foreground text-lg md:text-base text-muted-foreground">
             {t("description")}
@@ -22,13 +22,13 @@ export default function ProjectsPage() {
         
         {/* Zen Razor Project - Consolidated Grouped Section */}
         <div className="mb-10 md:mb-16">
-          <div className="relative bg-gradient-to-br from-card via-card to-muted/20 shadow-lg hover:shadow-xl transition-all duration-300 p-5 md:p-7 lg:p-10 rounded-xl md:rounded-2xl">
+          <div className="relative bg-gradient-to-br from-card via-card to-muted/20 shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl md:rounded-2xl">
             {/* Background Pattern */}
             <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] rounded-xl md:rounded-2xl"></div>
             
             {/* Header Section */}
-            <div className="relative z-10 mb-10 md:mb-14">
-              <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5 mb-6 md:mb-8">
+            <div className="relative z-10 mb-6 md:mb-14">
+              <div className="flex items-center gap-4 sm:gap-5 mb-4 md:mb-8">
                 <div className="relative flex-shrink-0">
                     <Image 
                       src="/projects/zen-razor/logo/logo.svg" 
@@ -39,7 +39,7 @@ export default function ProjectsPage() {
                     />
                 </div>
                 <div>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text zen-razor">
+                  <h2 className="text-2xl sm:text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text zen-razor">
                     {homeT("zenRazor.title")}
                   </h2>
                 </div>
@@ -69,7 +69,7 @@ export default function ProjectsPage() {
             </div>
             
             {/* Project Cards Grid */}
-            <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+            <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-8 lg:gap-10">
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-primary/10 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative">
