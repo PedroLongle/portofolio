@@ -9,6 +9,7 @@ import { defaultLocale } from "@/i18n/config";
 import Header from "@/components/layout/header";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { TooltipProvider } from "@/components/shadcn/tooltip";
+import localFont from 'next/font/local'
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -16,6 +17,12 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
   preload: true,
 });
+
+const rumbleBrave = localFont({
+  src: '../../public/fonts/RumbleBrave.otf',
+  display: 'swap',
+  variable: "--font-rumble-brave",
+})
 
 export const metadata: Metadata = {
   title: "Pedro Longle | Software Engineer",
@@ -28,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang={defaultLocale} suppressHydrationWarning className={montserrat.variable}>
+    <html lang={defaultLocale} suppressHydrationWarning className={`${montserrat.variable} ${rumbleBrave.variable}`}> 
       <body className="flex flex-col min-h-screen overflow-x-hidden">
         <TooltipProvider>
           <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_TAG || ''} /> 

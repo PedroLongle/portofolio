@@ -116,9 +116,10 @@ export default function Home() {
               link="/projects/portofolio"
             />
             <ProjectCard 
-              title={projectsT("tba.title")}
-              description={projectsT("tba.description")}
-              image={`/projects/tba/macbook.svg`}
+              title={projectsT("zenRazor.website.shortTitle")}
+              description={projectsT("zenRazor.website.description.short")}
+              image={`/projects/zen-razor/website/thumb.svg`}
+              link="/projects/zen-razor-website"
             />
           </div>
         </div>

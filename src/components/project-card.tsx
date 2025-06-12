@@ -11,15 +11,15 @@ export default function ProjectCard({ title, description, image, link }: {
 }) {
   const router = useRouter();
   return (
-    <div className="relative overflow-hidden">
+    <div className={`relative overflow-hidden ${link ? 'cursor-pointer' : 'opacity-50'}`}>
       <div className="relative h-[350px] w-full overflow-hidden">
         <Image 
           src={image} 
           alt={title}
           fill
-          className="object-cover transition-transform duration-500 cursor-pointer"
-          onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-          onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+          className={`object-cover  ${link ? 'transition-transform duration-500' : ''}`}
+          onMouseOver={(e) => e.currentTarget.style.transform = link ? 'scale(1.05)' : ''}
+          onMouseOut={(e) => e.currentTarget.style.transform = link ? 'scale(1)' : ''}
           onClick={() => link && router.push(link)}
         />
       </div>

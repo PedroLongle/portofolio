@@ -4,11 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "@/i18n/client";
 import { useTabWithParams } from "@/hooks/use-tabs";
+import GitHubRepo from "@/components/projects/github-repo";
 
 enum Tabs {
-  OVERVIEW = "overview",
+  REPO = "repo",
   TECH = "tech",
-  FEATURES = "features"
+  PERFORMANCE = "performance"
 }
 
 export default function ZenRazorWebsitePage() {
@@ -43,7 +44,7 @@ export default function ZenRazorWebsitePage() {
             </div>
             <div className="w-full">
               <Image 
-                src="/projects/zen-razor/website-mockup.svg" 
+                src="/projects/zen-razor/website/mockup.svg" 
                 alt={t('imageAlt')}
                 width={700}
                 height={1000}
@@ -59,10 +60,10 @@ export default function ZenRazorWebsitePage() {
                   "TypeScript", 
                   "Next.js", 
                   "Tailwind CSS",
-                  "Headless CMS",
-                  "SEO Optimization",
-                  "Responsive Design",
-                  "Performance Optimization"
+                  "Firebase",
+                  "Google Maps API",
+                  "React Hook Form + yup",
+                  "GitHub Actions"
                 ].map((tech, index) => (
                   <button 
                     key={index}
@@ -78,14 +79,14 @@ export default function ZenRazorWebsitePage() {
           <div className="overflow-x-auto -mx-4 px-4 mb-8">
             <nav className="flex min-w-[350px]">
               <button
-                onClick={() => handleTabChange(Tabs.OVERVIEW)}
+                onClick={() => handleTabChange(Tabs.REPO)}
                 className={`py-3 md:py-4 px-1 border-b-2 font-medium text-sm ${
-                  activeTab === "overview"
+                  activeTab === "repo"
                     ? "border-primary text-primary"
                     : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300"
                 }`}
               >
-                <span className="mx-2 md:mx-4 block">Overview</span>
+                <span className="mx-2 md:mx-4 block">{t('tabs.repo')}</span>
               </button>
               <button
                 onClick={() => handleTabChange(Tabs.TECH)}
@@ -95,49 +96,119 @@ export default function ZenRazorWebsitePage() {
                     : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300"
                 }`}
               >
-                <span className="mx-2 md:mx-4 block">Tech Stack</span>
+                <span className="mx-2 md:mx-4 block">{t('tabs.tech')}</span>
               </button>
               <button
-                onClick={() => handleTabChange(Tabs.FEATURES)}
+                onClick={() => handleTabChange(Tabs.PERFORMANCE)}
                 className={`py-3 md:py-4 px-1 border-b-2 font-medium text-sm ${
-                  activeTab === "features"
+                  activeTab === "performance"
                     ? "border-primary text-primary"
                     : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300"
                 }`}
               >
-                <span className="mx-2 md:mx-4 block">Features</span>
+                <span className="mx-2 md:mx-4 block">{t('tabs.performance')}</span>
               </button>
             </nav>
           </div>
           
           {/* Tab content */}
           <div className="min-h-[400px]">
-            {activeTab === "overview" && (
+            {activeTab === "repo" && (
               <div>
-                <div className="bg-card rounded-lg shadow-sm mb-8 p-4 md:p-6">
-                  <div className="flex items-center mb-4">
-                    <svg className="w-5 md:w-6 h-5 md:h-6 text-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
-                    </svg>
-                    <h2 className="text-lg md:text-xl font-semibold">Project Overview</h2>
-                  </div>
-                  <p className="mb-4 text-sm md:text-base">
-                    The Zen Razor public website serves as the digital face of the brand, showcasing products and services with a focus on user experience and performance. Built with modern web technologies to ensure fast loading times and seamless navigation.
-                  </p>
-                </div>
+                <GitHubRepo 
+                  repoUrl="https://github.com/PedroLongle/portofolio" 
+                  title={t('repo.title')} 
+                  description={t('repo.description')} 
+                />
                 
-                <div className="bg-card p-2 md:p-4 rounded-lg shadow-sm">
-                  <h3 className="text-base md:text-lg font-semibold mb-3">Key Highlights</h3>
-                  <ul className="space-y-2 list-disc list-inside text-muted-foreground text-sm md:text-base">
-                    <li>Modern, responsive design optimized for all devices</li>
-                    <li>SEO-optimized structure for maximum search visibility</li>
-                    <li>Content management system integration</li>
-                    <li>Performance-focused architecture</li>
-                    <li>Accessibility compliance (WCAG 2.1)</li>
-                    <li>Analytics and conversion tracking</li>
-                    <li>Social media integration</li>
-                    <li>Contact forms and lead generation</li>
-                  </ul>
+                <div className="bg-card p-4 md:p-6 rounded-lg shadow-sm">
+                  <h3 className="text-base md:text-lg font-semibold mb-4">{t('overview.keyHighlights.title')}</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-3">
+                      <div className="flex items-start">
+                        <svg className="w-4 h-4 md:w-5 md:h-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <div>
+                          <h4 className="font-medium text-sm md:text-base">{t('features.core.appointment.title')}</h4>
+                          <p className="text-xs md:text-sm text-muted-foreground">{t('features.core.appointment.description')}</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start">
+                        <svg className="w-4 h-4 md:w-5 md:h-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                        </svg>
+                        <div>
+                          <h4 className="font-medium text-sm md:text-base">{t('features.core.services.title')}</h4>
+                          <p className="text-xs md:text-sm text-muted-foreground">{t('features.core.services.description')}</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start">
+                        <svg className="w-4 h-4 md:w-5 md:h-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        <div>
+                          <h4 className="font-medium text-sm md:text-base">{t('features.core.barbers.title')}</h4>
+                          <p className="text-xs md:text-sm text-muted-foreground">{t('features.core.barbers.description')}</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start">
+                        <svg className="w-4 h-4 md:w-5 md:h-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <div>
+                          <h4 className="font-medium text-sm md:text-base">Interactive Maps</h4>
+                          <p className="text-xs md:text-sm text-muted-foreground">{t('overview.keyHighlights.interactiveMaps')}</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <div className="flex items-start">
+                        <svg className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <div>
+                          <h4 className="font-medium text-sm md:text-base">Form Validation</h4>
+                          <p className="text-xs md:text-sm text-muted-foreground">{t('features.technical.validation.description')}</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start">
+                        <svg className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
+                        </svg>
+                        <div>
+                          <h4 className="font-medium text-sm md:text-base">Responsive Design</h4>
+                          <p className="text-xs md:text-sm text-muted-foreground">{t('overview.keyHighlights.responsiveDesign')}</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start">
+                        <svg className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                        <div>
+                          <h4 className="font-medium text-sm md:text-base">Dark Theme</h4>
+                          <p className="text-xs md:text-sm text-muted-foreground">{t('overview.keyHighlights.darkTheme')}</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start">
+                        <svg className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        <div>
+                          <h4 className="font-medium text-sm md:text-base">Accessibility</h4>
+                          <p className="text-xs md:text-sm text-muted-foreground">{t('overview.keyHighlights.accessibility')}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             )}
@@ -146,96 +217,168 @@ export default function ZenRazorWebsitePage() {
               <div className="space-y-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
                   {[
-                    { name: "React", icon: "react.svg", description: "Component-based UI library for building interactive interfaces" },
-                    { name: "TypeScript", icon: "ts.svg", description: "Type-safe JavaScript for better code quality and maintainability" },
-                    { name: "Next.js", icon: "next.svg", description: "React framework with SSR, routing, and optimization features" },
-                    { name: "Tailwind CSS", icon: "tailwind.svg", description: "Utility-first CSS framework for rapid UI development" },
-                    { name: "Headless CMS", icon: "cms.svg", description: "Content management system for easy content updates" },
-                    { name: "SEO Tools", icon: "seo.svg", description: "Search engine optimization tools and meta management" },
+                    { name: "Next.js", icon: "next.svg", description: t('tech.stack.nextjs'), version: "15.3.0" },
+                    { name: "TypeScript", icon: "ts.svg", description: t('tech.stack.typescript'), version: "5.0" },
+                    { name: "Tailwind CSS", icon: "tailwind.svg", description: t('tech.stack.tailwind'), version: "4.0" },
+                    { name: "Firebase", icon: "firebase.svg", description: t('tech.stack.firebase'), version: "11.6.0" },
+                    { name: "React Hook Form + yup", icon: "react-hook-form.svg", description: t('tech.stack.reactHookForm'), version: "7.55.0 + 1.6.1" },
+                    { name: "Google Maps API", icon: "maps.png", description: t('tech.stack.googleMaps'), version: "2.20.6" },
+                    { name: "GitHub Actions", icon: "github-actions.png", description: t('tech.stack.githubActions'), version: "v4" },
+                    { name: "Lucide React", icon: "lucide.png", description: t('tech.stack.lucide'), version: "0.487.0" },
                   ].map((tech, index) => (
                     <div key={index} className="bg-card p-3 md:p-4 rounded-lg shadow-sm">
                       <div className="flex items-center space-x-3 mb-2">
                         <div className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center bg-primary/10 rounded-full">
                           <Image src={`/logos/${tech.icon}`} alt={tech.name} width={30} height={30} />
                         </div>
-                        <h3 className="font-medium text-sm md:text-base">{tech.name}</h3>
+                        <div className="flex-1">
+                          <h3 className="font-medium text-sm md:text-base">{tech.name}</h3>
+                          <span className="text-xs text-muted-foreground">{tech.version}</span>
+                        </div>
                       </div>
                       <p className="text-xs md:text-sm text-muted-foreground">{tech.description}</p>
                     </div>
                   ))}
                 </div>
+                
+                <div className="bg-card p-4 md:p-6 rounded-lg shadow-sm">
+                  <h3 className="text-base md:text-lg font-semibold mb-4">{t('tech.architecture.title')}</h3>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-medium text-sm md:text-base">{t('tech.architecture.appRouter.title')}</h4>
+                      <p className="text-xs md:text-sm text-muted-foreground">{t('tech.architecture.appRouter.description')}</p>
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-sm md:text-base">{t('tech.architecture.firebase.title')}</h4>
+                      <p className="text-xs md:text-sm text-muted-foreground">{t('tech.architecture.firebase.description')}</p>
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-sm md:text-base">{t('tech.architecture.turbopack.title')}</h4>
+                      <p className="text-xs md:text-sm text-muted-foreground">{t('tech.architecture.turbopack.description')}</p>
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-sm md:text-base">{t('tech.architecture.components.title')}</h4>
+                      <p className="text-xs md:text-sm text-muted-foreground">{t('tech.architecture.components.description')}</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             )}
             
-            {activeTab === "features" && (
+            {activeTab === "performance" && (
               <div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                  <div className="bg-card p-4 md:p-6 rounded-lg shadow-sm">
-                    <h3 className="text-base md:text-lg font-semibold mb-4">User Experience</h3>
-                    <div className="space-y-3">
-                      <div className="flex items-start">
-                        <svg className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <div>
-                          <h4 className="font-medium text-sm md:text-base">Responsive Design</h4>
-                          <p className="text-xs md:text-sm text-muted-foreground">Mobile-first approach ensuring optimal experience across all devices</p>
-                        </div>
+                <div className="mb-8">
+                  <h3 className="text-lg md:text-xl font-semibold mb-4">{t('performance.lighthouse.title')}</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+                    {[
+                      { name: t('performance.lighthouse.metrics.performance'), score: 100, color: "text-green-500" },
+                      { name: t('performance.lighthouse.metrics.accessibility'), score: 100, color: "text-green-500" },
+                      { name: t('performance.lighthouse.metrics.bestPractices'), score: 100, color: "text-green-500" },
+                      { name: t('performance.lighthouse.metrics.seo'), score: 100, color: "text-green-500" }
+                    ].map((metric, index) => (
+                      <div key={index} className="bg-card p-3 md:p-4 rounded-lg shadow-sm text-center">
+                        <div className={`text-2xl md:text-3xl font-bold ${metric.color}`}>{metric.score}</div>
+                        <div className="text-xs md:text-sm text-muted-foreground mt-1">{metric.name}</div>
                       </div>
-                      
-                      <div className="flex items-start">
-                        <svg className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <div>
-                          <h4 className="font-medium text-sm md:text-base">Fast Loading</h4>
-                          <p className="text-xs md:text-sm text-muted-foreground">Optimized images and code splitting for lightning-fast page loads</p>
-                        </div>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="bg-card p-4 md:p-6 rounded-lg shadow-sm mb-8">
+                  <h3 className="text-base md:text-lg font-semibold mb-4">{t('performance.metrics.title')}</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <div className="flex justify-between mb-1">
+                        <span className="text-xs md:text-sm font-medium">{t('performance.metrics.fcp.title')}</span>
+                        <span className="text-xs md:text-sm text-green-500">0.2s</span>
                       </div>
-                      
-                      <div className="flex items-start">
-                        <svg className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <div>
-                          <h4 className="font-medium text-sm md:text-base">Intuitive Navigation</h4>
-                          <p className="text-xs md:text-sm text-muted-foreground">Clear menu structure and breadcrumbs for easy site navigation</p>
-                        </div>
+                      <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                        <div className="bg-green-500 h-2.5 rounded-full" style={{ width: "100%" }}></div>
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <div className="flex justify-between mb-1">
+                        <span className="text-xs md:text-sm font-medium">{t('performance.metrics.lcp.title')}</span>
+                        <span className="text-xs md:text-sm text-green-500">0.5s</span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                        <div className="bg-green-500 h-2.5 rounded-full" style={{ width: "100%" }}></div>
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <div className="flex justify-between mb-1">
+                        <span className="text-xs md:text-sm font-medium">{t('performance.metrics.cls.title')}</span>
+                        <span className="text-xs md:text-sm text-green-500">0</span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                        <div className="bg-green-500 h-2.5 rounded-full" style={{ width: "100%" }}></div>
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <div className="flex justify-between mb-1">
+                        <span className="text-xs md:text-sm font-medium">{t('performance.metrics.tbt.title')}</span>
+                        <span className="text-xs md:text-sm text-green-500">20ms</span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                        <div className="bg-green-500 h-2.5 rounded-full" style={{ width: "98%" }}></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div className="flex justify-between mb-1">
+                        <span className="text-xs md:text-sm font-medium">{t('performance.metrics.speedIndex.title')}</span>
+                        <span className="text-xs md:text-sm text-green-500">0.6s</span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                        <div className="bg-green-500 h-2.5 rounded-full" style={{ width: "95%" }}></div>
                       </div>
                     </div>
                   </div>
-                  
-                  <div className="bg-card p-4 md:p-6 rounded-lg shadow-sm">
-                    <h3 className="text-base md:text-lg font-semibold mb-4">Business Features</h3>
-                    <div className="space-y-3">
-                      <div className="flex items-start">
-                        <svg className="w-4 h-4 md:w-5 md:h-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                        </svg>
-                        <div>
-                          <h4 className="font-medium text-sm md:text-base">Analytics Integration</h4>
-                          <p className="text-xs md:text-sm text-muted-foreground">Comprehensive tracking of user behavior and conversion metrics</p>
-                        </div>
+                </div>
+                
+                <div className="bg-card p-4 md:p-6 rounded-lg shadow-sm">
+                  <h3 className="text-base md:text-lg font-semibold mb-4">{t('performance.optimization.title')}</h3>
+                  <div className="space-y-3">
+                    <div className="flex items-start">
+                      <svg className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <div>
+                        <h4 className="font-medium text-sm md:text-base">{t('performance.optimization.techniques.turbopack.title')}</h4>
+                        <p className="text-xs md:text-sm text-muted-foreground">{t('performance.optimization.techniques.turbopack.description')}</p>
                       </div>
-                      
-                      <div className="flex items-start">
-                        <svg className="w-4 h-4 md:w-5 md:h-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                        <div>
-                          <h4 className="font-medium text-sm md:text-base">SEO Optimized</h4>
-                          <p className="text-xs md:text-sm text-muted-foreground">Search engine optimization for maximum online visibility</p>
-                        </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <svg className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <div>
+                        <h4 className="font-medium text-sm md:text-base">{t('performance.optimization.techniques.images.title')}</h4>
+                        <p className="text-xs md:text-sm text-muted-foreground">{t('performance.optimization.techniques.images.description')}</p>
                       </div>
-                      
-                      <div className="flex items-start">
-                        <svg className="w-4 h-4 md:w-5 md:h-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 3.26a2 2 0 001.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        <div>
-                          <h4 className="font-medium text-sm md:text-base">Lead Generation</h4>
-                          <p className="text-xs md:text-sm text-muted-foreground">Contact forms and call-to-action buttons for customer acquisition</p>
-                        </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <svg className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <div>
+                        <h4 className="font-medium text-sm md:text-base">{t('performance.optimization.techniques.codeSplitting.title')}</h4>
+                        <p className="text-xs md:text-sm text-muted-foreground">{t('performance.optimization.techniques.codeSplitting.description')}</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <svg className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <div>
+                        <h4 className="font-medium text-sm md:text-base">{t('performance.optimization.techniques.ssg.title')}</h4>
+                        <p className="text-xs md:text-sm text-muted-foreground">{t('performance.optimization.techniques.ssg.description')}</p>
                       </div>
                     </div>
                   </div>

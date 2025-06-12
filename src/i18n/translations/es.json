@@ -26,6 +26,11 @@
       "quickLinks": "Enlaces Rápidos",
       "contact": "Información de Contacto",
       "rights": "Todos los Derechos Reservados"
+    },
+    "repo": {
+      "title": "Repositorio GitHub",
+      "description": "El código fuente completo de este proyecto está disponible en GitHub. Siéntete libre de explorar la estructura del código, componentes y detalles de implementación.",
+      "viewButton": "Ver Código en GitHub"
     }
   },
   "home": {
@@ -53,7 +58,16 @@
       }
     },
     "projects": {
-      "title": "Proyectos Destacados"
+      "title": "Proyectos Destacados",
+      "zenRazor": {
+        "title": "Zen Razor",
+        "description": "Ecosistema digital integral que incluye un sitio web público, un back-office administrativo y una infraestructura backend robusta.",
+        "features": {
+          "fullStack": "Solución Full-Stack",
+          "architecture": "Arquitectura Moderna",
+          "infrastructure": "Infraestructura Escalable"
+        }
+      }
     },
     "stats": {
       "yearsExperience": "Años de Experiencia",
@@ -129,7 +143,7 @@
         "short": "Sitio web de la cartera personal.",
         "part1": "Un sitio web de portafolio moderno y responsivo que muestra mi trabajo, habilidades y servicios. Construido con Next.js, TypeScript y Tailwind CSS, este portafolio ofrece una experiencia de usuario fluida en todos los dispositivos, con internacionalización que admite tres idiomas y un formulario de contacto con validación.",
         "part2": "El proyecto está implementado utilizando Firebase App Hosting con gestión de variables de entorno a través de Google Cloud Secret Manager. La arquitectura utiliza React Server Components para un mejor rendimiento y sigue las mejores prácticas para accesibilidad y optimización SEO."
-      },
+      },  
       "tabs": {
         "repo": "Repositorio",
         "tech": "Stack Tecnológico",
@@ -137,7 +151,7 @@
       },
       "repo": {
         "title": "Repositorio GitHub",
-        "description": "El código fuente completo de este portafolio está disponible en GitHub. Siéntete libre de explorar la estructura del código, componentes y detalles de implementación.",
+        "description": "El código fuente completo de este proyecto está disponible en GitHub. Siéntete libre de explorar la estructura del código, componentes y detalles de implementación.",
         "viewButton": "Ver Código en GitHub"
       },
       "keyFeatures": {
@@ -164,7 +178,8 @@
           "nodemailer": "Envío de correos con transportador Gmail",
           "firebase": "Plataforma de despliegue + hosting",
           "secretManager": "Gestión de variables de entorno",
-          "nextIntl": "Biblioteca de internacionalización"
+          "nextIntl": "Biblioteca de internacionalización",
+          "githubActions": "Pipeline CI/CD para pruebas automatizadas y despliegue"
         }
       },
       "architecture": {
@@ -246,17 +261,182 @@
     },
     "zenRazor": {
       "website": {
-        "title": "Zen Razor - Sitio Web Público",
-        "description": "Sitio web público moderno y responsivo para la marca Zen Razor.",
-        "imageAlt": "Sitio Web Público de Zen Razor",
-        "fullDescription": {
-          "short": "Sitio web público para la marca Zen Razor",
-          "part1": "Un sitio web público moderno y responsivo para la marca Zen Razor, construido con tecnologías web de vanguardia. El sitio web presenta un diseño limpio y minimalista que refleja la estética de la marca mientras proporciona una experiencia de usuario intuitiva en todos los dispositivos.",
-          "part2": "El sitio incluye vitrinas de productos, narrativa de marca, información de contacto e integración perfecta con el sistema back-office para la gestión de contenido. Construido con optimización de rendimiento y SEO en mente para maximizar la presencia en línea y el compromiso del usuario."
+        "title": "Zen Razor - Sitio Web Premium de Barbería",
+        "shortTitle": "Sitio Web Público de Barbería",
+        "description": {
+          "short": "Sitio web público para barbería que incluye reserva de citas, gestión de servicios y servicios de ubicación.",
+          "part1": "Un sitio web moderno y completo para barbería construido con Next.js 15, que incluye reserva de citas, gestión de servicios y servicios de ubicación. Perfecto para barberías que buscan establecer una presencia profesional en línea.",
+          "part2": "El sitio web muestra una estética limpia y profesional de barbería con experiencia de usuario intuitiva en todos los dispositivos, integrando programación de citas, pantallas de servicios y Google Maps para una interacción perfecta con el cliente."
+        },
+        "imageAlt": "Sitio Web Premium de Barbería Zen Razor",
+        "tabs": {
+          "overview": "Resumen",
+          "tech": "Stack Tecnológico",
+          "features": "Características",
+          "repo": "Repositorio",
+          "performance": "Rendimiento"
+        },
+        "overview": {
+          "title": "Resumen del Proyecto",
+          "description": "Una solución integral de sitio web para barbería construida con tecnologías de vanguardia para proporcionar una experiencia de usuario excepcional tanto para clientes como para propietarios de negocios.",
+          "badges": {
+            "barbershop": "Barbería Premium",
+            "responsive": "Diseño Responsivo",
+            "nextjs": "Next.js 15"
+          },
+          "keyHighlights": {
+            "title": "Características Clave",
+            "appointment": "Sistema completo de reserva de citas con selección de fecha/hora",
+            "serviceManagement": "Gestión de servicios con descripciones, duraciones y precios",
+            "barberProfiles": "Sección de conoce al equipo con perfiles individuales de barberos",
+            "contactForms": "Gestión de consultas de clientes y comentarios",
+            "interactiveMaps": "Integración de Google Maps con estilo personalizado",
+            "responsiveDesign": "Diseño responsivo mobile-first para todos los dispositivos",
+            "darkTheme": "Soporte de modo oscuro personalizado con Tailwind CSS",
+            "accessibility": "Componentes y navegación compatibles con WCAG"
+          }
+        },
+        "tech": {
+          "stack": {
+            "nextjs": "Framework de React con App Router y características avanzadas de optimización",
+            "react": "Último React 19 con características modernas y rendimiento mejorado",
+            "typescript": "Implementación completa de TypeScript para seguridad de tipos y mejor experiencia de desarrollo",
+            "tailwind": "Framework CSS utility-first con sistema de diseño personalizado",
+            "firebase": "Solución backend completa con autenticación, base de datos y hosting",
+            "reactHookForm": "Gestión avanzada de estado de formularios con validación y validación de esquemas",
+            "googleMaps": "Mapas interactivos con estilo personalizado y servicios de ubicación",
+            "yup": "Validación de esquemas para formularios e integridad de datos",
+            "lucide": "Biblioteca de iconos moderna con lenguaje de diseño consistente",
+            "githubActions": "Pipeline CI/CD con pruebas automatizadas, construcción y flujos de trabajo de despliegue"
+          },
+          "architecture": {
+            "title": "Arquitectura Técnica",
+            "appRouter": {
+              "title": "Next.js App Router",
+              "description": "Utilizando el último App Router con componentes de servidor para rendimiento óptimo"
+            },
+            "firebase": {
+              "title": "Integración Firebase",
+              "description": "Infraestructura backend completa con base de datos en tiempo real y autenticación"
+            },
+            "turbopack": {
+              "title": "Desarrollo Turbopack",
+              "description": "Compilaciones de desarrollo ultra rápidas con el bundler Turbopack"
+            },
+            "components": {
+              "title": "Arquitectura de Componentes",
+              "description": "Sistema de componentes reutilizables con CVA para gestión de variantes"
+            }
+          }
+        },
+        "features": {
+          "core": {
+            "title": "Características Principales",
+            "appointment": {
+              "title": "Reserva de Citas",
+              "description": "Sistema de programación integral con disponibilidad en tiempo real"
+            },
+            "services": {
+              "title": "Gestión de Servicios",
+              "description": "Mostrar servicios con descripciones detalladas y precios"
+            },
+            "barbers": {
+              "title": "Perfiles de Barberos",
+              "description": "Mostrar miembros del equipo con perfiles individuales y especialidades"
+            }
+          },
+          "technical": {
+            "title": "Características Técnicas",
+            "validation": {
+              "title": "Validación de Formularios",
+              "description": "React Hook Form con validación de esquema Yup para integridad de datos"
+            },
+            "performance": {
+              "title": "Optimización de Rendimiento",
+              "description": "Optimizado con Turbopack, división de código y optimización de imágenes"
+            },
+            "accessibility": {
+              "title": "Cumplimiento de Accesibilidad",
+              "description": "Diseño compatible con WCAG 2.1 con soporte de navegación por teclado"
+            }
+          },
+          "uiux": {
+            "title": "Características UI/UX",
+            "design": {
+              "title": "Diseño Moderno",
+              "description": "Estética limpia y profesional de barbería con atención al detalle"
+            },
+            "animations": {
+              "title": "Animaciones Suaves",
+              "description": "Animaciones CSS con tw-animate-css para experiencia de usuario mejorada"
+            },
+            "loading": {
+              "title": "Estados de Carga",
+              "description": "Componentes de carga elegantes y pantallas de esqueleto"
+            },
+            "errorHandling": {
+              "title": "Manejo de Errores",
+              "description": "Mensajes de error amigables y retroalimentación de validación"
+            }
+          }
+        },
+        "performance": {
+          "lighthouse": {
+            "title": "Informe de Rendimiento Lighthouse",
+            "metrics": {
+              "performance": "Rendimiento",
+              "accessibility": "Accesibilidad",
+              "bestPractices": "Mejores Prácticas",
+              "seo": "SEO"
+            }
+          },
+          "metrics": {
+            "title": "Core Web Vitals",
+            "fcp": {
+              "title": "First Contentful Paint"
+            },
+            "lcp": {
+              "title": "Largest Contentful Paint"
+            },
+            "cls": {
+              "title": "Cumulative Layout Shift"
+            },
+            "tbt": {
+              "title": "Total Blocking Time"
+            },
+            "speedIndex": {
+              "title": "Speed Index"
+            }
+          },
+          "optimization": {
+            "title": "Optimizaciones de Rendimiento",
+            "techniques": {
+              "turbopack": {
+                "title": "Integración Turbopack",
+                "description": "Compilaciones de desarrollo ultra rápidas y bundles de producción optimizados"
+              },
+              "images": {
+                "title": "Optimización de Imágenes",
+                "description": "Optimización automática de imágenes de Next.js con formato WebP y carga perezosa"
+              },
+              "codeSplitting": {
+                "title": "División de Código",
+                "description": "División automática de código basada en rutas para tamaños de bundle óptimos"
+              },
+              "ssg": {
+                "title": "Generación Estática",
+                "description": "Páginas pre-renderizadas para mejor SEO y tiempos de carga más rápidos"
+              }
+            }
+          }
+        },
+        "repo": {
+          "title": "Repositorio GitHub",
+          "description": "El código fuente completo del sitio web de barbería Zen Razor está disponible en GitHub. Explora la arquitectura moderna, estructura de componentes y detalles de implementación."
         }
       },
       "backoffice": {
-        "title": "Zen Razor - Back Office",
+        "title": "Back Office",
         "description": "Panel administrativo para gestionar las operaciones de Zen Razor.",
         "imageAlt": "Panel Back Office de Zen Razor",
         "fullDescription": {
@@ -266,7 +446,7 @@
         }
       },
       "backend": {
-        "title": "Zen Razor - API Backend",
+        "title": "API Backend",
         "description": "Infraestructura backend robusta que alimenta las soluciones de Zen Razor.",
         "imageAlt": "Infraestructura Backend de Zen Razor",
         "fullDescription": {

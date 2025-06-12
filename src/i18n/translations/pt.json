@@ -26,6 +26,11 @@
       "quickLinks": "Links Rápidos",
       "contact": "Informações de Contacto",
       "rights": "Todos os Direitos Reservados"
+    },
+    "repo": {
+      "title": "Repositório GitHub",
+      "description": "O código fonte completo deste projeto está disponível no GitHub. Fique à vontade para explorar a estrutura do código, componentes e detalhes de implementação.",
+      "viewButton": "Ver Código no GitHub"
     }
   },
   "home": {
@@ -53,7 +58,16 @@
       }
     },
     "projects": {
-      "title": "Projetos em Destaque"
+      "title": "Projetos em Destaque",
+      "zenRazor": {
+        "title": "Zen Razor",
+        "description": "Ecossistema digital abrangente que inclui um website público, back-office administrativo e infraestrutura backend robusta.",
+        "features": {
+          "fullStack": "Solução Full-Stack",
+          "architecture": "Arquitetura Moderna",
+          "infrastructure": "Infraestrutura Escalável"
+        }
+      }
     },
     "stats": {
       "yearsExperience": "Anos de Experiência",
@@ -164,7 +178,8 @@
           "nodemailer": "Envio de emails com transportador Gmail",
           "firebase": "Plataforma de implementação + hospedagem",
           "secretManager": "Gestão de variáveis de ambiente",
-          "nextIntl": "Biblioteca de internacionalização"
+          "nextIntl": "Biblioteca de internacionalização",
+          "githubActions": "Pipeline CI/CD para testes automatizados e implementação"
         }
       },
       "architecture": {
@@ -246,17 +261,182 @@
     },
     "zenRazor": {
       "website": {
-        "title": "Zen Razor - Website Público",
-        "description": "Website público moderno e responsivo para a marca Zen Razor.",
-        "imageAlt": "Website Público Zen Razor",
-        "fullDescription": {
-          "short": "Website público para a marca Zen Razor",
-          "part1": "Um website público moderno e responsivo para a marca Zen Razor, construído com tecnologias web de ponta. O website apresenta um design limpo e minimalista que reflete a estética da marca, proporcionando uma experiência de utilizador intuitiva em todos os dispositivos.",
-          "part2": "O site inclui vitrines de produtos, narrativa da marca, informações de contacto e integração perfeita com o sistema back-office para gestão de conteúdo. Construído com otimização de desempenho e SEO em mente para maximizar a presença online e o envolvimento do utilizador."
+        "title": "Zen Razor - Website Premium de Barbearia",
+        "shortTitle": "Website Público da Barbearia",
+        "description": {
+          "short": "Website público para barbearia que inclui marcação de serviços, informações sobre a barbearia e serviços de localização.",
+          "part1": "Um website moderno e completo para barbearia construído com Next.js 15, incluindo marcação de consultas, gestão de serviços e serviços de localização. Perfeito para barbearias que procuram estabelecer uma presença profissional online.",
+          "part2": "O website apresenta uma estética limpa e profissional de barbearia com experiência de utilizador intuitiva em todos os dispositivos, integrando agendamento de consultas, exibição de serviços e Google Maps para interação perfeita com o cliente."
+        },
+        "imageAlt": "Website Premium de Barbearia Zen Razor",
+        "tabs": {
+          "overview": "Visão Geral",
+          "tech": "Stack Tecnológico",
+          "features": "Funcionalidades",
+          "repo": "Repositório",
+          "performance": "Performance"
+        },
+        "overview": {
+          "title": "Visão Geral do Projeto",
+          "description": "Uma solução abrangente de website para barbearia construída com tecnologias de ponta para proporcionar uma experiência de utilizador excecional tanto para clientes como para proprietários de negócios.",
+          "badges": {
+            "barbershop": "Barbearia Premium",
+            "responsive": "Design Responsivo",
+            "nextjs": "Next.js 15"
+          },
+          "keyHighlights": {
+            "title": "Funcionalidades Principais",
+            "appointment": "Sistema completo de marcação de consultas com seleção de data/hora",
+            "serviceManagement": "Gestão de serviços com descrições, durações e preços",
+            "barberProfiles": "Secção conheça a equipa com perfis individuais de barbeiros",
+            "contactForms": "Gestão de consultas de clientes e feedback",
+            "interactiveMaps": "Integração do Google Maps com estilo personalizado",
+            "responsiveDesign": "Design responsivo mobile-first para todos os dispositivos",
+            "darkTheme": "Suporte de modo escuro personalizado com Tailwind CSS",
+            "accessibility": "Componentes e navegação compatíveis com WCAG"
+          }
+        },
+        "tech": {
+          "stack": {
+            "nextjs": "Framework React com App Router e funcionalidades avançadas de otimização",
+            "react": "Último React 19 com funcionalidades modernas e performance melhorada",
+            "typescript": "Implementação completa de TypeScript para segurança de tipos e melhor experiência de desenvolvimento",
+            "tailwind": "Framework CSS utility-first com sistema de design personalizado",
+            "firebase": "Solução backend completa com autenticação, base de dados e hosting",
+            "reactHookForm": "Gestão avançada de estado de formulários com validação e validação de esquemas",
+            "googleMaps": "Mapas interativos com estilo personalizado e serviços de localização",
+            "yup": "Validação de esquemas para formulários e integridade de dados",
+            "lucide": "Biblioteca de ícones moderna com linguagem de design consistente",
+            "githubActions": "Pipeline CI/CD com testes automatizados, construção e fluxos de trabalho de implementação"
+          },
+          "architecture": {
+            "title": "Arquitetura Técnica",
+            "appRouter": {
+              "title": "Next.js App Router",
+              "description": "Utilizando o último App Router com componentes de servidor para performance ótima"
+            },
+            "firebase": {
+              "title": "Integração Firebase",
+              "description": "Infraestrutura backend completa com base de dados em tempo real e autenticação"
+            },
+            "turbopack": {
+              "title": "Desenvolvimento Turbopack",
+              "description": "Builds de desenvolvimento ultra-rápidos com o bundler Turbopack"
+            },
+            "components": {
+              "title": "Arquitetura de Componentes",
+              "description": "Sistema de componentes reutilizáveis com CVA para gestão de variantes"
+            }
+          }
+        },
+        "features": {
+          "core": {
+            "title": "Funcionalidades Principais",
+            "appointment": {
+              "title": "Marcação de Consultas",
+              "description": "Sistema de agendamento abrangente com disponibilidade em tempo real"
+            },
+            "services": {
+              "title": "Gestão de Serviços",
+              "description": "Exibir serviços com descrições detalhadas e preços"
+            },
+            "barbers": {
+              "title": "Perfis de Barbeiros",
+              "description": "Mostrar membros da equipa com perfis individuais e especialidades"
+            }
+          },
+          "technical": {
+            "title": "Funcionalidades Técnicas",
+            "validation": {
+              "title": "Validação de Formulários",
+              "description": "React Hook Form com validação de esquema Yup para integridade de dados"
+            },
+            "performance": {
+              "title": "Otimização de Performance",
+              "description": "Otimizado com Turbopack, divisão de código e otimização de imagens"
+            },
+            "accessibility": {
+              "title": "Conformidade de Acessibilidade",
+              "description": "Design compatível com WCAG 2.1 com suporte de navegação por teclado"
+            }
+          },
+          "uiux": {
+            "title": "Funcionalidades UI/UX",
+            "design": {
+              "title": "Design Moderno",
+              "description": "Estética limpa e profissional de barbearia com atenção ao detalhe"
+            },
+            "animations": {
+              "title": "Animações Suaves",
+              "description": "Animações CSS com tw-animate-css para experiência de utilizador melhorada"
+            },
+            "loading": {
+              "title": "Estados de Carregamento",
+              "description": "Componentes de carregamento elegantes e ecrãs de esqueleto"
+            },
+            "errorHandling": {
+              "title": "Tratamento de Erros",
+              "description": "Mensagens de erro amigáveis e feedback de validação"
+            }
+          }
+        },
+        "performance": {
+          "lighthouse": {
+            "title": "Relatório de Performance Lighthouse",
+            "metrics": {
+              "performance": "Performance",
+              "accessibility": "Acessibilidade",
+              "bestPractices": "Melhores Práticas",
+              "seo": "SEO"
+            }
+          },
+          "metrics": {
+            "title": "Core Web Vitals",
+            "fcp": {
+              "title": "First Contentful Paint"
+            },
+            "lcp": {
+              "title": "Largest Contentful Paint"
+            },
+            "cls": {
+              "title": "Cumulative Layout Shift"
+            },
+            "tbt": {
+              "title": "Total Blocking Time"
+            },
+            "speedIndex": {
+              "title": "Speed Index"
+            }
+          },
+          "optimization": {
+            "title": "Otimizações de Performance",
+            "techniques": {
+              "turbopack": {
+                "title": "Integração Turbopack",
+                "description": "Builds de desenvolvimento ultra-rápidos e bundles de produção otimizados"
+              },
+              "images": {
+                "title": "Otimização de Imagens",
+                "description": "Otimização automática de imagens do Next.js com formato WebP e carregamento lazy"
+              },
+              "codeSplitting": {
+                "title": "Divisão de Código",
+                "description": "Divisão automática de código baseada em rotas para tamanhos de bundle ótimos"
+              },
+              "ssg": {
+                "title": "Geração Estática",
+                "description": "Páginas pré-renderizadas para melhor SEO e tempos de carregamento mais rápidos"
+              }
+            }
+          }
+        },
+        "repo": {
+          "title": "Repositório GitHub",
+          "description": "O código fonte completo do website da barbearia Zen Razor está disponível no GitHub. Explore a arquitetura moderna, estrutura de componentes e detalhes de implementação."
         }
       },
       "backoffice": {
-        "title": "Zen Razor - Back Office",
+        "title": "Back-office",
         "description": "Painel administrativo para gerir as operações do Zen Razor.",
         "imageAlt": "Painel Back Office Zen Razor",
         "fullDescription": {
@@ -266,7 +446,7 @@
         }
       },
       "backend": {
-        "title": "Zen Razor - API Backend",
+        "title": "API Backend",
         "description": "Infraestrutura backend robusta que alimenta as soluções Zen Razor.",
         "imageAlt": "Infraestrutura Backend Zen Razor",
         "fullDescription": {
