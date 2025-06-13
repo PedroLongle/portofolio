@@ -13,7 +13,8 @@
       "viewAll": "Ver Todos",
       "contact": "Contacto",
       "getInTouch": "Entre em Contacto",
-      "backToProjects": "Voltar a Projetos"
+      "backToProjects": "Voltar a Projetos",
+      "liveDemo": "Demonstração ao Vivo"
     },
     "language": {
       "select": "Selecionar idioma",
@@ -291,9 +292,15 @@
             "barberProfiles": "Secção conheça a equipa com perfis individuais de barbeiros",
             "contactForms": "Gestão de consultas de clientes e feedback",
             "interactiveMaps": "Integração do Google Maps com estilo personalizado",
+            "interactiveMapsTitle": "Mapas Interativos",
             "responsiveDesign": "Design responsivo mobile-first para todos os dispositivos",
+            "responsiveDesignTitle": "Design Responsivo",
             "darkTheme": "Suporte de modo escuro personalizado com Tailwind CSS",
-            "accessibility": "Componentes e navegação compatíveis com WCAG"
+            "darkThemeTitle": "Tema Escuro",
+            "accessibility": "Componentes e navegação compatíveis com WCAG",
+            "accessibilityTitle": "Acessibilidade",
+            "formValidation": "React Hook Form com validação de esquema Yup para integridade de dados",
+            "formValidationTitle": "Validação de Formulários"
           }
         },
         "tech": {

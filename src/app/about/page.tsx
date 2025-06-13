@@ -100,8 +100,8 @@ export default function AboutPage() {
                 <div className="mb-4">
                   <p>{t('experience.job1.description')}</p>
                   <ul className="list-disc list-inside space-y-2 ml-4 lg:ml-10 mt-2">
-                    <li>{t('experience.job1.descriptionBullet1')}.</li>
-                    <li>{t('experience.job1.descriptionBullet2')}.</li>
+                    <li>{t('experience.job1.descriptionBullet1')}</li>
+                    <li>{t('experience.job1.descriptionBullet2')}</li>
                 </ul>
                 </div>
                 <ul className="list-disc list-inside space-y-2 mt-2">

@@ -13,7 +13,8 @@
       "viewAll": "View All",
       "contact": "Contact",
       "getInTouch": "Get in Touch",
-      "backToProjects": "Back to Projects"
+      "backToProjects": "Back to Projects",
+      "liveDemo": "Live Demo"
     },
     "language": {
       "select": "Select language",
@@ -291,9 +292,15 @@
             "barberProfiles": "Meet the team section with individual barber profiles",
             "contactForms": "Customer inquiries and feedback management",
             "interactiveMaps": "Google Maps integration with custom styling",
+            "interactiveMapsTitle": "Interactive Maps",
             "responsiveDesign": "Mobile-first responsive design for all devices",
+            "responsiveDesignTitle": "Responsive Design",
             "darkTheme": "Custom dark mode support with Tailwind CSS",
-            "accessibility": "WCAG compliant components and navigation"
+            "darkThemeTitle": "Dark Theme",
+            "accessibility": "WCAG compliant components and navigation",
+            "accessibilityTitle": "Accessibility",
+            "formValidation": "React Hook Form with Yup schema validation for data integrity",
+            "formValidationTitle": "Form Validation"
           }
         },
         "tech": {

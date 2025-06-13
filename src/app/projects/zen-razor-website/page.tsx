@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useTranslations } from "@/i18n/client";
 import { useTabWithParams } from "@/hooks/use-tabs";
 import GitHubRepo from "@/components/projects/github-repo";
+import LiveDemoButton from "@/components/projects/live-demo-button";
 
 enum Tabs {
   REPO = "repo",
@@ -41,6 +42,15 @@ export default function ZenRazorWebsitePage() {
                 {t('description.part2')}
                 <br></br>
               </p>
+              
+              {/* Live Demo Button */}
+              <div className="mb-8 md:mb-12">
+                <LiveDemoButton 
+                  demoUrl="https://zen-razor-website--zen-razor.europe-west4.hosted.app/" 
+                  size="md"
+                  className="w-full sm:w-auto"
+                />
+              </div>
             </div>
             <div className="w-full">
               <Image 
@@ -122,88 +132,88 @@ export default function ZenRazorWebsitePage() {
                 />
                 
                 <div className="bg-card p-4 md:p-6 rounded-lg shadow-sm">
-                  <h3 className="text-base md:text-lg font-semibold mb-4">{t('overview.keyHighlights.title')}</h3>
+                  <h3 className="text-base md:text-2xl font-semibold mb-6">{t('overview.keyHighlights.title')}</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-3">
-                      <div className="flex items-start">
+                      <div className="flex items-start gap-2">
                         <svg className="w-4 h-4 md:w-5 md:h-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
                         <div>
-                          <h4 className="font-medium text-sm md:text-base">{t('features.core.appointment.title')}</h4>
+                          <h4 className="font-bold text-sm md:text-base">{t('features.core.appointment.title')}</h4>
                           <p className="text-xs md:text-sm text-muted-foreground">{t('features.core.appointment.description')}</p>
                         </div>
                       </div>
                       
-                      <div className="flex items-start">
+                      <div className="flex items-start gap-2">
                         <svg className="w-4 h-4 md:w-5 md:h-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                         </svg>
                         <div>
-                          <h4 className="font-medium text-sm md:text-base">{t('features.core.services.title')}</h4>
+                          <h4 className="font-bold text-sm md:text-base">{t('features.core.services.title')}</h4>
                           <p className="text-xs md:text-sm text-muted-foreground">{t('features.core.services.description')}</p>
                         </div>
                       </div>
                       
-                      <div className="flex items-start">
+                      <div className="flex items-start gap-2">
                         <svg className="w-4 h-4 md:w-5 md:h-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                         </svg>
                         <div>
-                          <h4 className="font-medium text-sm md:text-base">{t('features.core.barbers.title')}</h4>
+                          <h4 className="font-bold text-sm md:text-base">{t('features.core.barbers.title')}</h4>
                           <p className="text-xs md:text-sm text-muted-foreground">{t('features.core.barbers.description')}</p>
                         </div>
                       </div>
                       
-                      <div className="flex items-start">
+                      <div className="flex items-start gap-2">
                         <svg className="w-4 h-4 md:w-5 md:h-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
                         <div>
-                          <h4 className="font-medium text-sm md:text-base">Interactive Maps</h4>
+                          <h4 className="font-bold text-sm md:text-base">{t('overview.keyHighlights.interactiveMapsTitle')}</h4>
                           <p className="text-xs md:text-sm text-muted-foreground">{t('overview.keyHighlights.interactiveMaps')}</p>
                         </div>
                       </div>
                     </div>
                     
                     <div className="space-y-3">
-                      <div className="flex items-start">
+                      <div className="flex items-start gap-2">
                         <svg className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         <div>
-                          <h4 className="font-medium text-sm md:text-base">Form Validation</h4>
-                          <p className="text-xs md:text-sm text-muted-foreground">{t('features.technical.validation.description')}</p>
+                          <h4 className="font-bold text-sm md:text-base">{t('overview.keyHighlights.formValidationTitle')}</h4>
+                          <p className="text-xs md:text-sm text-muted-foreground">{t('overview.keyHighlights.formValidation')}</p>
                         </div>
                       </div>
                       
-                      <div className="flex items-start">
+                      <div className="flex items-start gap-2">
                         <svg className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
                         </svg>
                         <div>
-                          <h4 className="font-medium text-sm md:text-base">Responsive Design</h4>
+                          <h4 className="font-bold text-sm md:text-base">{t('overview.keyHighlights.responsiveDesignTitle')}</h4>
                           <p className="text-xs md:text-sm text-muted-foreground">{t('overview.keyHighlights.responsiveDesign')}</p>
                         </div>
                       </div>
                       
-                      <div className="flex items-start">
+                      <div className="flex items-start gap-2">
                         <svg className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                         </svg>
                         <div>
-                          <h4 className="font-medium text-sm md:text-base">Dark Theme</h4>
+                          <h4 className="font-bold text-sm md:text-base">{t('overview.keyHighlights.darkThemeTitle')}</h4>
                           <p className="text-xs md:text-sm text-muted-foreground">{t('overview.keyHighlights.darkTheme')}</p>
                         </div>
                       </div>
                       
-                      <div className="flex items-start">
+                      <div className="flex items-start gap-2">
                         <svg className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                         </svg>
                         <div>
-                          <h4 className="font-medium text-sm md:text-base">Accessibility</h4>
+                          <h4 className="font-bold text-sm md:text-base">{t('overview.keyHighlights.accessibilityTitle')}</h4>
                           <p className="text-xs md:text-sm text-muted-foreground">{t('overview.keyHighlights.accessibility')}</p>
                         </div>
                       </div>
