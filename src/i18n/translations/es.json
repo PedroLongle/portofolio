@@ -294,6 +294,8 @@
             "contactForms": "Gestión de consultas de clientes y comentarios",
             "interactiveMaps": "Integración de Google Maps con estilo personalizado",
             "interactiveMapsTitle": "Mapas Interactivos",
+            "internationalization": "Soporte multiidioma con 5 idiomas: inglés, portugués, español, francés y alemán",
+            "internationalizationTitle": "Internacionalización",
             "responsiveDesign": "Diseño responsivo mobile-first para todos los dispositivos",
             "responsiveDesignTitle": "Diseño Responsivo",
             "darkTheme": "Soporte de modo oscuro personalizado con Tailwind CSS",
@@ -313,6 +315,7 @@
             "firebase": "Solución backend completa con autenticación, base de datos y hosting",
             "reactHookForm": "Gestión avanzada de estado de formularios con validación y validación de esquemas",
             "googleMaps": "Mapas interactivos con estilo personalizado y servicios de ubicación",
+            "nextIntl": "Biblioteca de internacionalización moderna compatible con 5 idiomas: inglés, portugués, español, francés y alemán",
             "yup": "Validación de esquemas para formularios e integridad de datos",
             "lucide": "Biblioteca de iconos moderna con lenguaje de diseño consistente",
             "githubActions": "Pipeline CI/CD con pruebas automatizadas, construcción y flujos de trabajo de despliegue"
@@ -334,6 +337,10 @@
             "components": {
               "title": "Arquitectura de Componentes",
               "description": "Sistema de componentes reutilizables con CVA para gestión de variantes"
+            },
+            "internationalization": {
+              "title": "Sistema de Internacionalización",
+              "description": "Implementación i18n personalizada con next-intl compatible con 5 idiomas para accesibilidad global"
             }
           }
         },

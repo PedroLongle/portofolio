@@ -73,6 +73,7 @@ export default function ZenRazorWebsitePage() {
                   "Firebase",
                   "Google Maps API",
                   "React Hook Form + yup",
+                  "next-intl",
                   "GitHub Actions"
                 ].map((tech, index) => (
                   <button 
@@ -175,6 +176,16 @@ export default function ZenRazorWebsitePage() {
                           <p className="text-xs md:text-sm text-muted-foreground">{t('overview.keyHighlights.interactiveMaps')}</p>
                         </div>
                       </div>
+                      
+                      <div className="flex items-start gap-2">
+                        <svg className="w-4 h-4 md:w-5 md:h-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                        </svg>
+                        <div>
+                          <h4 className="font-bold text-sm md:text-base">{t('overview.keyHighlights.internationalizationTitle')}</h4>
+                          <p className="text-xs md:text-sm text-muted-foreground">{t('overview.keyHighlights.internationalization')}</p>
+                        </div>
+                      </div>
                     </div>
                     
                     <div className="space-y-3">
@@ -233,6 +244,7 @@ export default function ZenRazorWebsitePage() {
                     { name: "Firebase", icon: "firebase.svg", description: t('tech.stack.firebase'), version: "11.6.0" },
                     { name: "React Hook Form + yup", icon: "react-hook-form.svg", description: t('tech.stack.reactHookForm'), version: "7.55.0 + 1.6.1" },
                     { name: "Google Maps API", icon: "maps.png", description: t('tech.stack.googleMaps'), version: "2.20.6" },
+                    { name: "next-intl", icon: "next-intl.png", description: t('tech.stack.nextIntl'), version: "4.1.0" },
                     { name: "GitHub Actions", icon: "github-actions.png", description: t('tech.stack.githubActions'), version: "v4" },
                     { name: "Lucide React", icon: "lucide.png", description: t('tech.stack.lucide'), version: "0.487.0" },
                   ].map((tech, index) => (
@@ -269,6 +281,10 @@ export default function ZenRazorWebsitePage() {
                     <div>
                       <h4 className="font-medium text-sm md:text-base">{t('tech.architecture.components.title')}</h4>
                       <p className="text-xs md:text-sm text-muted-foreground">{t('tech.architecture.components.description')}</p>
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-sm md:text-base">{t('tech.architecture.internationalization.title')}</h4>
+                      <p className="text-xs md:text-sm text-muted-foreground">{t('tech.architecture.internationalization.description')}</p>
                     </div>
                   </div>
                 </div>
