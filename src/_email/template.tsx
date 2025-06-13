@@ -1,11 +1,12 @@
 interface TournamentJoinConfirmationTemplateProps {
     name: string,
     email: string,
+    phone: string,
     message: string
 }
 
 export default function contactRequestEmailTemplate(props: TournamentJoinConfirmationTemplateProps): string {
-    const { name, email, message } = props;
+    const { name, email, phone, message } = props;
 
     const date = new Date().toLocaleDateString('pt-Pt', {
         year: 'numeric',
@@ -236,6 +237,20 @@ export default function contactRequestEmailTemplate(props: TournamentJoinConfirm
 
                                     <div style="font-family: 'Montserrat',sans-serif; font-size: 14px; line-height: 140%; text-align: left; word-wrap: break-word;">
                                         <p style="line-height: 140%; margin: 0px;">Email: <strong>${email}</strong></p>
+                                    </div>
+
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                                <tbody>
+                                <tr>
+                                    <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 20px;font-family:arial,helvetica,sans-serif;" align="left">
+
+                                    <div style="font-family: 'Montserrat',sans-serif; font-size: 14px; line-height: 140%; text-align: left; word-wrap: break-word;">
+                                        <p style="line-height: 140%; margin: 0px;">Telefone: <strong>${phone}</strong></p>
                                     </div>
 
                                     </td>

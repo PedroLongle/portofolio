@@ -23,10 +23,12 @@ const transporter = nodemailer.createTransport({
 export async function sendMail({
   name,
   email,
+  phone,
   message,
 }: {
   name: string;
   email: string;
+  phone: string;
   message: string;
 }) {
   try {
@@ -39,7 +41,7 @@ export async function sendMail({
     from: email,
     to: SITE_MAIL_RECIEVER,
     subject: "Portofolio | Novo Contacto",
-    html: contactRequestEmailTemplate({ name, email, message })
+    html: contactRequestEmailTemplate({ name, email, phone, message })
   });
   console.log('Message Sent', info.messageId);
   console.log('Mail sent to', SITE_MAIL_RECIEVER);

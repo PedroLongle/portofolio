@@ -83,6 +83,7 @@
     "form": {
       "name": "Nombre",
       "email": "Email",
+      "phone": "Teléfono",
       "message": "Mensaje",
       "subject": "Asunto",
       "send": "Enviar Mensaje",
@@ -594,6 +595,7 @@
   "validations": {
     "required": "Este campo es obligatorio",
     "email": "Por favor, introduce una dirección de email válida",
+    "phone": "Por favor, introduce un número de teléfono válido",
     "minLength": "Debe tener al menos {0} caracteres",
     "maxLength": "Debe tener como máximo {0} caracteres"
   },

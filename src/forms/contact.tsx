@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { ContactFormValues, useValidationSchema } from "./schema";
 import { Form } from "@/components/form";
 import FormInput from "@/components/form-input";
+import PhoneInput from "@/components/phone-input";
 import { Spinner } from "@/components/spinner";
 import { sendMail } from "@/_email";
 import Image from "next/image";
@@ -21,7 +22,13 @@ export default function ContactForm() {
 
   const form = useForm<ContactFormValues>({
     resolver: yupResolver(schema),
-    mode: "onSubmit"
+    mode: "onSubmit",
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "+351 ",
+      message: "",
+    }
   });
   
   const onSubmit = async (data: ContactFormValues) => {
@@ -31,6 +38,7 @@ export default function ContactForm() {
       const response = await sendMail({
         email: data.email,
         name: data.name,
+        phone: data.phone,
         message: data.message,
       });
 
@@ -96,6 +104,18 @@ export default function ContactForm() {
           type="email"
           placeholder={t('email')}
         />
+        
+        <div>
+          <PhoneInput
+            name="phone"
+            label={t('phone')}
+            placeholder={t('phone')}
+            value={form.watch('phone') || '+351 '}
+            onChange={(value) => form.setValue('phone', value)}
+            onBlur={() => form.trigger('phone')}
+            error={form.formState.errors.phone?.message}
+          />
+        </div>
         
         <FormInput
           name="message"
