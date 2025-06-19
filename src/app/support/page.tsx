@@ -125,13 +125,11 @@ export default function SupportPage() {
                             <p>{supportT("hireMe.underConstruction")}</p>
                           </TooltipContent>
                         </Tooltip>
-                        <Tooltip>
-                          <TooltipTrigger asChild>
                           <a 
-                            //href="https://www.upwork.com/" 
-                            //target="_blank" 
+                            href="https://www.upwork.com/freelancers/~01fe11aa16297799dc?mp_source=share "
+                            target="_blank" 
                             rel="noopener noreferrer"
-                            className="px-4 py-2 bg-gray-200 text-white rounded-md text-xs md:text-sm font-medium transition-colors w-full flex items-center justify-center cursor-not-allowed opacity-60"
+                            className="px-4 py-2 bg-gray-200 text-white rounded-md text-xs md:text-sm font-medium transition-colors w-full flex items-center justify-center"
                           >
                           <Image 
                               src="/logos/upwork.svg"
@@ -141,12 +139,7 @@ export default function SupportPage() {
                               style={{ width: '25%', maxWidth: '90px', height: 'auto' }}
                               priority
                             />
-                          </a>
-                          </TooltipTrigger>
-                          <TooltipContent className="bg-gray-700">
-                            <p>{supportT("hireMe.underConstruction")}</p>
-                          </TooltipContent>
-                        </Tooltip>                     
+                          </a>                 
                     </div>
                   </div>
                 </div>
