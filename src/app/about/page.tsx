@@ -218,17 +218,66 @@ export default function AboutPage() {
         {/* Certifications Section */}
         <div className="mb-12 lg:mb-20">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">{t('certifications.title')}</h2>
-          <div className="flex flex-col items-center sm:items-start justify-center">
-            {/* Certificate */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 justify-items-start">
+
+            {/* Certificate 1 */}
             <div className="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-xs">
               <div className="relative w-full h-64 bg-muted overflow-hidden group">
+                <Link 
+                  href={t('certifications.cert2.credlyLink')}
+                  target="_blank"
+                  className="block w-full h-full"
+                >
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
+                    <span className="text-white font-medium bg-primary/80 px-3 py-1 rounded-md">
+                      {t('certifications.cert2.verify')}
+                    </span>
+                  </div>
+                  <Image 
+                    src="/certificates/google-prompting-essentials.png" 
+                    alt={t('certifications.cert2.imageAlt')}
+                    width={350}
+                    height={150}
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </Link>
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-lg mb-1">{t('certifications.cert2.title')}</h3>
+                <div className="flex items-center mb-2">
+                  <span className="text-sm text-muted-foreground mr-1">{t('certifications.issuedBy')}:</span>
+                  <Link 
+                    href={t('certifications.cert2.issuerLink')} 
+                    className="text-sm text-muted-foreground hover:text-primary"
+                    isExternal
+                  >
+                    {t('certifications.cert2.issuer')}
+                  </Link>
+                </div>
+                <div className="flex flex-row items-center mb-4 gap-1">
+                  <Calendar className="w-4 h-4 mr-1" />
+                  <p className="text-sm text-muted-foreground">{t('certifications.cert2.date')}</p>
+                </div>
+                <Link 
+                  href={t('certifications.cert2.credlyLink')}
+                  isExternal
+                  className="inline-flex items-center text-sm font-medium text-primary hover:underline"
+                >
+                  {t('certifications.cert2.verify')}
+                </Link>
+              </div>
+            </div>
+
+            {/* Certificate 2 */}
+            <div className="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-xs">
+              <div className="relative h-64 bg-muted overflow-hidden group">
                 <Link 
                   href={t('certifications.cert1.credlyLink')}
                   target="_blank"
                   className="block w-full h-full"
                 >
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
-                    <span className="text-white font-medium bg-primary/80 rounded-md">
+                    <span className="text-white font-medium bg-primary/80 px-3 py-1 rounded-md">
                       {t('certifications.cert1.verify')}
                     </span>
                   </div>
@@ -253,7 +302,55 @@ export default function AboutPage() {
                     {t('certifications.cert1.issuer')}
                   </Link>
                 </div>
-                <div className="flex flex-row jus items-center mb-4 gap-1">
+                <div className="flex flex-row items-center mb-4 gap-1">
+                  <Calendar className="w-4 h-4 mr-1" />
+                  <p className="text-sm text-muted-foreground">{t('certifications.cert1.date')}</p>
+                </div>
+                <Link 
+                  href={t('certifications.cert1.credlyLink')}
+                  isExternal
+                  className="inline-flex items-center text-sm font-medium text-primary hover:underline"
+                >
+                  {t('certifications.cert1.verify')}
+                </Link>
+              </div>
+            </div>
+
+            {/* Certificate 3 (to-add) */}
+            <div className="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-xs hidden">
+              <div className="relative h-64 bg-muted overflow-hidden group">
+                <Link 
+                  href={t('certifications.cert1.credlyLink')}
+                  target="_blank"
+                  className="block w-full h-full"
+                >
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
+                    <span className="text-white font-medium bg-primary/80 px-3 py-1 rounded-md">
+                      {t('certifications.cert1.verify')}
+                    </span>
+                  </div>
+                  <Image 
+                    src="/certificates/google-ai-essentials.png" 
+                    alt={t('certifications.cert1.imageAlt')}
+                    width={350}
+                    height={150}
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </Link>
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-lg mb-1">{t('certifications.cert1.title')}</h3>
+                <div className="flex items-center mb-2">
+                  <span className="text-sm text-muted-foreground mr-1">{t('certifications.issuedBy')}:</span>
+                  <Link 
+                    href={t('certifications.cert1.issuerLink')} 
+                    className="text-sm text-muted-foreground hover:text-primary"
+                    isExternal
+                  >
+                    {t('certifications.cert1.issuer')}
+                  </Link>
+                </div>
+                <div className="flex flex-row items-center mb-4 gap-1">
                   <Calendar className="w-4 h-4 mr-1" />
                   <p className="text-sm text-muted-foreground">{t('certifications.cert1.date')}</p>
                 </div>

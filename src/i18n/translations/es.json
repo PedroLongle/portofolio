@@ -592,10 +592,19 @@
       "title": "Google AI Essentials",
       "issuer": "Coursera",
       "issuerLink": "https://www.coursera.org/",
-      "date": "Octubre 2023",
+      "date": "Octubre 2024",
       "imageAlt": "Certificado de Google AI Essentials",
       "credlyLink": "https://www.credly.com/badges/621d4879-98ef-4470-86d5-e93767d2836c/",
       "verify": "Verificar en Credly"
+      },
+      "cert2": {
+        "title": "Google Prompting Engineer Essentials",
+        "issuer": "Coursera",
+        "issuerLink": "https://www.coursera.org/",
+        "date": "Junio 2025",
+        "imageAlt": "Certificado de Google Prompting Engineer Essentials",
+        "credlyLink": "https://www.credly.com/badges/89f04fc9-d9d2-4570-a443-4d02c54ef075/public_url",
+        "verify": "Verificar en Credly"
       }
     }
   },
