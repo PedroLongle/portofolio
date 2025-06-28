@@ -605,6 +605,15 @@
         "imageAlt": "Certificado de Google Prompting Engineer Essentials",
         "credlyLink": "https://www.credly.com/badges/89f04fc9-d9d2-4570-a443-4d02c54ef075/public_url",
         "verify": "Verificar en Credly"
+      },
+      "cert3": {
+        "title": "Google Agile Essentials",
+        "issuer": "Coursera",
+        "issuerLink": "https://www.coursera.org/",
+        "date": "Junio 2025",
+        "imageAlt": "Certificado de Google Agile Essentials",
+        "credlyLink": "https://www.credly.com/badges/example-agile-essentials/",
+        "verify": "Verificar en Credly"
       }
     }
   },
