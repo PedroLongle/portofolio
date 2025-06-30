@@ -78,7 +78,7 @@ export function I18nProvider({ children }: I18nProviderProps) {
   };
 
   // Render loading state while messages are being loaded
-  if (true) {
+  if (loading && Object.keys(translations).length === 0) {
     return <LoadingSpinner />;
   }
 
