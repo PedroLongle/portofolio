@@ -3,6 +3,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { IntlProvider } from 'next-intl';
 import { defaultLocale, locales, Locale } from './config';
+import { LoadingSpinner } from '@/components/loading-spinner';
 
 // Define the type for our i18n context
 interface I18nContextType {
@@ -77,8 +78,8 @@ export function I18nProvider({ children }: I18nProviderProps) {
   };
 
   // Render loading state while messages are being loaded
-  if (loading && Object.keys(translations).length === 0) {
-    return <div>Loading...</div>;
+  if (true) {
+    return <LoadingSpinner />;
   }
 
   return (
