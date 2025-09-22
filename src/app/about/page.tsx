@@ -218,24 +218,72 @@ export default function AboutPage() {
         {/* Certifications Section */}
         <div className="mb-12 lg:mb-20">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">{t('certifications.title')}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 justify-items-start">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 justify-items-start">
 
-            {/* Certificate 1 */}
+            {/* Certificate 5 - September 2025 */}
             <div className="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-xs">
               <div className="relative h-64 bg-muted overflow-hidden group">
                 <Link 
-                  href={t('certifications.cert3.credlyLink')}
+                  href={t('certifications.cert5.credlyLink')}
                   target="_blank"
                   className="block w-full h-full"
                 >
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
                     <span className="text-white font-medium bg-primary/80 px-3 py-1 rounded-md">
-                      {t('certifications.cert3.verify')}
+                      {t('certifications.cert5.verify')}
                     </span>
                   </div>
                   <Image 
-                    src="/certificates/google-agile-essentials.png" 
-                    alt={t('certifications.cert3.imageAlt')}
+                    src="/certificates/responsible-ai-for-developers.png" 
+                    alt={t('certifications.cert5.imageAlt')}
+                    width={250}
+                    height={150}
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </Link>
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-lg mb-1">{t('certifications.cert5.title')}</h3>
+                <div className="flex items-center mb-2">
+                  <span className="text-sm text-muted-foreground mr-1">{t('certifications.issuedBy')}:</span>
+                  <Link 
+                    href={t('certifications.cert5.issuerLink')} 
+                    className="text-sm text-muted-foreground hover:text-primary"
+                    isExternal
+                  >
+                    {t('certifications.cert5.issuer')}
+                  </Link>
+                </div>
+                <div className="flex flex-row items-center mb-4 gap-1">
+                  <Calendar className="w-4 h-4 mr-1" />
+                  <p className="text-sm text-muted-foreground">{t('certifications.cert5.date')}</p>
+                </div>
+                <Link 
+                  href={t('certifications.cert5.credlyLink')}
+                  isExternal
+                  className="inline-flex items-center text-sm font-medium text-primary hover:underline"
+                >
+                  {t('certifications.cert5.verify')}
+                </Link>
+              </div>
+            </div>
+
+            {/* Certificate 6 - September 2025 */}
+            <div className="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-xs">
+              <div className="relative h-64 bg-muted overflow-hidden group">
+                <Link 
+                  href={t('certifications.cert6.credlyLink')}
+                  target="_blank"
+                  className="block w-full h-full"
+                >
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
+                    <span className="text-white font-medium bg-primary/80 px-3 py-1 rounded-md">
+                      {t('certifications.cert6.verify')}
+                    </span>
+                  </div>
+                  <Image 
+                    src="/certificates/google-business-intelligence-certificate.png" 
+                    alt={t('certifications.cert6.imageAlt')}
                     width={350}
                     height={150}
                     className="object-cover transition-transform duration-300 group-hover:scale-110"
@@ -243,32 +291,128 @@ export default function AboutPage() {
                 </Link>
               </div>
               <div className="p-4">
-                <h3 className="font-bold text-lg mb-1">{t('certifications.cert3.title')}</h3>
+                <h3 className="font-bold text-lg mb-1">{t('certifications.cert6.title')}</h3>
                 <div className="flex items-center mb-2">
                   <span className="text-sm text-muted-foreground mr-1">{t('certifications.issuedBy')}:</span>
                   <Link 
-                    href={t('certifications.cert3.issuerLink')} 
+                    href={t('certifications.cert6.issuerLink')} 
                     className="text-sm text-muted-foreground hover:text-primary"
                     isExternal
                   >
-                    {t('certifications.cert3.issuer')}
+                    {t('certifications.cert6.issuer')}
                   </Link>
                 </div>
                 <div className="flex flex-row items-center mb-4 gap-1">
                   <Calendar className="w-4 h-4 mr-1" />
-                  <p className="text-sm text-muted-foreground">{t('certifications.cert3.date')}</p>
+                  <p className="text-sm text-muted-foreground">{t('certifications.cert6.date')}</p>
                 </div>
                 <Link 
-                  href={t('certifications.cert3.credlyLink')}
+                  href={t('certifications.cert6.credlyLink')}
                   isExternal
                   className="inline-flex items-center text-sm font-medium text-primary hover:underline"
                 >
-                  {t('certifications.cert3.verify')}
+                  {t('certifications.cert6.verify')}
                 </Link>
               </div>
             </div>
 
-            {/* Certificate 2 */}
+            {/* Certificate 7 - September 2025 */}
+            <div className="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-xs">
+              <div className="relative h-64 bg-muted overflow-hidden group">
+                <Link 
+                  href={t('certifications.cert7.credlyLink')}
+                  target="_blank"
+                  className="block w-full h-full"
+                >
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
+                    <span className="text-white font-medium bg-primary/80 px-3 py-1 rounded-md">
+                      {t('certifications.cert7.verify')}
+                    </span>
+                  </div>
+                  <Image 
+                    src="/certificates/generative-ai-essentials-for-software-developers.png" 
+                    alt={t('certifications.cert7.imageAlt')}
+                    width={250}
+                    height={150}
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </Link>
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-lg mb-1">{t('certifications.cert7.title')}</h3>
+                <div className="flex items-center mb-2">
+                  <span className="text-sm text-muted-foreground mr-1">{t('certifications.issuedBy')}:</span>
+                  <Link 
+                    href={t('certifications.cert7.issuerLink')} 
+                    className="text-sm text-muted-foreground hover:text-primary"
+                    isExternal
+                  >
+                    {t('certifications.cert7.issuer')}
+                  </Link>
+                </div>
+                <div className="flex flex-row items-center mb-4 gap-1">
+                  <Calendar className="w-4 h-4 mr-1" />
+                  <p className="text-sm text-muted-foreground">{t('certifications.cert7.date')}</p>
+                </div>
+                <Link 
+                  href={t('certifications.cert7.credlyLink')}
+                  isExternal
+                  className="inline-flex items-center text-sm font-medium text-primary hover:underline"
+                >
+                  {t('certifications.cert7.verify')}
+                </Link>
+              </div>
+            </div>
+
+            {/* Certificate 4 - July 2025 */}
+            <div className="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-xs">
+              <div className="relative h-64 bg-muted overflow-hidden group">
+                <Link 
+                  href={t('certifications.cert4.credlyLink')}
+                  target="_blank"
+                  className="block w-full h-full"
+                >
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
+                    <span className="text-white font-medium bg-primary/80 px-3 py-1 rounded-md">
+                      {t('certifications.cert4.verify')}
+                    </span>
+                  </div>
+                  <Image 
+                    src="/certificates/bootcamp-innovaition-building-the-future-of-product.png" 
+                    alt={t('certifications.cert4.imageAlt')}
+                    width={250}
+                    height={150}
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </Link>
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-lg mb-1">{t('certifications.cert4.title')}</h3>
+                <div className="flex items-center mb-2">
+                  <span className="text-sm text-muted-foreground mr-1">{t('certifications.issuedBy')}:</span>
+                  <Link 
+                    href={t('certifications.cert4.issuerLink')} 
+                    className="text-sm text-muted-foreground hover:text-primary"
+                    isExternal
+                  >
+                    {t('certifications.cert4.issuer')}
+                  </Link>
+                </div>
+                <div className="flex flex-row items-center mb-4 gap-1">
+                  <Calendar className="w-4 h-4 mr-1" />
+                  <p className="text-sm text-muted-foreground">{t('certifications.cert4.date')}</p>
+                </div>
+                <Link 
+                  href={t('certifications.cert4.credlyLink')}
+                  isExternal
+                  className="inline-flex items-center text-sm font-medium text-primary hover:underline"
+                >
+                  {t('certifications.cert4.verify')}
+                </Link>
+              </div>
+            </div>
+
+            {/* Certificate 2 - June 2025 */}
             <div className="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-xs">
               <div className="relative w-full h-64 bg-muted overflow-hidden group">
                 <Link 
@@ -316,7 +460,55 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Certificate 3 */}
+            {/* Certificate 3 - June 2025 */}
+            <div className="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-xs">
+              <div className="relative h-64 bg-muted overflow-hidden group">
+                <Link 
+                  href={t('certifications.cert3.credlyLink')}
+                  target="_blank"
+                  className="block w-full h-full"
+                >
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
+                    <span className="text-white font-medium bg-primary/80 px-3 py-1 rounded-md">
+                      {t('certifications.cert3.verify')}
+                    </span>
+                  </div>
+                  <Image 
+                    src="/certificates/google-agile-essentials.png" 
+                    alt={t('certifications.cert3.imageAlt')}
+                    width={350}
+                    height={150}
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </Link>
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-lg mb-1">{t('certifications.cert3.title')}</h3>
+                <div className="flex items-center mb-2">
+                  <span className="text-sm text-muted-foreground mr-1">{t('certifications.issuedBy')}:</span>
+                  <Link 
+                    href={t('certifications.cert3.issuerLink')} 
+                    className="text-sm text-muted-foreground hover:text-primary"
+                    isExternal
+                  >
+                    {t('certifications.cert3.issuer')}
+                  </Link>
+                </div>
+                <div className="flex flex-row items-center mb-4 gap-1">
+                  <Calendar className="w-4 h-4 mr-1" />
+                  <p className="text-sm text-muted-foreground">{t('certifications.cert3.date')}</p>
+                </div>
+                <Link 
+                  href={t('certifications.cert3.credlyLink')}
+                  isExternal
+                  className="inline-flex items-center text-sm font-medium text-primary hover:underline"
+                >
+                  {t('certifications.cert3.verify')}
+                </Link>
+              </div>
+            </div>
+
+            {/* Certificate 1 - October 2024 */}
             <div className="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-xs">
               <div className="relative h-64 bg-muted overflow-hidden group">
                 <Link 

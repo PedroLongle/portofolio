@@ -594,7 +594,7 @@
         "issuerLink": "https://www.coursera.org/",
         "date": "October 2024",
         "imageAlt": "Google AI Essentials Certificate",
-        "credlyLink": "https://www.credly.com/badges/621d4879-98ef-4470-86d5-e93767d2836c/",
+        "credlyLink": "https://www.credly.com/badges/621d4879-98ef-4470-86d5-e93767d2836c/public_url",
         "verify": "Verify on Credly"
       },
       "cert2": {
@@ -612,7 +612,43 @@
         "issuerLink": "https://www.coursera.org/",
         "date": "June 2025",
         "imageAlt": "Google Agile Essentials Certificate",
-        "credlyLink": "https://www.credly.com/badges/example-agile-essentials/",
+        "credlyLink": "https://www.credly.com/badges/cb48ced5-213c-4020-a028-e9d777631fae/public_url",
+        "verify": "Verify on Credly"
+      },
+      "cert4": {
+        "title": "Bootcamp: InnovAItion - Building the Future of Products",
+        "issuer": "FLAG",
+        "issuerLink": "https://flag.pt/",
+        "date": "July 2025",
+        "imageAlt": "FLAG InnovAItion Bootcamp Certificate",
+        "credlyLink": "https://www.credly.com/badges/d1c5ebce-375a-470b-9484-f7427afc832c/public_url",
+        "verify": "Verify on Credly"
+      },
+      "cert5": {
+        "title": "Google Responsible AI for Developers Specialization",
+        "issuer": "Coursera",
+        "issuerLink": "https://www.coursera.org/",
+        "date": "September 2025",
+        "imageAlt": "Google Responsible AI for Developers Specialization Certificate",
+        "credlyLink": "https://www.coursera.org/account/accomplishments/specialization/ZC7WI43FS1PJ",
+        "verify": "Verify Certificate"
+      },
+      "cert6": {
+        "title": "Google Business Intelligence Specialization",
+        "issuer": "Coursera",
+        "issuerLink": "https://www.coursera.org/",
+        "date": "September 2025",
+        "imageAlt": "Google Business Intelligence Specialization Certificate",
+        "credlyLink": "https://www.credly.com/badges/de6f89db-f2d9-4d36-9b5c-b22a914891be/public_url",
+        "verify": "Verify on Credly"
+      },
+      "cert7": {
+        "title": "IBM | Generative AI Essentials for Software Developers Specialization",
+        "issuer": "Coursera",
+        "issuerLink": "https://www.coursera.org/",
+        "date": "September 2025",
+        "imageAlt": "IBM Generative AI Essentials for Software Developers Specialization Certificate",
+        "credlyLink": "https://www.credly.com/badges/75378456-3537-41d4-a13b-7a0df86fe801/public_url",
         "verify": "Verify on Credly"
       }
     }
