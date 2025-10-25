@@ -73,6 +73,23 @@ export default function AboutPage() {
                       </div>
                     </div>
                   </li>
+                  <li>
+                    <div className="inline-flex flex-col gap-2 md:gap-1">
+                      <Link isExternal href={t('education.degree3Link')} weight="medium" className="text-sm md:text-base">
+                        {t('education.degree3')}
+                      </Link>
+                      <div className="flex flex-row items-center gap-2 mt-1">
+                        <House className="w-4 h-4 hidden md:flex" />
+                        <Link isExternal href={t('education.school3Link')} className="text-xs md:text-sm">
+                          {t('education.school3')}
+                        </Link>
+                      </div>
+                      <div className="flex flex-row items-center gap-2 mt-1">
+                        <Calendar className="w-4 h-4" />
+                        <div className="text-xs md:text-sm text-muted-foreground">{t('education.year3')}</div>
+                      </div>
+                    </div>
+                  </li>
                 </ul>
               </div>
              

@@ -491,16 +491,21 @@
     "mission": "Mi misión es crear software intuitivo, eficiente y escalable que tenga un impacto positivo. Creo en el código limpio, el diseño centrado en el usuario y el aprendizaje continuo para estar a la vanguardia de la tecnología.",
     "education": {
       "title": "Educación",
-      "degree1": "Curso Técnico Superior Profesional - Desarrollo de Software",
-      "degree1Link": "https://www.istec.pt/index.php/ctesp-desenvolvimento-de-software/",
-      "school1": "Instituto Superior de Tecnologias Avançadas (ISTEC), Lisboa",
+      "degree1": "Licenciatura en Ingeniería Informática",
+      "degree1Link": "https://www.istec.pt/index.php/licenciatura-em-informatica/",
+      "school1": "Instituto Superior de Tecnologías Avanzadas (ISTEC), Lisboa",
       "school1Link": "https://www.istec.pt/",
-      "year1": "2023 - 2025",
-      "degree2": "Bachillerato Profesional - Técnico en Gestión y Programación de Sistemas Informáticos",
-      "degree2Link": "https://escoladigital.com/cursos-profissionais/gestao-programacao/",
-      "school2": "Escola Profissional de Tecnología Digital, Lisboa",
-      "school2Link": "https://escoladigital.com/",
-      "year2": "2020-2023"
+      "year1": "Setembro 2025 - Presente",
+      "degree2": "Curso Técnico Superior Profesional - Desarrollo de Software",
+      "degree2Link": "https://www.istec.pt/index.php/ctesp-desenvolvimento-de-software/",
+      "school2": "Instituto Superior de Tecnologias Avançadas (ISTEC), Lisboa",
+      "school2Link": "https://www.istec.pt/",
+      "year2": "Setembro 2023 - Agosto 2025",
+      "degree3": "Bachillerato Profesional - Técnico en Gestión y Programación de Sistemas Informáticos",
+      "degree3Link": "https://escoladigital.com/cursos-profissionais/gestao-programacao/",
+      "school3": "Escola Profissional de Tecnología Digital, Lisboa",
+      "school3Link": "https://escoladigital.com/",
+      "year3": "Setembro 2020 - Julio 2023"
     },
     "languages": {
       "title": "Idiomas",
@@ -540,7 +545,7 @@
     "experience": {
       "title": "Experiencia",
       "job1": {
-        "title": "Ingeniero de Software Junior/Mid",
+        "title": "Ingeniero de Software Full Stack",
         "company": "Procimo Tech, Lda",
         "link": "https://www.linkedin.com/company/procimo",
         "period": "Agosto 2023 - Presente",
